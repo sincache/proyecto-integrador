@@ -1,30 +1,39 @@
 // src/components/Header.js
-import React from 'react';
-import { Link } from 'react-router-dom';  // Importamos Link para la navegación
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Para la navegación
 
 const Header = () => {
+  // Estado para controlar la visibilidad del menú en pantallas pequeñas
+  const [menuActive, setMenuActive] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
+  };
+
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container">
-          <Link className="navbar-brand" to="/">Mi Sitio</Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">Inicio</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about">Acerca de</Link>
-              </li>
-              {/* Agrega más enlaces según necesites */}
-            </ul>
+    <nav className="navbar-custom">
+      <div className="navbar-container">
+        {/* LOGO y MENÚ HAMBURGUESA */}
+        <div className="navbar-brand-container">
+          <Link className="navbar-brand" to="/">Logo</Link>
+          <button className="navbar-toggle" onClick={toggleMenu}>☰</button>
+        </div>
+
+        {/* Contenedor de enlaces y botones */}
+        <div className="navbar-right">
+          <div className={`navbar-links ${menuActive ? "active" : ""}`}>
+            <Link className="nav-link" to="/">Inicio</Link>
+            <Link className="nav-link" to="/about">¿Quiénes somos?</Link>
+            <Link className="nav-link" to="/courses">Cursos/Talleres</Link>
+            <Link className="nav-link" to="/more">Más Opciones</Link>
+          </div>
+          <div className={`navbar-buttons ${menuActive ? "active" : ""}`}>
+            <button className="btn btn-unirse">Unirse</button>
+            <button className="btn btn-iniciar">Iniciar</button>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 };
 

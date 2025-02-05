@@ -1,6 +1,11 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// src/index.js
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Styles.css'; // Tus estilos personalizados
+
+
 
 // Importa tus componentes
 import Header from './components/Header';

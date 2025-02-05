@@ -1,7 +1,5 @@
 // src/components/Footer.js
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 const Footer = () => {
   return (
@@ -42,21 +40,11 @@ const Footer = () => {
             <div className="footer-column">
               <h6>Síguenos</h6>
               <div className="social-links">
-                <a href="#" title="Facebook">
-                  <i className="fab fa-facebook"></i>
-                </a>
-                <a href="#" title="Instagram">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" title="X">
-                  <i className="fab fa-x-twitter"></i>
-                </a>
-                <a href="#" title="LinkedIn">
-                  <i className="fab fa-linkedin"></i>
-                </a>
-                <a href="#" title="YouTube">
-                  <i className="fab fa-youtube"></i>
-                </a>
+                <a href="#" title="Facebook"><i className="fab fa-facebook"></i></a>
+                <a href="#" title="Instagram"><i className="fab fa-instagram"></i></a>
+                <a href="#" title="X"><i className="fab fa-x-twitter"></i></a>
+                <a href="#" title="LinkedIn"><i className="fab fa-linkedin"></i></a>
+                <a href="#" title="YouTube"><i className="fab fa-youtube"></i></a>
               </div>
             </div>
           </div>
