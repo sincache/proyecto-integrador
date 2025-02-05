@@ -1,0 +1,48 @@
+
+/* Estilos básicos para el contenedor del miembro del equipo */
+.team-member {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%; /* Para hacer la imagen redonda */
+    margin: 10px; /* Espacio entre las imágenes */
+    display: inline-block; /* Para que estén en línea */
+}
+
+/* Estilos para la imagen de perfil */
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Estilos para el overlay que aparecerá al hacer hover */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%; /* Para que coincida con la imagen */
+    text-align: center;
+    padding: 10px;
+}
+
+/* Efecto hover */
+.team-member:hover .profile-pic {
+    transform: scale(1.1); /* Escala la imagen un poco */
+    filter: blur(2px); /* Añade un ligero desenfoque */
+}
+
+.team-member:hover .overlay {
+    opacity: 1; /* Muestra el overlay */
+};
