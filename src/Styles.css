@@ -28,12 +28,13 @@
 
 body {
   background: linear-gradient(180deg, 
-      rgba(41,32,76,1) 0%, 
-      rgba(40,27,94,1) 25%, 
-      rgba(39,26,95,1) 50%, 
-      rgba(39,25,96,1) 75%, 
-      rgba(23,21,29,1) 100%
+      #29204c 0%, 
+      #271861 25%, 
+      #1e163d 50%, 
+      #1e163d 75%, 
+      #17151d 100%
   );
+
   color:#ffffff;
 }
 
@@ -75,10 +76,16 @@ body {
 }
 
 .team-card {
-  background-color: var(--purple-light);
   border: none;
   border-radius: 15px;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0rem;
+  margin: auto;
+  position: relative;
+  align-items: center;
 }
 
 .team-card:hover {
@@ -200,7 +207,10 @@ body {
 
 /* Estilo del footer */
 footer {
-  background-color: #121212;
+    background: linear-gradient(180deg,  
+      #1e163d 0%, 
+      #17151d 100%
+  );
   color: #ffffff;
   padding: 1rem 0;
 }
@@ -289,7 +299,6 @@ footer {
 }
 
 .footer-bottom {
-  background-color: #000;
   padding: 1rem 0;
   text-align: center;
   color: #666;

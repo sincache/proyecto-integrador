@@ -32,7 +32,7 @@ const MisionVisionValores = () => {
                 <div className="col-md-6">
                 <div className="mission-image">
                     <img
-                    src="/images/chica_tecnologica.png"
+                    src="../assets/images/chica_tecnologica.png"
                     alt="Mujer en tecnología"
                     className="img-fluid"
                     />

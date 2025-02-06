@@ -19,7 +19,6 @@ import TarjetaPresentacion from './components/TarjetasPresentacion';
 function HomePage() {
   return (
     <>
-      <Home />
       <QuienesSomos />
       <MisionVisionValores />
       <TarjetaPresentacion />
