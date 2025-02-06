@@ -60,6 +60,7 @@ const TarjetaPresentacion = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
                     
                         {/* Card 4 */}
                         <div class="col-md-3 col-sm-6">
@@ -77,8 +78,10 @@ const TarjetaPresentacion = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
 
                         {/* Card 5 */}
+                    <div class="row g-4 d-flex justify-content-center">
                         <div class="col-md-3 col-sm-6">
                             <div class="card team-card text-center h-100">
                                 <img src="/api/placeholder/300/300" class="card-img-top" alt="Team member" />
@@ -145,9 +148,12 @@ const TarjetaPresentacion = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        {/* Card 9 */}
-                        <div class="col-md-3 col-sm-6">
+                {/* Fila centrada para las últimas 3 tarjetas */}
+                    <div class="row g-4 d-flex justify-content-center">
+                        {/* Últimas 3 tarjetas */}
+                        <div class="col-sm-3 col-sm-3">
                             <div class="card team-card text-center h-100">
                                 <img src="/api/placeholder/300/300" class="card-img-top" alt="Team member" />
                                 <div class="card-body">
@@ -162,9 +168,8 @@ const TarjetaPresentacion = () => {
                                 </div>
                             </div>
                         </div>
-                    
-                        {/* Card 10 */}
-                        <div class="col-md-3 col-sm-6">
+
+                        <div class="col-sm-3 col-sm-3">
                             <div class="card team-card text-center h-100">
                                 <img src="/api/placeholder/300/300" class="card-img-top" alt="Team member" />
                                 <div class="card-body">
@@ -179,9 +184,8 @@ const TarjetaPresentacion = () => {
                                 </div>
                             </div>
                         </div>
-                    
-                        {/* Card 11 */}
-                        <div class="col-md-3 col-sm-6">
+
+                        <div class="col-sm-3 col-sm-3">
                             <div class="card team-card text-center h-100">
                                 <img src="/api/placeholder/300/300" class="card-img-top" alt="Team member" />
                                 <div class="card-body">
@@ -196,9 +200,7 @@ const TarjetaPresentacion = () => {
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
-                </div>
         </section>
     );
 };
