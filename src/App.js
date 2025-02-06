@@ -11,7 +11,21 @@ import './Styles.css'; // Estilos generales de bootstrap
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';     // Componente de la página de inicio
-import About from './components/About';   // Componente "Acerca de"
+// import About from './components/About';   // Componente "Acerca de", este componente se separo en 3 componentes para modificacion individual
+import QuienesSomos from './components/QuienesSomos';
+import MisionVisionValores from './components/MisionVisionValores';
+import TarjetaPresentacion from './components/TarjetasPresentacion';
+
+function HomePage() {
+  return (
+    <>
+      <Home />
+      <QuienesSomos />
+      <MisionVisionValores />
+      <TarjetaPresentacion />
+    </>
+  );
+}
 
 function App() {
   return (
@@ -20,9 +34,7 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            {/* Para agregar mas rutas cuando se tengan componentes */}
+            <Route index element={<HomePage />} />
           </Routes>
         </main>
         <Footer />

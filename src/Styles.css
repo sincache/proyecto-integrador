@@ -34,8 +34,72 @@ body {
       rgba(39,25,96,1) 75%, 
       rgba(23,21,29,1) 100%
   );
+  color:#ffffff;
 }
 
+/* Estilo de About */
+.quienes-somos {
+  padding: 6rem 0;
+}
+
+/* Main Section */
+:root {
+  --purple-dark: #2D2A3F;
+  --purple-light: #413C5A;
+  --accent: #00c2cb;
+}
+
+.hero-section {
+  padding: 6rem 0;
+  /*background-color: var(--purple-light);*/
+}
+
+.mission-section {
+  padding: 4rem 0;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.feature-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature-list i {
+  color: var(--accent);
+}
+
+.team-card {
+  background-color: var(--purple-light);
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.social-links a {
+  color: var(--accent);
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+  opacity: 0.8;
+}
+
+.mission-image {
+  border-radius: 20px;
+  overflow: hidden;
+}
 
 /* Estilo de NavBar */
 .navbar-custom {
