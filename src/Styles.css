@@ -140,6 +140,11 @@ body {
   color: white !important;
   flex-shrink: 0;
 }
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
 
 /* Menú de hamburguesa */
 .navbar-toggle {
