@@ -30,11 +30,11 @@ const TarjetaPresentacion = () => {
                         {/* Card 2 */}
                         <div class="col-md-3 col-sm-6">
                             <div class="card team-card text-center h-100">
-                                <img src="/api/placeholder/300/300" class="card-img-top" alt="Team member" />
+                                <img src="quienes-somos/images/Fotos de Perfil/Eddy.JPG" class="card-img-top" alt="Team member" />
                                 <div class="card-body">
                                     <h5 class="card-title">Edgar Vilchis</h5>
                                     <p class="card-subtitle mb-2 text-muted">Java Developer</p>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p class="card-text">Me especializo en crear soluciones digitales que no solo resuelven problemas, sino que generan conexiones significativas.</p>
                                     <div class="social-links">
                                         <a href="#"><i class="fab fa-linkedin"></i></a>
                                         <a href="#"><i class="fab fa-twitter"></i></a>
