@@ -42,11 +42,7 @@ const TarjetaPresentacion = () => {
                         {/* Card 2 */}
                         <div class="col-md-3 col-sm-6">
                             <div class="card team-card text-center h-100">
-<<<<<<< HEAD
-                                <img src="quienes-somos/images/Fotos de Perfil/Eddy.JPG" class="card-img-top" alt="Team member" />
-=======
                                 <img src={EdgarImg} class="card-img-top" alt="Team member" />
->>>>>>> 9cf256c1b9deb5d7f8f9922e01b367b101d86397
                                 <div class="card-body">
                                     <h5 class="card-title">Edgar Vilchis</h5>
                                     <p class="card-subtitle mb-2 text-muted">Java Developer</p>
