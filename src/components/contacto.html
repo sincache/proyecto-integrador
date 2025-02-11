@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="shortcut icon" href="" type="image/x-icon">
     <title>Contacto - TechWomen Academy</title>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar-custom">
@@ -18,7 +20,7 @@
                 <a class="navbar-brand" href="#">Logo</a>
                 <button class="navbar-toggle">☰</button>
             </div>
-            
+
             <!-- Enlaces y botones -->
             <div class="navbar-right">
                 <div class="navbar-links">
@@ -27,7 +29,7 @@
                     <a class="nav-link" href="#">Cursos/Talleres</a>
                     <a class="nav-link" href="#">Más Opciones</a>
                 </div>
-                
+
                 <div class="navbar-buttons">
                     <button class="btn btn-unirse">Unirse</button>
                     <button class="btn btn-iniciar">Iniciar</button>
@@ -41,52 +43,62 @@
         <section class="hero-section">
             <div class="container justify-content-center">
                 <h6 class="display-4 mb-4">¿En qué podemos ayudarte?</h6>
-                <p class="lead" id="Parrafo"> Si tienes alguna pregunta, sugerencia o necesitas más información, no dudes en contactarnos. Estamos aquí para ayudarte. </p>
+                <p class="lead" id="Parrafo"> Si tienes alguna pregunta, sugerencia o necesitas más información, no
+                    dudes en contactarnos. Estamos aquí para ayudarte. </p>
             </div>
         </section>
 
-        <!-- Formulario de Contacto -->
-        <section class="mission-section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="card bg-purple-light p-4">
-                            <h2 class="text-center mb-4">Formulario de Contacto</h2>
-                            <form id="contactForm">
-                                <!-- Campo Nombre -->
-                                <div class="mb-3">
-                                    <label for="nombre" class="form-label">Nombre:</label>
-                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
-                                </div>
-
-                                <!-- Campo Correo Electrónico -->
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Correo Electrónico:</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-
-                                <!-- Campo Teléfono -->
-                                <div class="mb-3">
-                                    <label for="telefono" class="form-label">Teléfono:</label>
-                                    <input type="tel" class="form-control" id="telefono" name="telefono">
-                                </div>
-
-                                <!-- Campo Mensaje -->
-                                <div class="mb-3">
-                                    <label for="mensaje" class="form-label">Mensaje:</label>
-                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
-                                </div>
-
-                                <!-- Botón de Enviar -->
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-accent">Enviar Mensaje</button>
-                                </div>
-                            </form>
-                        </div>
+        <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+            <div class="row w-75 shadow-lg rounded overflow-hidden">
+                <!-- Información de contacto (izquierda) -->
+                <div class="col-md-5 bg-dark text-white p-5 d-flex flex-column justify-content-center">
+                    <h1 class="mb-4 text-center">CONTÁCTANOS</h1>
+                    <div class="data text-center">
+                        <p><i class="fas fa-phone-alt"></i> +NUMERO</p>
+                        <p><i class="fas fa-envelope"></i> TechWomenAcademy@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Insurgentes Sur 1079, Col del Valle Sur, Benito Juárez, 03720 Ciudad de México, CDMX</p>
                     </div>
                 </div>
+
+                <!-- Formulario de contacto (derecha) -->
+                <div class="col-md-7 bg-purple-light p-5 d-flex flex-column justify-content-center">
+
+                    <form id="contactForm">
+
+                        <!-- Campo Nombre -->
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label> 
+                            <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre completo"
+                                required>
+                        </div>
+
+                        <!-- Campo Correo Electrónico -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com"
+                                required>
+                        </div>
+
+                        <!-- Campo Teléfono -->
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono"
+                                placeholder="(Opcional) Tu número de teléfono">
+                        </div>
+
+                        <!-- Campo Mensaje -->
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4"
+                                placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+                        <!-- Botón de Enviar -->
+                        <button type="submit" class="btn btn-accent mt-3">Enviar Mensaje</button>
+                    </form>
+                </div>
             </div>
-        </section>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -159,4 +171,5 @@
         });
     </script>
 </body>
+
 </html>
