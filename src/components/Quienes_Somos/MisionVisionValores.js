@@ -1,4 +1,5 @@
 import React from 'react';
+import ChicaTecnologica from '../assets/images/chica_tecnologica.png';
 
 const MisionVisionValores = () => {
     return (
@@ -32,7 +33,7 @@ const MisionVisionValores = () => {
                 <div className="col-md-6">
                 <div className="mission-image">
                     <img
-                    src="../assets/images/chica_tecnologica.png"
+                    src={ChicaTecnologica}
                     alt="Mujer en tecnología"
                     className="img-fluid"
                     />
