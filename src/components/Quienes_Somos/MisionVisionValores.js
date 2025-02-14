@@ -1,5 +1,5 @@
 import React from 'react';
-import ChicaTecnologica from '../assets/images/chica_tecnologica.png';
+import ChicaTecnologica from '../../assets/images/chica_tecnologica.png';
 
 const MisionVisionValores = () => {
     return (

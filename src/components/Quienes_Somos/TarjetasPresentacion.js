@@ -1,15 +1,15 @@
 import React from 'react';
-import ChristianImg from '../assets/images/members/christian-sandoval.jpeg';
-import EdgarImg from '../assets/images//members/edgar-vilchis.jpeg';
-import AlejandraOlveraImg from '../assets/images/members/alejandra-olvera.jpeg';
-import AlejandraOrdaz from '../assets/images/members/alejandra-ordaz.jpeg';
-import ArelyHernandez from '../assets/images/members/arely-hernandez.jpeg';
-import BryanVargas from '../assets/images/members/bryan-vargas.jpg';
-import EmilianoFlores from '../assets/images/members/emiliano-flores.jpeg';
-import ErikaFlores from '../assets/images/members/erika-martinez.jpeg';
-import JacobVargas from '../assets/images/members/jacob-vargas.jpeg';
-import LilianaTorres from '../assets/images/members/liliana-gonzalez.jpeg';
-import PaoletTorres from '../assets/images/members/paolet-torres.jpeg'
+import ChristianImg from '../../assets/images/members/christian-sandoval.jpeg';
+import EdgarImg from '../../assets/images//members/edgar-vilchis.jpeg';
+import AlejandraOlveraImg from '../../assets/images/members/alejandra-olvera.jpeg';
+import AlejandraOrdaz from '../../assets/images/members/alejandra-ordaz.jpeg';
+import ArelyHernandez from '../../assets/images/members/arely-hernandez.jpeg';
+import BryanVargas from '../../assets/images/members/bryan-vargas.jpg';
+import EmilianoFlores from '../../assets/images/members/emiliano-flores.jpeg';
+import ErikaFlores from '../../assets/images/members/erika-martinez.jpeg';
+import JacobVargas from '../../assets/images/members/jacob-vargas.jpeg';
+import LilianaTorres from '../../assets/images/members/liliana-gonzalez.jpeg';
+import PaoletTorres from '../../assets/images/members/paolet-torres.jpeg'
 
 
 const TarjetaPresentacion = () => {

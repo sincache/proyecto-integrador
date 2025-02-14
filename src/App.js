@@ -12,14 +12,14 @@ import Home from './components/Home';     // Componente de la página de inicio
 // import About from './components/About';   // Componente "Acerca de", este componente se separo en 3 componentes para modificacion individual
 import QuienesSomos from './components/Quienes_Somos/QuienesSomos';
 import MisionVisionValores from './components/Quienes_Somos/MisionVisionValores';
-import TarjetaPresentacion from './components/Quienes_Somos/TarjetasPresentacion';
+import TarjetasPresentacion from './components/Quienes_Somos/TarjetasPresentacion';
 
 function HomePage() {
   return (
     <>
       <QuienesSomos />
       <MisionVisionValores />
-      <TarjetaPresentacion />
+      <TarjetasPresentacion />
     </>
   );
 }
@@ -30,9 +30,7 @@ function App() {
       <div>
         <Header />
         <main>
-          <Routes>
-            <Route index element={<HomePage />} />
-          </Routes>
+          <HomePage />
         </main>
         <Footer />
       </div>
