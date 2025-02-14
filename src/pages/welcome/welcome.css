@@ -1,261 +1,108 @@
-.App {
-    text-align: center;
+/* Variables globales */
+:root {
+    --primary-color: #FF1493;
+    --secondary-color: #4A148C;
+    --text-light: #ffffff;
+    --spacing-lg: 4rem;
+    --spacing-md: 2rem;
+    --spacing-sm: 1rem;
 }
 
-.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
-}
-
-.App-intro {
-    font-size: large;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-
-
-
-/* Alinear texto conctactanos al centro */
-.hero-section {
-    display: flex;               /* Activa Flexbox */
-    justify-content: center;     /* Centra horizontalmente */
-    align-items: center;         /* Centra verticalmente */
-    height: 100vh;               /* Hace que la sección ocupe toda la altura de la pantalla */
-    text-align: center;          /* Centra el texto dentro del contenedor */
-    
-    position: relative;                  /* Necesario para el overlay */
-    background-image: url('../src/assets/images/Mujer\ 1.jpg'); /* Cambia 'tu-imagen.jpg' por el nombre de tu archivo */
-    background-size: cover;             /* Hace que la imagen cubra toda la sección */
-    background-position: center;        /* Centra la imagen */
-    background-repeat: no-repeat;       /* Evita que la imagen se repita */
-    height: 100vh;
-    
-}
-
-/* Aplicar opacidad */
-.hero-section::before {
-    content: '';                        /* Crea el pseudo-elemento */
-    position: absolute;
-    top: 0;
-    left: 0;
+#imagen-presentacion {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);  /* Negro con 50% de opacidad */
-    z-index: 1;    
+    margin: 0 0;
+    padding: 0;
+    display: block;
 }
-
-
-/* Sobreponer letras para no aplicar opacidad*/
-.hero-section .container {
-    position: relative;
-    z-index: 2;                         /* Coloca el texto por encima del overlay */
-}
-
-
-
-
-/* Fromulario */
-.bg-purple-light{
-    background-color: rgba(0, 0, 0, 0.5); /* Gris con 50% de opacidad */
-    border-radius: 10px; /* Bordes redondeados para un mejor look */
-    color: white; 
-    padding: 20px; /* Espaciado interno */
-    box-shadow: 0 4px 8px rgba(134, 134, 134, 0.2); /* Sombra suave */
-    flex-direction: column;
-    text-align: center;
-    gap:15px;
-}
-
-/* Boton color rosa */ 
-button.btn-accent {
-    background-color: #ff1f71; /* Rosa vibrante */
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-
-
-
-/* Estilos generales */
 
 body {
-    background: linear-gradient(180deg,
-            #29204c 0%,
-            #271861 25%,
-            #1e163d 50%,
-            #1e163d 75%,
-            #17151d 100%);
-
-    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image: linear-gradient(180deg, 
+        rgba(41,32,76,1) 0%, 
+        rgba(40,27,94,1) 25%, 
+        rgba(39,26,95,1) 50%, 
+        rgba(39,25,96,1) 75%, 
+        rgba(23,21,29,1) 100%
+    );
+    background-attachment: fixed;
+    color: white;
 }
 
-/* Estilo de About */
-.quienes-somos {
-    padding: 6rem 0;
-}
-
-/* Main Section */
-:root {
-    --purple-dark: #2D2A3F;
-    --purple-light: #413C5A;
-    --accent: #00c2cb;
-}
-
-.hero-section {
-    padding: 6rem 0;
-    /*background-color: var(--purple-light);*/
-}
-
-.mission-section {
-    padding: 4rem 0;
-}
-
-.feature-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.feature-list li {
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.feature-list i {
-    color: var(--accent);
-}
-
-.team-card {
-    border: none;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0rem;
-    margin: auto;
-    position: relative;
-    align-items: center;
-}
-
-.team-card:hover {
-    transform: translateY(-5px);
-}
-
-
-
-.social-links a {
-    color: var(--accent);
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    transition: opacity 0.3s ease;
-}
-
-.social-links a:hover {
-    opacity: 0.8;
-}
-
-.mission-image {
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-/* Estilo de NavBar */
-.navbar-custom {
-    background-color: #1a1a2e;
-    padding: 15px 0;
-}
-
-.navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+/* Contenedor */
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 var(--spacing-sm);
 }
 
-/* LOGO y botón de menú de hamburguesa se mantienen a la izquierda */
-.navbar-brand-container {
+/* Hero Section */
+.hero {
+    padding: var(--spacing-lg) 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-light);
+    text-align: center;
+    column-gap: 10px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-light);
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+/* Botones */
+.cta-buttons {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin-top: var(--spacing-md);
 }
 
-/* LOGO */
-.navbar-brand {
-    font-family: 'Cursive', sans-serif;
-    font-size: clamp(20px, 2vw, 24px);
-    color: white !important;
-    flex-shrink: 0;
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-.card-img-top {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-}
-
-/* Menú de hamburguesa */
-.navbar-toggle {
-    display: none;
-    background: none;
+.btn-primary {
+    background-color: #ff1f71;
     border: none;
     color: white;
-    padding: 0.5rem;
-    font-size: 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
-/* Contenedor de los enlaces y botones alineado a la derecha */
-.navbar-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    flex-grow: 1;
-}
-
-/* Enlaces alineados a la derecha */
-.navbar-links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    color: #ffffff;
-}
-
-/* Botones alineados a la derecha */
-.navbar-buttons {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/* Estilos de los botones */
-.btn-unirse {
+.btn-secondary {
     background-color: transparent;
     border: 2px solid #00c2cb;
     color: #00c2cb;
@@ -265,174 +112,255 @@ body {
     white-space: nowrap;
 }
 
-.btn-unirse:hover {
+.btn-primary:hover {
     background-color: #00c2cb;
     color: white;
 }
 
-.btn-iniciar {
-    background-color: #ff1f71;
-    border: none;
-    color: white;
-    border-radius: 25px;
-    padding: 8px 25px;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.btn-iniciar:hover {
-    background-color: #e01860;
-}
-
-/* Estilo del footer */
-footer {
-    background: linear-gradient(180deg,
-            #1e163d 0%,
-            #17151d 100%);
-    color: #ffffff;
-    padding: 1rem 0;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-between;
-}
-
-.newsletter-section {
-    flex: 1;
-    min-width: 300px;
-}
-
-.newsletter-section h5 {
-    color: #00c2cb;
-    margin-bottom: 1rem;
-}
-
-.newsletter-form {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.newsletter-form input {
-    flex-grow: 1;
-    padding: 0.5rem;
-    background-color: #222;
-    border: 1px solid #333;
-    color: white;
-}
-
-.newsletter-form button {
+.btn-secondary:hover {
     background-color: #00c2cb;
-    color: #121212;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+    color: white;
 }
 
-.footer-links {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
+/* Sección de Cursos */
+.features {
+    padding: var(--spacing-lg) 0;
 }
 
-.footer-column {
-    flex: 1;
-    min-width: 150px;
+.features h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-light);
 }
 
-.footer-column h6 {
-    color: #00c2cb;
-    margin-bottom: 1rem;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
 }
 
-.footer-column a {
-    color: #ffffff;
+.feature-card {
+    padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card h3 {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-card p {
+    color: var(--text-light);
+    opacity: 0.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+.link-arrow {
+    color: var(--primary-color);
     text-decoration: none;
-    display: block;
-    margin-bottom: 0.5rem;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-}
-
-.footer-column a:hover {
-    opacity: 1;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
+    display: inline-flex;
     align-items: center;
 }
 
-.social-links a {
+.link-arrow:hover {
+    transition: all 0.5s ease-out;
     color: #00c2cb;
-    font-size: 1.5rem;
-    transition: transform 0.3s;
 }
 
-.social-links a:hover {
-    transform: scale(1.2);
+/* Media Queries */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* Sección de Beneficios */
+.benefits {
+    padding: var(--spacing-lg) 0;
 }
 
-.footer-bottom {
-    padding: 1rem 0;
+.benefits .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.benefits-content h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-light);
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+.benefits-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+/* Logo Container */
+.logo-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 75%;
+    height: 75%;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+
+}
+
+/* Sección de Inscripción */
+.enrollment {
+    padding: var(--spacing-lg) 0;
     text-align: center;
-    color: #666;
-    font-size: 0.875rem;
-    border-top-color: #5c0aac;
-    border-top-style: solid;
 }
 
-.footer-bottom a {
-    color: #ffffff;
-    margin: 0 0.5rem;
-    text-decoration: none;
+.enrollment h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-light);
 }
 
+.enrollment p {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+.enrollment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.enrollment-step {
+    background: rgba(255, 255, 255, 0.05);
+    padding: var(--spacing-md);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.enrollment-step:hover {
+    transform: translateY(-5px);
+}
+
+.enrollment-step h3 {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+}
+
+.enrollment-step p {
+    color: var(--text-light);
+    opacity: 0.8;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Botón Saber Más */
+.cta-bottom {
+    margin-top: var(--spacing-md);
+}
+
+.btn-primary.btn-lg {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-    }
-
-    .footer-links {
-        flex-direction: column;
-    }
-}
-
-/* Responsive: Menú hamburguesa en pantallas pequeñas */
-@media (max-width: 768px) {
-    .navbar-toggle {
-        display: block;
-    }
-
-    .navbar-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .navbar-links,
-    .navbar-buttons {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding: 1rem 0;
-        align-items: center;
-    }
-
-    .navbar-links.active,
-    .navbar-buttons.active {
-        display: flex;
-    }
-
-    .nav-link {
+    .benefits .container {
+        grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .btn-unirse,
-    .btn-iniciar {
-        width: 100%;
-        text-align: center;
+    .benefits-list li {
+        text-align: left;
+    }
+
+    .enrollment-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .logo-container {
+        margin-top: var(--spacing-md);
+        max-width: 300px;
     }
 }
+
+/* Animación para el logo */
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo-container::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    border: 3px solid rgba(255, 20, 147, 0.2);
+    border-radius: 80%;
+    animation: rotateCircle 50s linear infinite;
+}
+
+.logo-container::before {
+    content: '';
+    position: absolute;
+    top: -15%;
+    left: -15%;
+    right: -15%;
+    bottom: -15%;
+    border: 2px solid rgba(255, 20, 147, 0.1);
+    border-radius: 50%;
+    animation: rotateCircle 30s linear infinite reverse;
+}
+
