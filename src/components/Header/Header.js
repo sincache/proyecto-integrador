@@ -29,7 +29,7 @@ const Header = () => {
             <Link className="nav-link" to="/more">Más Opciones</Link>
           </div>
           <div className={`navbar-buttons ${menuActive ? "active" : ""}`}>
-            <button className="btn btn-unirse">Unirse</button>
+            <button className="btn btn-unirse"><Link className="nav-link" to="/singin">Unirse</Link></button>
             <button className="btn btn-iniciar">Iniciar</button>
           </div>
         </div>

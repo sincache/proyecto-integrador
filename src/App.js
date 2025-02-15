@@ -13,6 +13,9 @@ import Home from './components/Home';     // Componente de la página de inicio
 import QuienesSomos from './components/Quienes_Somos/QuienesSomos';
 import MisionVisionValores from './components/Quienes_Somos/MisionVisionValores';
 import TarjetasPresentacion from './components/Quienes_Somos/TarjetasPresentacion';
+import About from './components/About';
+import Cursos from './components/Cursos/Cursos';
+import Sing_in from './components/Sing_in/Sing_in';
 
 function HomePage() {
   return (
@@ -30,7 +33,13 @@ function App() {
       <div>
         <Header />
         <main>
-          <HomePage />
+          <Routes>
+            <Route path="/" element={<HomePage />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/courses" element={<Cursos />}/>
+            <Route path="/singin" element={<Sing_in />}/>
+            <Route path="/" element={<HomePage />}/>
+          </Routes>
         </main>
         <Footer />
       </div>
