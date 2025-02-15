@@ -16,12 +16,13 @@ const Sing_in = () => {
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" placeholder="Crea una contraseña"required/>
+                    <input type="password" class="form-control" id="password" placeholder="Crea una contraseña" required/>
                 </div>
                 <button type="submit" class="btn btn-accent">Registrarse</button>
             </form>
         </div>
     </section>
+
     );
 }
 
