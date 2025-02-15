@@ -1,5 +1,6 @@
 // src/components/About.js
 import React from 'react';
+import chicaTecnologica from '../assets/images/chica_tecnologica.png'
 
 const About = () => {
   return (
@@ -49,7 +50,7 @@ const About = () => {
             <div className="col-md-6">
               <div className="mission-image">
                 <img
-                  src="/images/chica_tecnologica.png"
+                  src={chicaTecnologica}
                   alt="Mujer en tecnología"
                   className="img-fluid"
                 />

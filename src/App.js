@@ -26,7 +26,7 @@ function HomePage() {
   );
 }
 
-/* function App() {
+function App() {
   return (
     <Router>
       <div>
@@ -38,9 +38,9 @@ function HomePage() {
       </div>
     </Router>
   );
-} */
+}
 
-function App() {
+/* function App() {
   return (
     <Router>
       <div>
@@ -54,7 +54,7 @@ function App() {
       </div>
     </Router>
   );
-}
+} */
 
 
 export default App;
