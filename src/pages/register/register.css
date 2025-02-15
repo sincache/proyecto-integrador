@@ -1,4 +1,4 @@
-.App {
+hero-section.App {
     text-align: center;
 }
 
@@ -109,6 +109,7 @@ button.btn-accent {
     padding: 12px 20px;
     border-radius: 5px;
     font-size: 16px;
+    display: inline-block;
 }
 
 
