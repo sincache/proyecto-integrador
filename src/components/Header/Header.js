@@ -2,6 +2,7 @@
 // src/components/Header.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Para la navegación
+import LogoTWA from '../../assets/images/Logo_TWA_Sin_Fondo.png';
 
 const Header = () => {
   // Estado para controlar la visibilidad del menú en pantallas pequeñas
@@ -16,7 +17,7 @@ const Header = () => {
       <div className="navbar-container">
         {/* LOGO y MENÚ HAMBURGUESA */}
         <div className="navbar-brand-container">
-          <Link className="navbar-brand" to="/">Logo</Link>
+          <Link className="navbar-brand" to="/"><img id="logo-header" src={LogoTWA} alt="Logo" /></Link>
           <button className="navbar-toggle" onClick={toggleMenu}>☰</button>
         </div>
 

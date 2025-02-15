@@ -6,7 +6,7 @@ import AlejandraOrdaz from '../../assets/images/members/alejandra-ordaz.jpeg';
 import ArelyHernandez from '../../assets/images/members/arely-hernandez.jpeg';
 import BryanVargas from '../../assets/images/members/bryan-vargas.jpg';
 import EmilianoFlores from '../../assets/images/members/emiliano-flores.jpeg';
-import ErikaFlores from '../../assets/images/members/erika-martinez.jpeg';
+import ErikaFlores from '../../assets/images/members/erika-martinez-corregida.jpeg';
 import JacobVargas from '../../assets/images/members/jacob-vargas.jpeg';
 import LilianaTorres from '../../assets/images/members/liliana-gonzalez.jpeg';
 import PaoletTorres from '../../assets/images/members/paolet-torres.jpeg'
