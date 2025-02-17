@@ -1,0 +1,123 @@
+
+   
+   
+  [
+    {
+      "ID": "11",
+      "CATEGORIA": "Database",
+      "TEMA": "Administrador de base de datos",
+      "TITULO": "Administrador de bases de datos relacionales",
+      "DESCRIPCION": "Se explican los fundamentos de la administración de una base de datos a través de un sistema gestor. Desde el modelado de diferentes datos, la consulta a la información almacenada de una tienda internacional y su implementación en la nube para mantener en óptimas condiciones la información.",
+      "IMAGEN": "sin información",
+      "TIEMPO": "10 horas",
+      "NIVEL": "Básico"
+    },
+    {
+      "ID": "12",
+      "CATEGORIA": "Otros cursos",
+      "TEMA": "Linux",
+      "TITULO": "Introducción práctica a los comandos Linux y Shell Scripting",
+      "PLATAFORMA": "Coursera",
+      "DESCRIPCION": "Este curso proporciona una comprensión práctica de los comandos shell comunes de Linux / UNIX. En este curso amigable para principiantes, usted aprenderá acerca de los fundamentos de Linux, comandos Shell, y Bash shell scripting.",
+      "IMAGEN": "sin información",
+      "TIEMPO": "10 horas",
+      "NIVEL": "Básico",
+      "PRECIO": 0,
+      "ENLACE": "https://www.coursera.org/search?query=linux"
+    },
+    {
+      "ID": "13",
+      "CATEGORIA": "Otros cursos",
+      "TEMA": "POO",
+      "TITULO": "Curso de programación orientada a objetos",
+      "PLATAFORMA": "videoscurso.co",
+      "DESCRIPCION": "En este curso aprenderás los fundamentos de la programación orientada a objetos. Conocerás sobre las prácticas, los conocimientos correctos y profundizaremos en por qué es una metodología poderosa en el mundo de la programación y desarrollo del software.",
+      "IMAGEN": "sin información",
+      "TIEMPO": "8 horas aprox.",
+      "NIVEL": "Básico",
+      "PRECIO": 0,
+      "ENLACE": "https://codigofacilito.com/cursos/c-plus-plus"
+    },
+    {
+      "ID": "14",
+      "CATEGORIA": "Front end",
+      "TEMA": "Frameworks Bootstrap",
+      "TITULO": "",
+      "PLATAFORMA": "",
+      "DESCRIPCION": "Crea páginas web elegantes y responsivas rápidamente con Bootstrap, el framework de CSS más popular. Aprende a utilizar sus componentes y utilidades para diseñar sitios web impresionantes y funcionales.",
+      "IMAGEN": null,
+      "TIEMPO": "",
+      "NIVEL": "Basico",
+      "PRECIO": null
+      
+    },
+    {
+        "ID": "15",
+        "CATEGORIA": "DevOps",
+        "TEMA": "Azure",
+        "TITULO": null,
+        "PLATAFORMA": "",
+        "DESCRIPCION": "Explora Microsoft Azure, una de las principales plataformas de servicios en la nube. Aprende a implementar, administrar y asegurar soluciones en la nube utilizando las herramientas y servicios de Azure.",
+        "IMAGEN": null,
+        "TIEMPO": "",
+        "NIVEL": "Basico",
+        "PRECIO": null
+        
+      },
+      {
+        "ID": "16",
+        "CATEGORIA": "DevOps",
+        "TEMA": "GitHub actions",
+        "TITULO": null,
+        "PLATAFORMA": "",
+        "DESCRIPCION": "Automatiza tus flujos de trabajo de desarrollo con GitHub Actions. Aprende a configurar y utilizar flujos de trabajo para la integración continua y la entrega continua (CI/CD) directamente en GitHub.",
+        "IMAGEN": null,
+        "TIEMPO": "",
+        "NIVEL": "Basico",
+        "PRECIO": null
+        
+      },
+      {
+        "ID": "17",
+        "CATEGORIA": "DevOps",
+        "TEMA": "Docker",
+        "TITULO": null,
+        "PLATAFORMA": "",
+        "DESCRIPCION": "Domina Docker, una plataforma líder para la creación, despliegue y gestión de aplicaciones en contenedores. Aprende a crear, probar y desplegar contenedores para aplicaciones escalables y portátiles.",
+        "IMAGEN": null,
+        "TIEMPO": "",
+        "NIVEL": "Basico",
+        "PRECIO": null
+        
+      },
+      {
+        "ID": "18",
+        "CATEGORIA": "Kubernets",
+        "TEMA": "",
+        "TITULO": null,
+        "PLATAFORMA": "",
+        "DESCRIPCION": "Gestiona y orquesta aplicaciones en contenedores con Kubernetes, el sistema de orquestación más popular. Aprende a desplegar, escalar y mantener aplicaciones distribuidas en este curso completo.",
+        "IMAGEN": null,
+        "TIEMPO": "",
+        "NIVEL": "Basico",
+        "PRECIO": null
+        
+      },
+      {
+        "ID": "19",
+        "CATEGORIA": "Otros cursos",
+        "TEMA": "Scrum",
+        "TITULO": null,
+        "PLATAFORMA": "",
+        "DESCRIPCION": "Mejora tus habilidades de gestión de proyectos aprendiendo SCRUM, un marco de trabajo ágil para equipos de desarrollo. Aprende los roles, eventos y artefactos de SCRUM para implementar proyectos de manera eficiente y efectiva",
+        "IMAGEN": null,
+        "TIEMPO": "",
+        "NIVEL": "Basico",
+        "PRECIO": null
+        
+      }
+  ]
+  
+   
+      
+

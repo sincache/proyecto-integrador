@@ -47,6 +47,7 @@
                     dudes en contactarnos. Estamos aquí para ayudarte. </p>
             </div>
         </section>
+        
 
         <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
             <div class="row w-75 shadow-lg rounded overflow-hidden">
@@ -63,38 +64,43 @@
                 <!-- Formulario de contacto (derecha) -->
                 <div class="col-md-7 bg-purple-light p-5 d-flex flex-column justify-content-center">
 
-                    <form id="contactForm">
+                    <form action="https://formsubmit.co/sincahe@mail.com" method="POST" id="contactForm"> 
+                    
 
                         <!-- Campo Nombre -->
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label> 
-                            <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre completo"
+                            <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escribe tu nombre completo"
                                 required>
-                        </div>
+                        <!-- </div> -->
 
                         <!-- Campo Correo Electrónico -->
                         <div class="mb-3">
                             <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com"
+                            <input type="email"  name="email"  class="form-control" id="email" placeholder="tucorreo@ejemplo.com"
                                 required>
-                        </div>
+                        <!-- </div> -->
 
                         <!-- Campo Teléfono -->
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="text" class="form-control" id="telefono"
+                            <input type="number"  name="telefono" class="form-control" id="telefono"
                                 placeholder="(Opcional) Tu número de teléfono">
-                        </div>
+                        <!-- </div> -->
 
                         <!-- Campo Mensaje -->
                         <div class="mb-3">
                             <label for="mensaje" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" rows="4"
+                            <textarea name="mensaje" class="form-control" id="mensaje" rows="4"
                                 placeholder="Escribe tu mensaje aquí..." required></textarea>
                         </div>
+                
                         <!-- Botón de Enviar -->
-                        <button id="enviar-formulario" type="submit" class="btn btn-accent mt-3">Enviar Mensaje</button>
+                         
+                          <button id="enviar-formulario" type="submit" class="btn btn-accent mt-3">Enviar Mensaje</button>
+                        
                     </form>
+                   
                 </div>
             </div>
         </div>

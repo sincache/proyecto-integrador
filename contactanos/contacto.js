@@ -1,8 +1,8 @@
-let nombre = document.getElementById("nombre");
-let telefono = document.getElementById("telefono");
-let mensaje = document.getElementById("mensaje");
-let email = document.getElementById("email");
-let botonEnviar = document.getElementById("enviar-formulario");
+const nombre = document.getElementById("nombre");
+const telefono = document.getElementById("telefono");
+const mensaje = document.getElementById("mensaje");
+const email = document.getElementById("email");
+const botonEnviar = document.getElementById("enviar-formulario");
 
 function soloLetras(texto) {
     return /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(texto);
