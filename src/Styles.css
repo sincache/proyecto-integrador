@@ -35,6 +35,9 @@ hero-section-register.App {
   to { transform: rotate(360deg); }
 }
 
+* {
+  font-family: "Roboto", serif;
+}
 
 /* Estilos generales */
 
@@ -184,6 +187,8 @@ body {
   color: white;
 }
 
+/* ---------------------------------------------------------------------------------------- */
+
 /* Sección de Cursos */
 .features {
   padding: var(--spacing-lg) 0;
@@ -309,6 +314,8 @@ body {
   opacity: 0.8;
 
 }
+
+/* --------------------------------------------------------------------------------------------- */
 
 /* Sección de Inscripción */
 .enrollment {
@@ -525,8 +532,8 @@ body {
   text-align: center;
 }
 
-.form-label {
-  align-items: center;
+label.form-label {
+  text-align: center;
 }
 
 /* Aplicar opacidad */
@@ -582,6 +589,70 @@ button.btn-accent:hover {
   color: white;
 }
 
+
+/* ------------------------------------------------------------------------------- */
+
+/* Seccion de Contactanos */
+
+/* Alinear texto conctactanos al centro */
+.hero-section-contactanos {
+  display: flex;               /* Activa Flexbox */
+  justify-content: center;     /* Centra horizontalmente */
+  align-items: center;         /* Centra verticalmente */
+  height: 100vh;               /* Hace que la sección ocupe toda la altura de la pantalla */
+  text-align: center;          /* Centra el texto dentro del contenedor */
+  
+  position: relative;                  /* Necesario para el overlay */
+  background-image: url('../src/assets/images/Mujer\ 1.jpg'); /* Cambia 'tu-imagen.jpg' por el nombre de tu archivo */
+  background-size: cover;             /* Hace que la imagen cubra toda la sección */
+  background-position: center;        /* Centra la imagen */
+  background-repeat: no-repeat;       /* Evita que la imagen se repita */
+  height: 100vh;
+}
+
+/* Aplicar opacidad */
+.hero-section-contactanos::before {
+  content: '';                        /* Crea el pseudo-elemento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);  /* Negro con 50% de opacidad */
+  z-index: 1;    
+}
+
+@media (max-width: 1200px) {
+  .row.w-75 {
+      width: 95% !important;
+  }
+}
+
+/* Sobreponer letras para no aplicar opacidad*/
+.hero-section-contactanos .container {
+  position: relative;
+  z-index: 2;                         /* Coloca el texto por encima del overlay */
+}
+
+.container-fluid{
+  display: flex;
+  max-width: 1200px;
+}
+
+/* Fromulario */
+.bg-purple-light{
+  background-color: rgba(0, 0, 0, 0.5); /* Gris con 50% de opacidad */
+  border-radius: 10px; /* Bordes redondeados para un mejor look */
+  color: white; 
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 4px 8px rgba(134, 134, 134, 0.2); /* Sombra suave */
+  flex-direction: column;
+  text-align: center;
+  gap:15px;
+  display: flex;
+}
+
+
 /* --------------------------------------------------------------------------------- */
 
 /* Estilo de NavBar */
@@ -623,7 +694,7 @@ button.btn-accent:hover {
 .card-img-top {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  object-fit: cover; /* Esta propiedad hace que la imagen se ajuste al tamaño del contenedor */
 }
 
 .card-title {
@@ -716,6 +787,7 @@ footer {
   );
   color: #ffffff;
   padding: 1rem 0;
+  display: flex;
 }
 
 .footer-container {
@@ -862,3 +934,10 @@ footer {
   }
 }
 
+a.btn-accent {
+  color: #ffffff;
+}
+
+a.btn-accent:hover {
+  color: #00c2cb;
+}

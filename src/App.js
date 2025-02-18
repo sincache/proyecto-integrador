@@ -14,9 +14,12 @@ import QuienesSomos from './components/Quienes_Somos/QuienesSomos';
 import MisionVisionValores from './components/Quienes_Somos/MisionVisionValores';
 import TarjetasPresentacion from './components/Quienes_Somos/TarjetasPresentacion';
 import Register from './components/Register/Register';
+import Sing_in from './components/Sing_in/Sing_in';
+import Cursos from './components/Cursos/Cursos';
+import Contactanos from './components/Contacto/Contactanos';
 
 
-function HomePage() {
+function QuienesSomosCompleta() {
   return (
     <>
       <QuienesSomos />
@@ -29,32 +32,19 @@ function HomePage() {
 function App() {
   return (
     <Router>
-      <div>
-        <Header />
-        <main>
-          <HomePage />
-        </main>
-        <Footer />
-      </div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/QuienesSomos" element={<QuienesSomosCompleta />} />
+        <Route path="/Unirse" element={<Sing_in />} />
+        <Route path="/Cursos" element={<Cursos />} />
+        <Route path="/Contactanos" element={<Contactanos />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }
 
-/* function App() {
-  return (
-    <Router>
-      <div>
-        <Header />
-        <main>
-          <Home />
-          <HomePage />
-          <Register />
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  );
-} */
 
 
 export default App;

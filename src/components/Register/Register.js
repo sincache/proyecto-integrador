@@ -20,7 +20,7 @@ const Register = () => {
                     <input type="password" class="form-control" id="password" placeholder="Crea una contraseña" required />
                 </div>
                 <div class="cta-buttons">
-                <button type="submit" class="btn btn-accent">Registrarse</button>
+                    <button type="submit" class="btn btn-accent">Registrarse</button>
                 </div>
             </form>
         </div>

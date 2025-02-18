@@ -49,6 +49,11 @@
     
 }
 
+.row.w-75 {
+    display: flex;
+    max-width: 1080px;
+}
+
 /* Aplicar opacidad */
 .hero-section::before {
     content: '';                        /* Crea el pseudo-elemento */
@@ -61,6 +66,12 @@
     z-index: 1;    
 }
 
+@media (max-width: 768px) {
+    .row.w-75 {
+        width: 95% !important;
+    }
+}
+
 
 /* Sobreponer letras para no aplicar opacidad*/
 .hero-section .container {
@@ -69,7 +80,9 @@
 }
 
 
-
+.container-fluid{
+    display: flex;
+}
 
 /* Fromulario */
 .bg-purple-light{
@@ -436,3 +449,4 @@ footer {
         text-align: center;
     }
 }
+
