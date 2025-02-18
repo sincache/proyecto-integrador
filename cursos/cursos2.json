@@ -7,10 +7,13 @@
       "CATEGORIA": "Database",
       "TEMA": "Administrador de base de datos",
       "TITULO": "Administrador de bases de datos relacionales",
+      "PLATAFORMA": "Coursera",
       "DESCRIPCION": "Se explican los fundamentos de la administración de una base de datos a través de un sistema gestor. Desde el modelado de diferentes datos, la consulta a la información almacenada de una tienda internacional y su implementación en la nube para mantener en óptimas condiciones la información.",
-      "IMAGEN": "sin información",
+      "IMAGEN": "/cursos/imagenesCursos/administradorbasedatos.jpg",
       "TIEMPO": "10 horas",
-      "NIVEL": "Básico"
+      "NIVEL": "Básico",
+      "PRECIO": 0,
+      "ENLACE": "https://www.coursera.org/learn/foundations-data?specialization=google-data-analytics"
     },
     {
       "ID": "12",
@@ -19,7 +22,7 @@
       "TITULO": "Introducción práctica a los comandos Linux y Shell Scripting",
       "PLATAFORMA": "Coursera",
       "DESCRIPCION": "Este curso proporciona una comprensión práctica de los comandos shell comunes de Linux / UNIX. En este curso amigable para principiantes, usted aprenderá acerca de los fundamentos de Linux, comandos Shell, y Bash shell scripting.",
-      "IMAGEN": "sin información",
+      "IMAGEN": "/cursos/imagenesCursos/linux.png",
       "TIEMPO": "10 horas",
       "NIVEL": "Básico",
       "PRECIO": 0,
@@ -32,7 +35,7 @@
       "TITULO": "Curso de programación orientada a objetos",
       "PLATAFORMA": "videoscurso.co",
       "DESCRIPCION": "En este curso aprenderás los fundamentos de la programación orientada a objetos. Conocerás sobre las prácticas, los conocimientos correctos y profundizaremos en por qué es una metodología poderosa en el mundo de la programación y desarrollo del software.",
-      "IMAGEN": "sin información",
+      "IMAGEN": "/cursos/imagenesCursos/poo.png",
       "TIEMPO": "8 horas aprox.",
       "NIVEL": "Básico",
       "PRECIO": 0,
@@ -58,7 +61,7 @@
         "TITULO": null,
         "PLATAFORMA": "",
         "DESCRIPCION": "Explora Microsoft Azure, una de las principales plataformas de servicios en la nube. Aprende a implementar, administrar y asegurar soluciones en la nube utilizando las herramientas y servicios de Azure.",
-        "IMAGEN": null,
+        "IMAGEN": "/cursos/imagenesCursos/Azure.jpg",
         "TIEMPO": "",
         "NIVEL": "Basico",
         "PRECIO": null
