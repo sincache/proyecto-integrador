@@ -1,3 +1,11 @@
+/* Fuente Roboto de Google Fonts */
+
+.roboto {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
 }
@@ -18,11 +26,18 @@
   font-size: large;
 }
 
+hero-section-register.App {
+  text-align: center;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
+* {
+  font-family: "Roboto", serif;
+}
 
 /* Estilos generales */
 
@@ -48,7 +63,380 @@ body {
   --purple-dark: #2D2A3F;
   --purple-light: #413C5A;
   --accent: #00c2cb;
+  --spacing-lg: 4rem;
+  --spacing-md: 2rem;
+  --spacing-sm: 1rem;
+  --font: Roboto, sans-serif;
 }
+
+/* --------------------------------------------------------------------------------- */
+
+/* Estilos de Home */
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+#imagen-presentacion {
+  width: 100%;
+  height: 100%;
+  margin: 0 0;
+  padding: 0;
+  display: block;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  background-image: linear-gradient(180deg, 
+      rgba(41,32,76,1) 0%, 
+      rgba(40,27,94,1) 25%, 
+      rgba(39,26,95,1) 50%, 
+      rgba(39,25,96,1) 75%, 
+      rgba(23,21,29,1) 100%
+  );
+  background-attachment: fixed;
+  color: white;
+}
+
+/* Contenedor */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+/* Hero Section */
+.hero {
+  padding: var(--spacing-lg) 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-light);
+  text-align: center;
+  column-gap: 10px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-light);
+  opacity: 0.9;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+/* Botones */
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  margin-top: var(--spacing-md);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ff1f71;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #00c2cb;
+  color: #00c2cb;
+  border-radius: 25px;
+  padding: 8px 25px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: #00c2cb;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #00c2cb;
+  color: white;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* Sección de Cursos */
+.features {
+  padding: var(--spacing-lg) 0;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-light);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.feature-card {
+  padding: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card h3 {
+  color: var(--text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.feature-card p {
+  color: var(--text-light);
+  opacity: 0.8;
+  margin-bottom: var(--spacing-sm);
+}
+
+.link-arrow {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.link-arrow:hover {
+  transition: all 0.5s ease-out;
+  color: #00c2cb;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .features-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+      flex-direction: column;
+  }
+
+  .btn {
+      width: 100%;
+      text-align: center;
+  }
+}
+/* Sección de Beneficios */
+.benefits {
+  padding: var(--spacing-lg) 0;
+}
+
+.benefits .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.benefits-content h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-light);
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+.benefits-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+/* Logo Container */
+.logo-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 75%;
+  height: 75%;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.8;
+
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* Sección de Inscripción */
+.enrollment {
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+}
+
+.enrollment h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-light);
+}
+
+.enrollment p {
+  max-width: 600px;
+  margin: 0 auto var(--spacing-lg);
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+.enrollment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.enrollment-step {
+  background: rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-md);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.enrollment-step:hover {
+  transform: translateY(-5px);
+}
+
+.enrollment-step h3 {
+  color: var(--text-light);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.enrollment-step p {
+  color: var(--text-light);
+  opacity: 0.8;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Botón Saber Más */
+.cta-bottom {
+  margin-top: var(--spacing-md);
+}
+
+.btn-primary.btn-lg {
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .benefits .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+
+  .benefits-list li {
+      text-align: left;
+  }
+
+  .enrollment-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-sm);
+  }
+
+  .logo-container {
+      margin-top: var(--spacing-md);
+      max-width: 300px;
+  }
+}
+
+/* Animación para el logo */
+@keyframes rotateCircle {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.logo-container::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
+  border: 3px solid rgba(255, 20, 147, 0.2);
+  border-radius: 80%;
+  animation: rotateCircle 50s linear infinite;
+}
+
+.logo-container::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  right: -15%;
+  bottom: -15%;
+  border: 2px solid rgba(255, 20, 147, 0.1);
+  border-radius: 50%;
+  animation: rotateCircle 30s linear infinite reverse;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+/* Sección de Quienes Somos  */
 
 .hero-section {
   padding: 6rem 0;
@@ -76,7 +464,7 @@ body {
 }
 
 .team-card {
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   transition: transform 0.3s ease;
   display: flex;
@@ -86,13 +474,13 @@ body {
   margin: auto;
   position: relative;
   align-items: center;
+  background-color: transparent;
 }
+
 
 .team-card:hover {
   transform: translateY(-5px);
 }
-
-
 
 .social-links a {
   color: var(--accent);
@@ -109,8 +497,170 @@ body {
   border-radius: 20px;
   overflow: hidden;
 }
+/* --------------------------------------------------------------------------------- */
+
+/* Sección de Registro */
+.hero-section-register {
+  display: flex;
+  /* Activa Flexbox */
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  height: 100vh;
+  /* Hace que la sección ocupe toda la altura de la pantalla */
+  text-align: center;
+  /* Centra el texto dentro del contenedor */
+
+  position: absolute;
+  /* Necesario para el overlay */
+  background-image: url('../src/assets/images/Mujer\ 1.jpg');
+  /* Cambia 'tu-imagen.jpg' por el nombre de tu archivo */
+  background-size: cover;
+  /* Hace que la imagen cubra toda la sección */
+  background-position: center;
+  /* Centra la imagen */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  height: 100vh;
+  padding: 6rem 0;
+  flex-direction: column;
+
+}
+
+.display-4 {
+  text-align: center;
+}
+
+label.form-label {
+  text-align: center;
+}
+
+/* Aplicar opacidad */
+.hero-section-register::before {
+  content: '';
+  /* Crea el pseudo-elemento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Negro con 50% de opacidad */
+  z-index: 1;
+}
+
+/* Sobreponer letras para no aplicar opacidad*/
+.hero-section-register .container-register {
+  position: relative;
+  z-index: 2;
+  /* Coloca el texto por encima del overlay */
+}
+
+/* Fromulario */
+.bg-purple-light {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Gris con 50% de opacidad */
+  border-radius: 10px;
+  /* Bordes redondeados para un mejor look */
+  color: white;
+  padding: 20px;
+  /* Espaciado interno */
+  box-shadow: 0 4px 8px rgba(134, 134, 134, 0.2);
+  /* Sombra suave */
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+
+/* Boton color rosa */
+button.btn-accent {
+  background-color: #ff1f71;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  padding: 8px 25px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+button.btn-accent:hover {
+  background-color: #00c2cb;
+  color: white;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+
+/* Seccion de Contactanos */
+
+/* Alinear texto conctactanos al centro */
+.hero-section-contactanos {
+  display: flex;               /* Activa Flexbox */
+  justify-content: center;     /* Centra horizontalmente */
+  align-items: center;         /* Centra verticalmente */
+  height: 100vh;               /* Hace que la sección ocupe toda la altura de la pantalla */
+  text-align: center;          /* Centra el texto dentro del contenedor */
+  
+  position: relative;                  /* Necesario para el overlay */
+  background-image: url('../src/assets/images/Mujer\ 1.jpg'); /* Cambia 'tu-imagen.jpg' por el nombre de tu archivo */
+  background-size: cover;             /* Hace que la imagen cubra toda la sección */
+  background-position: center;        /* Centra la imagen */
+  background-repeat: no-repeat;       /* Evita que la imagen se repita */
+  height: 100vh;
+}
+
+/* Aplicar opacidad */
+.hero-section-contactanos::before {
+  content: '';                        /* Crea el pseudo-elemento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);  /* Negro con 50% de opacidad */
+  z-index: 1;    
+}
+
+@media (max-width: 1200px) {
+  .row.w-75 {
+      width: 95% !important;
+  }
+}
+
+/* Sobreponer letras para no aplicar opacidad*/
+.hero-section-contactanos .container {
+  position: relative;
+  z-index: 2;                         /* Coloca el texto por encima del overlay */
+}
+
+.container-fluid{
+  display: flex;
+  max-width: 1200px;
+}
+
+/* Fromulario */
+.bg-purple-light{
+  background-color: rgba(0, 0, 0, 0.5); /* Gris con 50% de opacidad */
+  border-radius: 10px; /* Bordes redondeados para un mejor look */
+  color: white; 
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 4px 8px rgba(134, 134, 134, 0.2); /* Sombra suave */
+  flex-direction: column;
+  text-align: center;
+  gap:15px;
+  display: flex;
+}
+
+
+/* --------------------------------------------------------------------------------- */
 
 /* Estilo de NavBar */
+#logo-header {
+  width: 150px;
+  height: 75px;
+}
+
 .navbar-custom {
   background-color: #1a1a2e;
   padding: 15px 0;
@@ -124,6 +674,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  min-width: 885px;
 }
 
 /* LOGO y botón de menú de hamburguesa se mantienen a la izquierda */
@@ -135,7 +686,7 @@ body {
 
 /* LOGO */
 .navbar-brand {
-  font-family: 'Cursive', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: clamp(20px, 2vw, 24px);
   color: white !important;
   flex-shrink: 0;
@@ -143,7 +694,21 @@ body {
 .card-img-top {
   width: 100%;
   height: 250px;
-  object-fit: contain;
+  object-fit: cover; /* Esta propiedad hace que la imagen se ajuste al tamaño del contenedor */
+}
+
+.card-title {
+  font-family: "Roboto", serif;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.text-muted {
+  color: white !important;
+}
+
+.card-text {
+  color: #ffffff
 }
 
 /* Menú de hamburguesa */
@@ -212,7 +777,9 @@ body {
   background-color: #e01860;
 }
 
-/* Estilo del footer */
+/* --------------------------------------------------------------------------------- */
+
+/* Sección del footer */
 footer {
     background: linear-gradient(180deg,  
       #1e163d 0%, 
@@ -220,6 +787,7 @@ footer {
   );
   color: #ffffff;
   padding: 1rem 0;
+  display: flex;
 }
 
 .footer-container {
@@ -364,4 +932,12 @@ footer {
       width: 100%;
       text-align: center;
   }
+}
+
+a.btn-accent {
+  color: #ffffff;
+}
+
+a.btn-accent:hover {
+  color: #00c2cb;
 }

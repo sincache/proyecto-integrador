@@ -1,5 +1,6 @@
 // src/components/Footer.js
 import React from 'react';
+import LogoTWA from '../../assets/images/Logo_TWA_Sin_Fondo.png';
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-container">
           <div className="newsletter-section">
-            <h5>Logo</h5>
+          <img id="logo-header" src={LogoTWA} alt="Logo" />
             <p>Únete a nuestro boletín para estar al tanto de novedades y lanzamientos.</p>
             <form className="newsletter-form">
               <input type="email" placeholder="Introduce tu correo" required />

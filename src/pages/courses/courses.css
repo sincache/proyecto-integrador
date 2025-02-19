@@ -28,77 +28,78 @@
     }
 }
 
-
-
-
-
 /* Alinear texto conctactanos al centro */
 .hero-section {
-    display: flex;               /* Activa Flexbox */
-    justify-content: center;     /* Centra horizontalmente */
-    align-items: center;         /* Centra verticalmente */
-    height: 100vh;               /* Hace que la sección ocupe toda la altura de la pantalla */
-    text-align: center;          /* Centra el texto dentro del contenedor */
-    
-    position: relative;                  /* Necesario para el overlay */
-    background-image: url('../src/assets/images/Mujer\ 1.jpg'); /* Cambia 'tu-imagen.jpg' por el nombre de tu archivo */
-    background-size: cover;             /* Hace que la imagen cubra toda la sección */
-    background-position: center;        /* Centra la imagen */
-    background-repeat: no-repeat;       /* Evita que la imagen se repita */
-    height: 100vh;
-    
-}
-
-.row.w-75 {
     display: flex;
-    max-width: 1080px;
+    /* Activa Flexbox */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    height: 100vh;
+    /* Hace que la sección ocupe toda la altura de la pantalla */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+
+    position: relative;
+    /* Necesario para el overlay */
+    background-image: url('../src/assets/images/Mujer\ 1.jpg');
+    /* Cambia 'tu-imagen.jpg' por el nombre de tu archivo */
+    background-size: cover;
+    /* Hace que la imagen cubra toda la sección */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    height: 100vh;
+
 }
 
 /* Aplicar opacidad */
 .hero-section::before {
-    content: '';                        /* Crea el pseudo-elemento */
+    content: '';
+    /* Crea el pseudo-elemento */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);  /* Negro con 50% de opacidad */
-    z-index: 1;    
-}
-
-@media (max-width: 768px) {
-    .row.w-75 {
-        width: 95% !important;
-    }
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Negro con 50% de opacidad */
+    z-index: 1;
 }
 
 
 /* Sobreponer letras para no aplicar opacidad*/
 .hero-section .container {
     position: relative;
-    z-index: 2;                         /* Coloca el texto por encima del overlay */
+    z-index: 2;
+    /* Coloca el texto por encima del overlay */
 }
 
 
-.container-fluid{
-    display: flex;
-}
+
 
 /* Fromulario */
-.bg-purple-light{
-    background-color: rgba(0, 0, 0, 0.5); /* Gris con 50% de opacidad */
-    border-radius: 10px; /* Bordes redondeados para un mejor look */
-    color: white; 
-    padding: 20px; /* Espaciado interno */
-    box-shadow: 0 4px 8px rgba(134, 134, 134, 0.2); /* Sombra suave */
+.bg-purple-light {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Gris con 50% de opacidad */
+    border-radius: 10px;
+    /* Bordes redondeados para un mejor look */
+    color: white;
+    padding: 20px;
+    /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(134, 134, 134, 0.2);
+    /* Sombra suave */
     flex-direction: column;
     text-align: center;
-    gap:15px;
+    gap: 15px;
 }
 
-/* Boton color rosa */ 
+/* Boton color rosa */
 button.btn-accent {
-    background-color: #ff1f71; /* Rosa vibrante */
+    background-color: #ff1f71;
+    /* Rosa vibrante */
     color: white;
     border: none;
     padding: 12px 20px;
@@ -449,4 +450,3 @@ footer {
         text-align: center;
     }
 }
-
