@@ -1,0 +1,104 @@
+[
+  {
+    "ID": "1",
+    "CATEGORIA": "Back end",
+    "TITULO": "Curso de Java: desde cero a experto",
+    "DESCRIPCION": "En este curso de Java aprenderás a manejar de manera eficiente los conceptos y técnicas de programación en Java, y dominar de manera práctica los elementos de la sintaxis del lenguaje, la programación orientada a objetos, estructuras de datos, y el desarrollo de aplicaciones avanzadas.",
+    "IMAGEN": "/cursos/imagenesCursos/java.jpg",
+    "TIEMPO": "8 horas aprox.",
+    "NIVEL": "Básico-Experto",
+    "ENLACE": "https://edutin.com/curso-de-java"
+  },
+  {
+    "ID": "2",
+    "CATEGORIA": "Back end",
+    "TITULO": "Introducción a la programación con Python",
+    "DESCRIPCION": "Este curso te guiará desde un nivel básico hasta una comprensión sólida de los fundamentos de Python. Aprenderás a escribir código de forma clara y eficiente a través de lecciones interactivas, ejercicios prácticos y problemas reales.",
+    "IMAGEN": "/cursos/imagenesCursos/pyton.jpg",
+    "TIEMPO": "8 horas aprox.",
+    "NIVEL": "Básico",
+    "ENLACE": "sin informacion"
+  },
+  {
+    "ID": "3",
+    "CATEGORIA": "Front end",
+    "TITULO": "Curso de HTML5, CSS3 e Javascript",
+    "DESCRIPCION": "Conviértete en un desarrollador web completo aprendiendo HTML, CSS y JavaScript. Descubre cómo crear páginas web atractivas, interactivas y responsive que se ven geniales en cualquier dispositivo.",
+    "IMAGEN": "/cursos/imagenesCursos/frontend.png",
+    "TIEMPO": "20 horas aprox.",
+    "NIVEL": "Básico-Avanzado",
+    "ENLACE": "sin informacion"
+  },
+  {
+    "ID": "4",
+    "CATEGORIA": "Front end",
+    "TITULO": "React JS para principiantes",
+    "DESCRIPCION": "Aprende a construir interfaces de usuario modernas y dinámicas con React, una biblioteca de JavaScript popular y ampliamente utilizada en el desarrollo web. Este curso te guiará desde los conceptos básicos hasta la creación de aplicaciones web avanzadas.",
+    "IMAGEN": "/cursos/imagenesCursos/Reactf.jpg",
+    "TIEMPO": "2 horas",
+    "NIVEL": "Básico",
+    "ENLACE": "sin informacion"
+  },
+  {
+    "ID": "5",
+    "CATEGORIA": "Database",
+    "TITULO": "Curso de MongoDB",
+    "DESCRIPCION": "En este curso de MongoDB, comprenderás desde los fundamentos y modelado de datos hasta la optimización del rendimiento y ejecución de consultas avanzadas.",
+    "IMAGEN": "/cursos/imagenesCursos/MongoDB.png",
+    "TIEMPO": "8 horas aprox.",
+    "NIVEL": "Avanzado",
+    "ENLACE": "sin informacion"
+  },
+  {
+    "ID": "6",
+    "CATEGORIA": "Database",
+    "TITULO": "Introducción a MYSQL",
+    "DESCRIPCION": "Empezarás este curso cubriendo la organización de los datos, las tablas y las mejores prácticas para la construcción de bases de datos.",
+    "IMAGEN": "/cursos/imagenesCursos/MYSQL.png",
+    "TIEMPO": "2 horas",
+    "NIVEL": "Básico",
+    "ENLACE": "sin informacion"
+  },
+  {
+    "ID": "7",
+    "CATEGORIA": "Otros cursos",
+    "TITULO": "Curso de C++",
+    "DESCRIPCION": "Este curso está diseñado para introducirte al mundo de la programación en C++. Aprenderás desde los conceptos básicos hasta técnicas avanzadas.",
+    "IMAGEN": "/cursos/imagenesCursos/c++.jpg",
+    "TIEMPO": "8 horas aprox.",
+    "NIVEL": "Básico",
+    "ENLACE": "sin informacion"
+  },
+  {
+    "ID": "8",
+    "CATEGORIA": "Otros cursos",
+    "TITULO": "Curso de Git y GitHub",
+    "DESCRIPCION": "En el curso gratuito de Introducción a Git y GitHub vas a poder aprender los conceptos necesarios para poder manejar repositorios remotos mediante el manejador de versiones Git y crear, administrar, compartir y actualizar repositorios remotos mediante GitHub.",
+    "IMAGEN": "/cursos/imagenesCursos/gitygithub.png",
+    "TIEMPO": "4 horas",
+    "NIVEL": "Básico",
+    "ENLACE": "sin informacion"
+  },
+  {
+    "ID": "9",
+    "CATEGORIA": "Otros cursos",
+    "TITULO": "Estructura de datos",
+    "DESCRIPCION": "Este es el primer curso del Certificado en Análisis de datos de Google. Organizaciones de todo tipo necesitan analistas de datos que les ayuden a mejorar sus procesos, identificar oportunidades y tendencias, lanzar nuevos productos y tomar decisiones meditadas.",
+    "IMAGEN": "/cursos/imagenesCursos/administraciondatos.png",
+    "TIEMPO": "10 horas",
+    "NIVEL": "Básico",
+    "ENLACE": "sin informacion"
+  },
+  {
+    "ID": "10",
+    "CATEGORIA": "Otros cursos",
+    "TITULO": "Lógica de programación",
+    "DESCRIPCION": "En el curso verás principios y técnicas que se utilizan para resolver problemas y desarrollar algoritmos en el ámbito de la programación. Se basa en la capacidad de descomponer un problema complejo en partes más pequeñas y manejables, y luego diseñar una serie de pasos lógicos para resolver cada parte.",
+    "IMAGEN": "/cursos/imagenesCursos/logicadeprogramacion.png",
+    "TIEMPO": "10 horas",
+    "NIVEL": "Básico",
+    "ENLACE": "sin informacion"
+  }
+ 
+
+]
