@@ -678,10 +678,9 @@ button.btn-accent:hover {
 }
 
 /* LOGO y botón de menú de hamburguesa se mantienen a la izquierda */
-.navbar-brand-container {
+.navbar-custom {
   display: flex;
   align-items: center;
-  gap: 1rem;
 }
 
 /* LOGO */
@@ -733,10 +732,14 @@ button.btn-accent:hover {
 
 /* Enlaces alineados a la derecha */
 .navbar-links {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
-  gap: 1.5rem;
   color: #ffffff;
+}
+
+a {
+  margin: 1rem ;
 }
 
 /* Botones alineados a la derecha */

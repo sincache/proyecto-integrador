@@ -17,6 +17,7 @@ import Register from './components/Register/Register';
 import Sing_in from './components/Sing_in/Sing_in';
 import Cursos from './components/Cursos/Cursos';
 import Contactanos from './components/Contacto/Contactanos';
+import AgregarCurso from './components/Cursos/AgregarCursos';
 
 
 function QuienesSomosCompleta() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/QuienesSomos" element={<QuienesSomosCompleta />} />
         <Route path="/Unirse" element={<Sing_in />} />
         <Route path="/Cursos" element={<Cursos />} />
+        <Route path="/Cursos/Agregar" element={<AgregarCurso />} />
         <Route path="/Contactanos" element={<Contactanos />} />
       </Routes>
       <Footer />
