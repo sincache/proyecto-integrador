@@ -102,6 +102,7 @@ const Cursos = () => {
                 "PRECIO": 0,
                 "ENLACE": "https://www.datacamp.com/es/courses/introduction-to-sql/"
               }
+            
         ];
         setCursos(mockCursos);
         setLoading(false);
