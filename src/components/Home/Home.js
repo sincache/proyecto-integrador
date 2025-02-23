@@ -65,7 +65,7 @@ const Home = () => {
                         </ul>
                     </div>
                     <div class="logo-container">
-                        <img id="logo" src={LogoTWA} alt="TechWomen Academy Logo" class="logo" />
+                        <img id="logo-body" src={LogoTWA} alt="TechWomen Academy Logo" class="logo" />
                     </div>
                 </div>
             </section>
