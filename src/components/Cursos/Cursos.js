@@ -37,7 +37,8 @@ const Cursos = () => {
       <section className="container my-5">
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h2>Nuestros Cursos</h2>
-          <Link to="/Cursos/Agregar" className="btn btn-primary">Agregar Nuevo Curso</Link>
+          <Link to="/Cursos/Agregar" className="btn btn-primary">Agregar Nuevo Curso</Link> 
+          <Link className="btn btn-secondary">Explora tu catálogo</Link>
         </div>
 
         <section className="container my-5">
