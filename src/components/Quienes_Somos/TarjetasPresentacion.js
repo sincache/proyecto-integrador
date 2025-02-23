@@ -82,7 +82,7 @@ const TarjetaPresentacion = () => {
                                     <h5 class="card-title">Paolet Torres</h5>
                                     <p class="card-subtitle mb-2 text-muted">Java Deveolper</p>
                                     <p class="card-text">Desarrolladora Full-Satck 
-                                    Soy una persona motivada por el aprendizaje y por el poder comprender cómo funciona el mundo que me rodea. Este impulso me ha llevado a adentrarme en la programación e involucrarme en el fascinante mundo de la tecnología.</p>
+                                    Soy una persona motivada por el aprendizaje, este impulso me ha llevado a adentrarme en la programación e involucrarme en el fascinante mundo de la tecnología.</p>
                                     <div class="social-links">
                                         <a href="#"><i class="fab fa-linkedin"></i></a>
                                         <a href="#"><i class="fab fa-twitter"></i></a>
