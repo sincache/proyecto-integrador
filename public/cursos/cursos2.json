@@ -60,7 +60,7 @@
         "CATEGORIA": "DevOps",
         "TITULO": "Docker",
         "DESCRIPCION": "Domina Docker, una plataforma líder para la creación, despliegue y gestión de aplicaciones en contenedores. Aprende a crear, probar y desplegar contenedores para aplicaciones escalables y portátiles.",
-        "IMAGEN": "/cursos/imagenesCursos/docker1.png",
+        "IMAGEN": "/cursos/imagenesCursos/Docker1.png",
         "TIEMPO": "4 horas",
         "NIVEL": "Basico",
         "ENLACE":"sin informacion"

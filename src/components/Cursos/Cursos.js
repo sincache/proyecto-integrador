@@ -37,7 +37,8 @@ const Cursos = () => {
       <section className="container my-5">
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h2>Nuestros Cursos</h2>
-          <Link to="/Cursos/Agregar" className="btn btn-primary">Agregar Nuevo Curso</Link>
+          <Link to="/Cursos/Agregar" className="btn btn-primary">Agregar Nuevo Curso</Link> 
+          <Link className="btn btn-secondary">Explora tu catálogo</Link>
         </div>
 
         <section className="container my-5">
@@ -50,7 +51,7 @@ const Cursos = () => {
                                     className="card-img-top" 
                                     alt={curso.TITULO} 
                                 />
-                                <div className="card-body d-flex flex-column">
+                                <div className="card-body d-flex flex-column text-white">
                                     <h5 className="card-title">{curso.TITULO}</h5>
                                     <p className="card-text">{curso.DESCRIPCION}</p>
                                     <ul className="list-unstyled mt-3">

@@ -18,6 +18,7 @@ import Sing_in from './components/Sing_in/Sing_in';
 import Cursos from './components/Cursos/Cursos';
 import Contactanos from './components/Contacto/Contactanos';
 import AgregarCurso from './components/Cursos/AgregarCursos';
+import EliminarCurso from './components/Cursos/EliminarCurso';
 
 
 function QuienesSomosCompleta() {
@@ -40,6 +41,7 @@ function App() {
         <Route path="/Unirse" element={<Sing_in />} />
         <Route path="/Cursos" element={<Cursos />} />
         <Route path="/Cursos/Agregar" element={<AgregarCurso />} />
+        <Route path="/Cursos/Eliminar" element={<EliminarCurso />} />
         <Route path="/Contactanos" element={<Contactanos />} />
       </Routes>
       <Footer />

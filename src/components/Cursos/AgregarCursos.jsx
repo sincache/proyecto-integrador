@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const AgregarCurso = () => {
   const [nuevoCurso, setNuevoCurso] = useState({
@@ -71,6 +72,9 @@ const AgregarCurso = () => {
           </div>
           <div className="col-md-12 text-end">
             <button type="submit" className="btn btn-success">Guardar Curso</button>
+          </div>
+          <div className="col-md-12 text-end">
+            <Link to="/Cursos/Eliminar" className="btn btn-danger m-0">Eliminar Curso</Link>
           </div>
         </div>
       </form>
