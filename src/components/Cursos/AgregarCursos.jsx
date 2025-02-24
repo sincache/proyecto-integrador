@@ -30,13 +30,13 @@ const AgregarCurso = () => {
       return;
     } 
     function soloLetras(texto){
-      if(/ʌ[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(texto)){
+      if(/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(texto)){
         console.log("El texto es válido.");
       } else {
-        console.log("El texto contiene caracteres no permitidos.");
+        alert("El texto contiene caracteres no permitidos.");
       }
     }
-    
+    soloLetras("Solo letras");
 
     // Obtener cursos guardados o inicializar lista
     const cursosGuardados = JSON.parse(localStorage.getItem('cursos')) || [];
