@@ -19,6 +19,8 @@ import Cursos from './components/Cursos/Cursos';
 import Contactanos from './components/Contacto/Contactanos';
 import AgregarCurso from './components/Cursos/AgregarCursos';
 import EliminarCurso from './components/Cursos/EliminarCurso';
+import EditarCurso from './components/EditarCurso/EditarCurso';
+
 
 
 function QuienesSomosCompleta() {
@@ -43,6 +45,7 @@ function App() {
         <Route path="/Cursos/Agregar" element={<AgregarCurso />} />
         <Route path="/Cursos/Eliminar" element={<EliminarCurso />} />
         <Route path="/Contactanos" element={<Contactanos />} />
+        <Route path="/Cursos/Editar/:id" element={<EditarCurso />} /> 
       </Routes>
       <Footer />
     </Router>
