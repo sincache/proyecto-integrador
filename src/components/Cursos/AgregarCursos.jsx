@@ -29,7 +29,15 @@ const AgregarCurso = () => {
     if (!nuevoCurso.ID || !nuevoCurso.TITULO || !nuevoCurso.CATEGORIA) {
       alert('Por favor, completa los campos obligatorios.');
       return;
+    } 
+    function soloLetras(texto){
+      if(/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(texto)){
+        console.log("El texto es válido.");
+      } else {
+        alert("El texto contiene caracteres no permitidos.");
+      }
     }
+    soloLetras("Solo letras");
 
     // Obtener cursos guardados o inicializar lista
     const cursosGuardados = JSON.parse(localStorage.getItem('cursos')) || [];
@@ -48,7 +56,7 @@ const AgregarCurso = () => {
       <form onSubmit={handleSubmit} className="mb-5">
         <div className="row g-3">
           <div className="col-md-2">
-            <input type="number" name="ID" placeholder="ID" className="form-control"   required />
+            <input type="text" name="ID" placeholder="ID" className="form-control" value={nuevoCurso.ID} onChange={handleChange} required /> 
           </div>
           <div className="col-md-4">
             <input type="text" name="CATEGORIA" placeholder="Categoría" className="form-control" value={nuevoCurso.CATEGORIA} onChange={handleChange} required />

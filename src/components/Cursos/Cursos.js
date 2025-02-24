@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaEdit } from 'react-icons/fa';
 
 const Cursos = () => {
   const [cursos, setCursos] = useState([]);
@@ -65,6 +66,7 @@ const Cursos = () => {
                                     <a href={curso.ENLACE} target="_blank" rel="noopener noreferrer" className="btn btn-accent mt-auto">
                                         Más Información
                                     </a>
+                                    <Link to={`/Cursos/Editar/${curso.ID}`} className="btn mt-2"><FaEdit /> </Link>
                                 </div>
                             </div>
                         </div>
