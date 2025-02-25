@@ -18,7 +18,7 @@ const AgregarCurso = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setNuevoCurso({ ...nuevoCurso, [name]: value.replace(/[^a-zA-Z-Ññ-ü, é, á, í, ó, ú, ñ, Ñ, ¿, ¡]/g, '') });
+    setNuevoCurso({ ...nuevoCurso, [name]: value.replace() });
   };
   
 
