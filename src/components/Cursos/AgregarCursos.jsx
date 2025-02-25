@@ -33,7 +33,7 @@ const AgregarCurso = () => {
       if(/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(texto)){
         console.log("El texto es válido.");
       } else {
-        alert("El texto contiene caracteres no permitidos.");
+        alert('El texto caracteres no permitidos.');
       }
     }
     soloLetras("Solo letras");
