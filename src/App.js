@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // src/index.js
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Styles.css'; // Estilos generales de bootstrap
-
+import 'bootstrap/dist/js/bootstrap.min.js'; //menu de hamburguesa
 // Se deben importar los componentes de cada pagina
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
