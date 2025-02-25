@@ -20,6 +20,7 @@ import Contactanos from './components/Contacto/Contactanos';
 import AgregarCurso from './components/Cursos/AgregarCursos';
 import EliminarCurso from './components/Cursos/EliminarCurso';
 import EditarCurso from './components/EditarCurso/EditarCurso';
+import Iniciar from './components/Iniciar/Iniciar';
 
 
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/QuienesSomos" element={<QuienesSomosCompleta />} />
         <Route path="/Unirse" element={<Sing_in />} />
+        <Route path='/Iniciar' element={<Iniciar/>} />
         <Route path="/Cursos" element={<Cursos />} />
         <Route path="/Cursos/Agregar" element={<AgregarCurso />} />
         <Route path="/Cursos/Eliminar" element={<EliminarCurso />} />
