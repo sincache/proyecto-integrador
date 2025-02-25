@@ -202,6 +202,17 @@ justify-content: space-around;
   white-space: nowrap;
 }
 
+.btn-outline-light{
+  border: white;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 25px;
+  
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
 .btn-primary:hover {
   background-color: #00c2cb;
   color: white;
@@ -210,6 +221,12 @@ justify-content: space-around;
 .btn-secondary:hover {
   background-color: #00c2cb;
   color: white;
+}
+
+.btn-outline-light:hover{
+  background-color: #5C0AAC;
+  color: white;
+  border: none;
 }
 
 /* ---------------------------------------------------------------------------------------- */
@@ -695,7 +712,7 @@ a {
 }
 
 #logo-header {
-  width: 150px;
+  width: 230px;
   height: auto;
   cursor: pointer;
   
@@ -778,6 +795,15 @@ a {
   .nav-link {
       text-align: center;
   }
+
+  .nav-link:hover {
+    background-color: #5C0AAC;
+    color: white;
+    border: none;
+    border-radius: 25px;
+  }
+
+
 
   a.navbar-link:hover { 
     background-color: #00c2cb;
