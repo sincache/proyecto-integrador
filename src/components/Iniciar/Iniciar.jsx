@@ -17,8 +17,10 @@ const Iniciar =({setUser})=>{
         const userData = usersData.find((u) => u.username === username);
         if(!userData){
             setError('Usuario no encontrado');
-            return;
+            return; 
         }
+    
+        
         const passwordMatch = userData.password === password;
         if(passwordMatch){
             //setUser(userData.username);
@@ -38,14 +40,15 @@ const Iniciar =({setUser})=>{
                 <h2 className='text-xl font-bold md-4 text-center'>
                     Iniciar sesion
                 </h2>
-                <input type='text'placeholder='Usuario' value={username} onChange={(e) => setUsername(e.target.value)} className="w-full mb-4 p-2 border rounded-x1" required />
+                <input type='text'placeholder='Usuario' value={username} onChange={(e) => setUsername(e.target.value)} className="w-full mb-4 p-2 border rounded-x1" required /> 
+
                 <input type='password' placeholder='Contraseña' value={password} onChange={(e) => setPassword(e.target.value)} className="w-full mb-4 p-2 border rounded-x1"/>
                 {error && <p className='text-red-500 text-sm mb-2'>{error}</p>}
                 <button
                     type='submit'
-                    className='w-full bg-blue 500 text-white p-2 rounded-x1 hover:bg-blue-600'
-                >
-                    Ingresar
+                    className='w-full bg-blue 500 text-white p-2 rounded-x1 hover:bg-blue-600'> 
+                    <button class="bg-pink-500">Ingresar</button>
+                    
                 </button>
             </form>
     
