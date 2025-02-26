@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { validarGeneroCurp } from '../Cursos/utils/CorroborarCURP';
 import TerminosCondicionesModal from '../TerminosCondiciones/TerminosCondicionesModal';
 
+
 const Sing_in = () => {
     const [nombre, setNombre] = useState('');
     const [apellido, setApellido] = useState('');

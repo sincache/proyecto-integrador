@@ -67,9 +67,6 @@ const Header = ({user, onLogout }) => {
             <li className="nav-item">
               <Link className="nav-link" to="/Contactanos" onClick={closeMenu}>Contáctanos</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/TerminosCondiciones" onClick={closeMenu}>Términos y condiciones</Link>
-            </li>
           </ul>
           {/* Botones de acción */}
           <div className="d-flex justify-content-center gap-3 mt-3 mt-lg-0">
