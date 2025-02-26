@@ -23,7 +23,7 @@ const Iniciar =({setUser})=>{
         
         const passwordMatch = userData.password === password;
         if(passwordMatch){
-            //setUser(userData.username);
+            setUser(userData.username);
             localStorage.setItem('user', userData.username);
             setError('');
             navigate('/Cursos');

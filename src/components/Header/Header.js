@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import LogoTWA from '../../assets/images/TWA.navbar.png';
 
 
-const Header = ({ onLogout }) => {
+const Header = ({user, onLogout }) => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -11,7 +11,6 @@ const Header = ({ onLogout }) => {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false); // Cierra el menú al hacer clic en un enlace
-  const [user, setUser] = useState(localStorage.getItem('user') || '');
 
   //Cierra sesion
   const handleLogout = () => {
@@ -20,10 +19,6 @@ const Header = ({ onLogout }) => {
     closeMenu();
   }
 ;
-  useEffect(() => {
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) setUser(storedUser);
-  }, []);
   // Cierra el menú si se hace clic fuera
   useEffect(() => {
     const handleClickOutside = (event) => {

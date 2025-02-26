@@ -54,12 +54,12 @@ function App() {
   }
   return (
     <Router>
-      <Header onLogout={handleLogout}/>
+      <Header user={user} onLogout={handleLogout}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/QuienesSomos" element={<QuienesSomosCompleta />} />
         <Route path="/Unirse" element={<Sing_in />} />
-        <Route path='/Iniciar' element={user?<Cursos/>:<Iniciar/>} />
+        <Route path='/Iniciar' element={user?<Cursos/>:<Iniciar setUser={setUser}/>} />
         <Route path="/Cursos" element={<Cursos />} />
         <Route path="/Cursos/Agregar" element={user?<AgregarCurso/>:<Iniciar/>}/> 
         <Route path="/Cursos/Eliminar" element={<ProtectedRoute user={user}><EliminarCurso /></ProtectedRoute>} />
