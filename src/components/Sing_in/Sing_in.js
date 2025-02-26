@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { validarGeneroCurp } from '../Cursos/utils/CorroborarCURP';
-
+import TerminosCondicionesModal from '../TerminosCondiciones/TerminosCondicionesModal';
 
 const Sing_in = () => {
     const [nombre, setNombre] = useState('');
@@ -13,6 +13,15 @@ const Sing_in = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState(false);
     const [curpError, setCurpError] = useState('');
+    const [showModal, setShowModal] = useState(false);
+    const [aceptarTerminos, setAceptarTerminos] = useState(false);
+
+    const handleShowModal = () => setShowModal(true);
+    const handleCloseModal = () => setShowModal(false);
+
+    const handleCheckboxChange = (event) => {
+        setAceptarTerminos(event.target.checked);
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -41,6 +50,10 @@ const Sing_in = () => {
             return;
         }
 
+        if (!aceptarTerminos) {
+            setError('Debes aceptar los términos y condiciones');
+            return; //Hola!, aqui nomas para saludar
+        }
         console.log('Datos del formulario:', { nombre, apellido, curp, email, telefono, password });
 
         // Limpiar el formulario y mostrar el mensaje de éxito
@@ -54,8 +67,6 @@ const Sing_in = () => {
         setError('');
         setSuccess(true);
     };
-
-
 
 
     useEffect(() => {
@@ -173,10 +184,22 @@ const Sing_in = () => {
                             required
                         />
                     </div>
+                    <div className="mb-3">
+                        <input
+                        type='checkbox'
+                        id='terminos'   
+                        checked={aceptarTerminos}
+                        onChange={handleCheckboxChange}
+
+                        />
+                        <label htmlFor='terminos'>Acepto los <a href="#" onClick={handleShowModal}>Términos y Condiciones</a>
+                        </label>
+                        </div>   
                     <div className="cta-buttons">
                         <button type="submit" className="btn btn-accent">Registrarse</button>
                     </div>
                 </form>
+                <TerminosCondicionesModal show={showModal} handleClose={handleCloseModal} />
             </div>
         </section>
     );

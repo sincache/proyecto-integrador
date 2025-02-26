@@ -1,8 +1,29 @@
-import React from 'react';
-
+import React, {useState} from 'react';
+import TerminosCondicionesModal from '../TerminosCondiciones/TerminosCondicionesModal';
 
 const Register = () => {
+//funcion para que el usuario ahuevo acepte los terminos y condiciones antes del registro
+    const [showModal, setShowModal] = useState(false);
+    const [acceptedTerms, setAcceptedTerms] = useState(false);
+
+    const handleClose = () => setShowModal(false);
+    const handleShow = () => setShowModal(true);
+
+    const handleCheckboxChange = (event) => {
+        setAcceptedTerms(event.target.checked);
+    };
+    
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (!acceptedTerms) {
+        alert('Debes aceptar los términos y condiciones');
+        return;
+        }
+    
+    };
+
     return (
+        
         <section id="hero-register" class="hero-section">
         <div id="register-container" class="container">
             <h1 class="display-4">Regístrate</h1>
@@ -23,9 +44,10 @@ const Register = () => {
                     <button type="submit" class="btn btn-accent">Registrarse</button>
                 </div>
             </form>
+            <TerminosCondicionesModal show={showModal} handleClose={handleClose} />
         </div>
     </section>
     );
-}
+};
 
 export default Register
