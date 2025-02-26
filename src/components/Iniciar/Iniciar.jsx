@@ -35,18 +35,22 @@ const Iniciar =({setUser})=>{
 
     return(
 
-        <div className='flex flex-col items-center justify-center min-h-screen bg-gray-200'>
-            <form onSubmit={handleSubmit} className='flex bg-black p-5 rounded-x1 shadow-lg space-x-8'>
-                <h2 className='text-xl font-bold md-4 text-center'>
-                    Iniciar sesion
+        <div className='d-flex vh-50 vw-50 aling-items-center justify-content-center min-h-screen bg-gray-200'>
+            <form onSubmit={handleSubmit} className='bg-black p-4 rounded shadow-lg w-100' style={{maxWidth: "600px"}}>
+                <h2 className='text-center text-white mb-4'>
+                    Iniciar sesión
                 </h2> 
-
-                <input type='text'placeholder='Usuario' value={username} onChange={(e) => setUsername(e.target.value)} className="w-full mb-4 p-2 border rounded-x1" required />  
-                <input type='password' placeholder='Contraseña' value={password} onChange={(e) => setPassword(e.target.value)} className="w-full mb-4 p-2 border rounded-x1"/>
+                <div className='mb-3'>
+                <input type='text'placeholder='Usuario' value={username} onChange={(e) => setUsername(e.target.value)} className="form-control" required />  
+                </div>
+                <div className='mb-3'>
+                <input type='password' placeholder='Contraseña' value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" required/>
+                </div>
+                
                 {error && <p className='text-red-500 text-sm mb-2'>{error}</p>} 
                 <button 
                     type='submit' 
-                    className='bg-blue 500 text-pink p-2 rounded-md hover:bg-blue-600'
+                    className='btn btn-primary w-100'
                 > 
                     Ingresar 
                 </button>
