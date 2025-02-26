@@ -35,23 +35,23 @@ const Iniciar =({setUser})=>{
 
     return(
 
-        <div className='flex flex-col items-center justify-center min-h-screen'>
-            <form onSubmit={handleSubmit} className='bg-black p-6 rounded-2x1 shadow-lg w-80'>
+        <div className='flex flex-col items-center justify-center min-h-screen bg-gray-200'>
+            <form onSubmit={handleSubmit} className='flex bg-black p-5 rounded-x1 shadow-lg space-x-8'>
                 <h2 className='text-xl font-bold md-4 text-center'>
                     Iniciar sesion
-                </h2>
-                <input type='text'placeholder='Usuario' value={username} onChange={(e) => setUsername(e.target.value)} className="w-full mb-4 p-2 border rounded-x1" required /> 
+                </h2> 
 
+                <input type='text'placeholder='Usuario' value={username} onChange={(e) => setUsername(e.target.value)} className="w-full mb-4 p-2 border rounded-x1" required />  
                 <input type='password' placeholder='Contraseña' value={password} onChange={(e) => setPassword(e.target.value)} className="w-full mb-4 p-2 border rounded-x1"/>
-                {error && <p className='text-red-500 text-sm mb-2'>{error}</p>}
-                <button
-                    type='submit'
-                    className='w-full bg-blue 500 text-white p-2 rounded-x1 hover:bg-blue-600'> 
-                    <button class="bg-pink-500">Ingresar</button>
-                    
+                {error && <p className='text-red-500 text-sm mb-2'>{error}</p>} 
+                <button 
+                    type='submit' 
+                    className='bg-blue 500 text-pink p-2 rounded-md hover:bg-blue-600'
+                > 
+                    Ingresar 
                 </button>
             </form>
-    
+            
         </div>
         
     );
