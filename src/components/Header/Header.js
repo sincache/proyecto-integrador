@@ -1,16 +1,29 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import LogoTWA from '../../assets/images/TWA.navbar.png';
 
 
-const Header = () => {
+const Header = ({ onLogout }) => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const navigate = useNavigate();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false); // Cierra el menú al hacer clic en un enlace
+  const [user, setUser] = useState(localStorage.getItem('user') || '');
 
+  //Cierra sesion
+  const handleLogout = () => {
+    onLogout();
+    navigate('/Iniciar');
+    closeMenu();
+  }
+;
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) setUser(storedUser);
+  }, []);
   // Cierra el menú si se hace clic fuera
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -62,9 +75,18 @@ const Header = () => {
           </ul>
           {/* Botones de acción */}
           <div className="d-flex justify-content-center gap-3 mt-3 mt-lg-0">
-            <Link to="/Unirse" className="btn btn-primary" onClick={closeMenu}>Unirse</Link>
-            <Link to="/Iniciar" className="btn btn-outline-light" onClick={closeMenu}>Iniciar</Link>
-          </div>
+          {user ? (
+              <>
+                <span className="nav-link text-white">Bienvenido, <strong>{user}</strong></span>
+                <button onClick={handleLogout} className="btn btn-primary">Cerrar sesión</button>
+              </>
+            ) : (
+              <>
+                <Link to="/Unirse" className="btn btn-primary" onClick={closeMenu}>Unirse</Link>
+                <Link to="/Iniciar" className="btn btn-outline-light" onClick={closeMenu}>Iniciar</Link>
+              </>
+            )}          
+            </div>
         </div>
       </div>
     </nav>

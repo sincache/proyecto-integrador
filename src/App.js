@@ -1,6 +1,7 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 // src/index.js
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Styles.css'; // Estilos generales de bootstrap
@@ -21,6 +22,7 @@ import AgregarCurso from './components/Cursos/AgregarCursos';
 import EliminarCurso from './components/Cursos/EliminarCurso';
 import EditarCurso from './components/EditarCurso/EditarCurso';
 import Iniciar from './components/Iniciar/Iniciar';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 
 
 
@@ -35,17 +37,32 @@ function QuienesSomosCompleta() {
 }
 
 function App() {
+  //Obtener la sesion de las cookies
+  const [user, setUser] = useState(localStorage.getItem('user') || '');
+  //Recuperar la sesion cada que se recargue la pagina
+  useEffect(() => {
+      const storedUser = localStorage.getItem('user');
+      if(storedUser){
+        setUser(storedUser);
+      }
+    },[]
+  );
+
+  const handleLogout = () => {
+    setUser('');
+    localStorage.removeItem('user');
+  }
   return (
     <Router>
-      <Header />
+      <Header onLogout={handleLogout}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/QuienesSomos" element={<QuienesSomosCompleta />} />
         <Route path="/Unirse" element={<Sing_in />} />
-        <Route path='/Iniciar' element={<Iniciar/>} />
+        <Route path='/Iniciar' element={user?<Cursos/>:<Iniciar/>} />
         <Route path="/Cursos" element={<Cursos />} />
-        <Route path="/Cursos/Agregar" element={<AgregarCurso />} />
-        <Route path="/Cursos/Eliminar" element={<EliminarCurso />} />
+        <Route path="/Cursos/Agregar" element={user?<AgregarCurso/>:<Iniciar/>}/> 
+        <Route path="/Cursos/Eliminar" element={<ProtectedRoute user={user}><EliminarCurso /></ProtectedRoute>} />
         <Route path="/Contactanos" element={<Contactanos />} />
         <Route path="/Cursos/Editar/:id" element={<EditarCurso />} /> 
       </Routes>
