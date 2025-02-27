@@ -64,7 +64,7 @@
     "CATEGORIA": "Otros cursos",
     "TITULO": "Curso de C++",
     "DESCRIPCION": "Este curso está diseñado para introducirte al mundo de la programación en C++. Aprenderás desde los conceptos básicos hasta técnicas avanzadas.",
-    "IMAGEN": "/cursos/imagenesCursos/cpp.jpg",
+    "IMAGEN": "/cursos/imagenesCursos/c++.jpg",
     "TIEMPO": "8 horas aprox.",
     "NIVEL": "Básico",
     "ENLACE": null

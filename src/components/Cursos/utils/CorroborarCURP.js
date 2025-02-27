@@ -1,6 +1,6 @@
 
 
-function validarGeneroCurp (Curp){
+export function validarGeneroCurp (Curp){
     //validar que la entrada sea una cadena
     if (typeof Curp !== "string") {
         throw new Error ("La CURP debe ser una cadena de texto");

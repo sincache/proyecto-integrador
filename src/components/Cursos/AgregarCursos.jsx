@@ -18,8 +18,9 @@ const AgregarCurso = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setNuevoCurso({ ...nuevoCurso, [name]: value });
+    setNuevoCurso({ ...nuevoCurso, [name]: value.replace() });
   };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -64,19 +65,19 @@ const AgregarCurso = () => {
             <input type="text" name="TITULO" placeholder="Título" className="form-control" value={nuevoCurso.TITULO} onChange={handleChange} required />
           </div>
           <div className="col-md-12">
-            <textarea name="DESCRIPCION" placeholder="Descripción" className="form-control" value={nuevoCurso.DESCRIPCION} onChange={handleChange}></textarea>
+            <textarea name="DESCRIPCION" placeholder="Descripción" className="form-control" value={nuevoCurso.DESCRIPCION} onChange={handleChange} required ></textarea>
           </div>
           <div className="col-md-6">
-            <input type="text" name="IMAGEN" placeholder="URL de la imagen" className="form-control" value={nuevoCurso.IMAGEN} onChange={handleChange} />
+            <input type="text" name="IMAGEN" placeholder="URL de la imagen" className="form-control" value={nuevoCurso.IMAGEN} onChange={handleChange} required/>
           </div>
           <div className="col-md-3">
-            <input type="text" name="TIEMPO" placeholder="Duración" className="form-control" value={nuevoCurso.TIEMPO} onChange={handleChange} />
+            <input type="text" name="TIEMPO" placeholder="Duración" className="form-control" value={nuevoCurso.TIEMPO} onChange={handleChange} required/>
           </div>
           <div className="col-md-3">
-            <input type="text" name="NIVEL" placeholder="Nivel" className="form-control" value={nuevoCurso.NIVEL} onChange={handleChange} />
+            <input type="text" name="NIVEL" placeholder="Nivel" className="form-control" value={nuevoCurso.NIVEL} onChange={handleChange} required/>
           </div>
           <div className="col-md-12">
-            <input type="text" name="ENLACE" placeholder="Enlace (opcional)" className="form-control" value={nuevoCurso.ENLACE} onChange={handleChange} />
+            <input type="text" name="ENLACE" placeholder="Enlace (opcional)" className="form-control" value={nuevoCurso.ENLACE} />
           </div>
           <div className="col-md-12 text-end">
             <button type="submit" className="btn btn-success">Guardar Curso</button>
@@ -86,6 +87,7 @@ const AgregarCurso = () => {
           </div>
         </div>
       </form>
+    
     </main>
   );
 };

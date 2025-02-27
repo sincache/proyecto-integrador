@@ -1,5 +1,5 @@
 import React from 'react';
-import PortadaHome from '../../assets/images/Portada_Home.jpg';
+import PortadaHome from '../../assets/images/Portada_Home (1).jpg';
 import LogoTWA from '../../assets/images/Logo_TWA_Sin_Fondo.png';
 
 const Home = () => {
