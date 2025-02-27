@@ -25,7 +25,6 @@ import Iniciar from './components/Iniciar/Iniciar';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 
 
-
 function QuienesSomosCompleta() {
   return (
     <>
