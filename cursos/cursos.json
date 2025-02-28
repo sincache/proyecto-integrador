@@ -7,6 +7,7 @@
     "IMAGEN": "/cursos/imagenesCursos/java.jpg",
     "TIEMPO": "8 horas aprox.",
     "NIVEL": "Básico-Experto",
+    "PRECIO": "Gratis",
     "ENLACE": "https://edutin.com/curso-de-java"
   },
   {
@@ -17,6 +18,7 @@
     "IMAGEN": "/cursos/imagenesCursos/python.jpg",
     "TIEMPO": "8 horas aprox.",
     "NIVEL": "Básico",
+    "PRECIO": "Gratis",
     "ENLACE": null
   },
   {
@@ -27,6 +29,7 @@
     "IMAGEN": "/cursos/imagenesCursos/frontend.png",
     "TIEMPO": "20 horas aprox.",
     "NIVEL": "Básico-Avanzado",
+    "PRECIO": "Gratis",
     "ENLACE": null
   },
   {
@@ -37,6 +40,7 @@
     "IMAGEN": "/cursos/imagenesCursos/Reactf.jpg",
     "TIEMPO": "2 horas",
     "NIVEL": "Básico",
+    "PRECIO": "Gratis",
     "ENLACE": null
   },
   {
@@ -47,6 +51,7 @@
     "IMAGEN": "/cursos/imagenesCursos/MongoDB.png",
     "TIEMPO": "8 horas aprox.",
     "NIVEL": "Avanzado",
+    "PRECIO": "Gratis",
     "ENLACE": null
   },
   {
@@ -57,6 +62,7 @@
     "IMAGEN": "/cursos/imagenesCursos/MYSQL.png",
     "TIEMPO": "2 horas",
     "NIVEL": "Básico",
+    "PRECIO": "Gratis",
     "ENLACE": null
   },
   {
@@ -67,6 +73,7 @@
     "IMAGEN": "/cursos/imagenesCursos/c++.jpg",
     "TIEMPO": "8 horas aprox.",
     "NIVEL": "Básico",
+    "PRECIO": "Gratis",
     "ENLACE": null
   },
   {
@@ -77,6 +84,7 @@
     "IMAGEN": "/cursos/imagenesCursos/gitygithub.png",
     "TIEMPO": "4 horas",
     "NIVEL": "Básico",
+    "PRECIO": "Gratis",
     "ENLACE": null
   },
   {
@@ -87,6 +95,7 @@
     "IMAGEN": "/cursos/imagenesCursos/administraciondatos.png",
     "TIEMPO": "10 horas",
     "NIVEL": "Básico",
+    "PRECIO": "Gratis",
     "ENLACE": null
   },
   {
@@ -97,6 +106,7 @@
     "IMAGEN": "/cursos/imagenesCursos/logicadeprogramacion.png",
     "TIEMPO": "10 horas",
     "NIVEL": "Básico",
+    "PRECIO": "Gratis",
     "ENLACE": null
   }
 ]
