@@ -1,25 +1,23 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Link, useNavigate } from 'react-router-dom';
-import LogoTWA from '../../assets/images/TWA.navbar.png';
+import React, { useState, useEffect, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import LogoTWA from "../../assets/images/TWA.navbar.png"; // Asegúrate de importar tu logo
 
 
-const Header = ({user, onLogout }) => {
-
+const Header = ({ user, onLogout }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const navigate = useNavigate();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false); // Cierra el menú al hacer clic en un enlace
+  const closeMenu = () => setMenuOpen(false);
 
-  //Cierra sesion
   const handleLogout = () => {
     onLogout();
-    navigate('/Iniciar');
+    navigate("/Iniciar");
     closeMenu();
-  }
-;
-  // Cierra el menú si se hace clic fuera
+  };
+
+  // Cerrar el menú al hacer clic fuera de él
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -33,58 +31,84 @@ const Header = ({user, onLogout }) => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark navbar-background-color">
-      <div className="container d-flex justify-content-between align-items-center">
-        {/* Logo */}
-        <Link className="navbar-brand" to="/" onClick={closeMenu}>
-          <img src={LogoTWA} alt="Logo" id="logo-header" height="40" />
-        </Link>
-        {/* Botón hamburguesa */}
-        <button
-          className={`navbar-toggler ${menuOpen ? "" : "collapsed"}`}
-          type="button"
-          onClick={toggleMenu}
-          aria-expanded={menuOpen}
-          aria-label="Toggle navigation"
+    <nav className="Navbar">
+      {/* Logo */}
+      <Link className="navbar-logo" to="/" onClick={closeMenu}>
+        <img src={LogoTWA} alt="Logo" className="logo" />
+      </Link>
+
+      {/* Botón hamburguesa */}
+      <label className="hamburger" htmlFor="menu_hamburguesa" onClick={toggleMenu}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          fill="currentColor"
+          className="list_icon"
+          viewBox="0 0 16 16"
         >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        {/* Menú */}
-        <div
-          ref={menuRef}
-          className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}
-        >
-          <ul className="navbar-nav mx-auto text-center gap-3">
-            <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={closeMenu}>Inicio</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/QuienesSomos" onClick={closeMenu}>¿Quiénes somos?</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Cursos" onClick={closeMenu}>Cursos/Talleres</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Contactanos" onClick={closeMenu}>Contáctanos</Link>
-            </li>
-          </ul>
-          {/* Botones de acción */}
-          <div className="d-flex justify-content-center gap-3 mt-3 mt-lg-0">
+          <path
+            fillRule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+      </label>
+      <input
+        type="checkbox"
+        className="menu_hamburguesa"
+        id="menu_hamburguesa"
+        checked={menuOpen}
+        onChange={toggleMenu}
+      />
+
+      {/* Menú de navegación */}
+      <ul className={`nav ${menuOpen ? "open" : ""}`} ref={menuRef}>
+        <li className="nav-item">
+          <Link className="nav-link" to="/" onClick={closeMenu}>
+            Inicio
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/QuienesSomos" onClick={closeMenu}>
+            ¿Quiénes somos?
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/Cursos" onClick={closeMenu}>
+            Cursos/Talleres
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/Contactanos" onClick={closeMenu}>
+            Contáctanos
+          </Link>
+        </li>
+
+        {/* Botones */}
+        <div className="nav-buttons">
           {user ? (
-              <>
-                <span className="nav-link text-white">Bienvenido, <strong>{user}</strong></span>
-                <button onClick={handleLogout} className="btn btn-primary">Cerrar sesión</button>
-              </>
-            ) : (
-              <>
-                <Link to="/Unirse" className="btn btn-primary" onClick={closeMenu}>Unirse</Link>
-                <Link to="/Iniciar" className="btn btn-outline-light" onClick={closeMenu}>Iniciar</Link>
-              </>
-            )}          
-            </div>
+            <>
+              <span className="nav-link text-white">
+                Bienvenido, <strong>{user}</strong>
+              </span>
+              <button onClick={handleLogout} className="nav-btn-Unirse">
+                Cerrar sesión
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/Unirse" className="nav-btn-Unirse" onClick={closeMenu}>
+                Unirse
+              </Link>
+              <Link to="/Iniciar" className="nav-btn-iniciar" onClick={closeMenu}>
+                Iniciar
+              </Link>
+            </>
+          )}
         </div>
-      </div>
+      </ul>
     </nav>
   );
 };
+
 export default Header;
