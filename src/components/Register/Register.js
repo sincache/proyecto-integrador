@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import TerminosCondicionesModal from '../TerminosCondiciones/TerminosCondicionesModal';
 
 const Register = () => {
-//funcion para que el usuario ahuevo acepte los terminos y condiciones antes del registro
+//funcion para que el usuario acepte los terminos y condiciones antes del registro
     const [showModal, setShowModal] = useState(false);
     const [acceptedTerms, setAcceptedTerms] = useState(false);
 
@@ -44,7 +44,7 @@ const Register = () => {
                     <button type="submit" class="btn btn-accent">Registrarse</button>
                 </div>
             </form>
-            <TerminosCondicionesModal show={showModal} handleClose={handleClose} />
+            <TerminosCondicionesModal show={showModal} handleClose={handleClose}/>
         </div>
     </section>
     );

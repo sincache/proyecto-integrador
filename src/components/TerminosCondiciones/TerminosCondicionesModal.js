@@ -7,7 +7,7 @@ const TerminosCondicionesModal = ({show, handleClose}) => {
     return (
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Terminos y Condiciones</Modal.Title>
+                <Modal.Title className="termino">Terminos y Condiciones</Modal.Title>
             </Modal.Header>
             <Modal.Body>
             <div className="terminos">
