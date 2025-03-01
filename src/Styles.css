@@ -96,7 +96,7 @@ body {
 .nav a.nav-link {
   color: white;
   font-family: "Roboto", sans-serif;
-  font-size: small;
+  font-size: medium;
   text-decoration: none;
   padding: 10px 15px;
 }
@@ -167,14 +167,24 @@ body {
 }
 
 .hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger .list_icon {
+  fill: #ffffff; /* Para que el ícono herede el color del texto */
+  cursor: pointer; /* Añade un puntero para indicar que es clicable */
+}
+
+.hamburger {
   display: none; /* Oculta el ícono del menú hamburguesa por defecto */
   cursor: pointer;
   z-index: 1000; /* Asegura que el ícono esté por encima del menú */
-}
-
-.hamburger svg {
-  fill: #ffffff; /* Cambia el color del ícono a blanco */
-  cursor: pointer; /* Añade un puntero para indicar que es clicable */
 }
 
 /* Estilos para pantallas menores a 1200px */
@@ -236,7 +246,7 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    padding: 10px 0;
+    padding: 20px 0;
   }
 
   /* Cuando se abre el menú, mostrar los botones */
@@ -246,6 +256,20 @@ body {
 
   /* Estilizar los botones para que ocupen todo el ancho y se apilen */
   .nav-buttons button {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .nav-btn-Unirse{
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .nav-btn-iniciar{
     width: 80%;
     margin: 10px auto;
     padding: 10px;

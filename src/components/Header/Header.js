@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import LogoTWA from "../../assets/images/TWA.navbar.png"; // Asegúrate de importar tu logo
 
-
 const Header = ({ user, onLogout }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -38,7 +37,12 @@ const Header = ({ user, onLogout }) => {
       </Link>
 
       {/* Botón hamburguesa */}
-      <label className="hamburger" htmlFor="menu_hamburguesa" onClick={toggleMenu}>
+      <button
+        className="hamburger"
+        onClick={toggleMenu}
+        aria-expanded={menuOpen}
+        aria-label="Toggle navigation"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"
@@ -52,14 +56,7 @@ const Header = ({ user, onLogout }) => {
             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
           />
         </svg>
-      </label>
-      <input
-        type="checkbox"
-        className="menu_hamburguesa"
-        id="menu_hamburguesa"
-        checked={menuOpen}
-        onChange={toggleMenu}
-      />
+      </button>
 
       {/* Menú de navegación */}
       <ul className={`nav ${menuOpen ? "open" : ""}`} ref={menuRef}>
