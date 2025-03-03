@@ -56,7 +56,6 @@ const Cursos = () => {
                                     <p className="card-text">{curso.DESCRIPCION}</p>
                                     <ul className="list-unstyled mt-3">
                                         <li><strong>Categoría:</strong> {curso.CATEGORIA}</li>
-                                        <li><strong>Tema:</strong> {curso.TEMA}</li>
                                         <li><strong>Plataforma:</strong> {curso.PLATAFORMA}</li>
                                         <li><strong>Duración:</strong> {curso.TIEMPO}</li>
                                         <li><strong>Nivel:</strong> {curso.NIVEL}</li>
