@@ -43,11 +43,11 @@ hero-section-register.App {
 
 body {
   background: linear-gradient(180deg, 
-      #29204c 0%, 
-      #271861 25%, 
+      #29204c 15%, 
+      #271861 35%, 
       #1e163d 50%, 
       #1e163d 75%, 
-      #17151d 100%
+      #17151d 90%
   );
 
   color:#ffffff;
@@ -280,6 +280,55 @@ body {
 
 /* --------------------------------------------------------------------------------- */
 
+/* Contenedor Login */
+
+#Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-image: url('assets/images/Videojuegos.jpg');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  
+}
+
+/* Recuadro iniciar Sesión */ 
+.bg-black{
+  position: relative;
+  width: 400px;
+  height: 450;
+  background: transparent !important;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  border: 2px solid rgba(255, 255, 255, .5) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------- */
 
 #logo-footer{
   width: 100px;
@@ -948,12 +997,7 @@ button.btn-accent:hover {
 }
 
 
-/* .d-flex{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 
-} */
 
 /* -------------------------------------------------------------------------------------------- */
 
@@ -992,10 +1036,7 @@ button.btn-accent:hover {
 
 /* Sección del footer */
 footer {
-    background: linear-gradient(180deg,  
-      #1e163d 0%, 
-      #17151C 100%
-  );
+    background: #17151C;
   color: #ffffff;
   padding: 1rem 0;
   display: flex;
