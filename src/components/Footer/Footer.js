@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-container">
           <div className="newsletter-section">
-            <img id="logo-header" src={LogoTWA} alt="Logo" />
+            <img id="logo-footer" src={LogoTWA} alt="Logo" />
             <p>Únete a nuestro boletín para estar al tanto de novedades y lanzamientos.</p>
             <form className="newsletter-form">
               <input type="email" placeholder="Introduce tu correo" required />

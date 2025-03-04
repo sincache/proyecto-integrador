@@ -1,13 +1,24 @@
 
-.terminos {
-    color: #333; }
+ .terminos {
+    background-color: #005;
+    color: white;
+   }
 
 .terminos h1 {
-    color: #007bff; } 
+    color: #ff1f71; } 
 .terminos h2 {
-    color: #005; 
+    color: #ff1f71; 
 }
 
 .terminos p {
-    color: #666;
+    color: white;
+}
+
+.termino {
+    color: white;
+}
+
+.color_fondo {
+    background: #005;
+   
 }

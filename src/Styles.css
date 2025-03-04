@@ -67,9 +67,223 @@ body {
   --spacing-md: 2rem;
   --spacing-sm: 1rem;
   --font: Roboto, sans-serif;
+  /* max-width: auto; */
 }
 
 /* --------------------------------------------------------------------------------- */
+
+/* Navbar general */
+.Navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #100d28;
+  height: 60px;
+  padding: 0 20px;
+}
+
+/* Enlaces a inicio-contactanos */
+.nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  flex-grow: 0.58;
+}
+
+.nav a.nav-link {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.nav a.nav-link:hover {
+  color: #ff0080;
+}
+
+/* Logo Navbar */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  height: 60px;
+}
+
+/* Botones del Navbar */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  align-items: center;
+  justify-items: flex-end;
+}
+
+.nav-btn-Unirse {
+  background-color: #ff1f71;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  padding: 6px 15px;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-btn-iniciar {
+  background-color: transparent;
+  border: 1.5px solid #00c2cb;
+  color: #00c2cb;
+  border-radius: 20px;
+  padding: 6px 15px;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-btn-Unirse:hover {
+  background-color: #00c2cb;
+  color: white;
+}
+
+.nav-btn-iniciar:hover {
+  background-color: #00c2cb;
+  color: white;
+}
+
+/* Menú hamburguesa */
+.menu_hamburguesa {
+  display: none; /* Oculta el checkbox */
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger .list_icon {
+  fill: #ffffff; /* Para que el ícono herede el color del texto */
+  cursor: pointer; /* Añade un puntero para indicar que es clicable */
+}
+
+.hamburger {
+  display: none; /* Oculta el ícono del menú hamburguesa por defecto */
+  cursor: pointer;
+  z-index: 1000; /* Asegura que el ícono esté por encima del menú */
+}
+
+/* Estilos para pantallas menores a 1200px */
+@media (max-width: 1200px) {
+  .hamburger {
+    display: block; /* Muestra el ícono del menú hamburguesa */
+  }
+
+  .navbar-logo {
+    position: absolute; /* Posiciona el logo de manera absoluta */
+    left: 52%; /* Lo mueve al 50% del contenedor */
+    transform: translateX(-50%); /* Lo centra horizontalmente */
+  }
+
+  .logo {
+    width: 80%;
+    height: auto;
+  }
+
+  .nav {
+    display: none; /* Oculta el menú de navegación por defecto */
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 60px); /* Ocupa toda la altura de la pantalla menos la altura del Navbar */
+    background-color: #100d28;
+    position: fixed; /* Fija el menú en la pantalla */
+    top: 60px; /* Ajusta según la altura del Navbar */
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease;
+    z-index: 999; /* Asegura que el menú esté por encima del contenido */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+  }
+
+  .nav.open {
+    display: flex; /* Muestra el menú de navegación cuando está abierto */
+  }
+
+  /* Estilos para los enlaces del menú en móvil */
+  .nav a.nav-link {
+    font-size: 1.5rem; /* Tamaño de fuente más grande para móviles */
+    padding: 15px 20px; /* Más espacio para tocar fácilmente */
+    text-align: center; /* Centra el texto */
+    color: white; /* Color del texto */
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  /* Efecto hover para móviles */
+  .nav a.nav-link:hover {
+    color: #ff0080; /* Cambia el color del texto al hacer hover */
+    background-color: transparent;
+  }
+
+  /* Mostrar los botones dentro del menú hamburguesa */
+  .nav-buttons {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  /* Cuando se abre el menú, mostrar los botones */
+  .nav.open .nav-buttons {
+    display: flex;
+  }
+
+  /* Estilizar los botones para que ocupen todo el ancho y se apilen */
+  .nav-buttons button {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .nav-btn-Unirse{
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .nav-btn-iniciar{
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* --------------------------------------------------------------------------------- */
+
+
+#logo-footer{
+  width: 100px;
+}
 
 /* Estilos de Home */
 /* Reset y estilos base */
@@ -686,144 +900,8 @@ button.btn-accent:hover {
 
 /* --------------------------------------------------------------------------------- */
 
-/* Estilo de NavBar */
-.navbar-custom {
-  background-color: #100D28;
-  padding: 15px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-  
-}
-
-.logo {
-  width: auto;
-  height: auto;
-  position: relative;
-  left: auto;
-  opacity: 0.8;
-  padding: auto;
-}
-
-a {
-  margin: 1rem ;
-}
-
-#logo-header {
-  width: 230px;
-  height: auto;
-  cursor: pointer;
-  
-}
-
-/* Menú de hamburguesa---------------------------------------------------------------- */
-.navbar-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-}
-
-/* No esta navbar menu */
-
-/* Enlaces alineados a la derecha */
-/*Todos los botones del navbar - Inicio, Quienes, Cursos, Contactanos*/
-.navbar-links {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  color: #ffffff;
-  list-style-type: none;
-  padding-top: 1.8%;
-}
-
-/* Botones alineados a la derecha */
-/* Botones Unirse e Iniciar */
-.navbar-buttons {
-  display: flex;
-  gap: 0;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-}
-
-/* Contenedor de los enlaces y botones alineado a la derecha */
-.navbar-right {
-  display: flex;
-  align-items: end;
-  justify-content: flex-end;
-  gap: 1rem;
-  flex-wrap: wrap;
-  flex-grow: 1;
-}
-
-.navbar-menu{
-  display: flex;
-  align-items: center;
-}
-
-/* Responsive: Menú hamburguesa en pantallas pequeñas */
-@media (max-width: 768px) {
-  .navbar-toggle {
-      display: block;
-  }
-
-  .navbar-container {
-      flex-direction: column;
-      align-items: stretch;
-  }
-
-  .navbar-links,
-  .navbar-buttons {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      padding: 1rem 0;
-      align-items: center;
-  }
-
-  .navbar-links.active,
-  .navbar-buttons.active {
-      display: flex;
-  }
-
-  .nav-link {
-      text-align: center;
-  }
-
-  .nav-link:hover {
-    background-color: #5C0AAC;
-    color: white;
-    border: none;
-    border-radius: 25px;
-  }
 
 
-
-  a.navbar-link:hover { 
-    background-color: #00c2cb;
-    color: #FF0080;
-  }
-
-  .btn-unirse,
-  .btn-iniciar {
-      width: 100%;
-      text-align: center;
-  }
-}
-
-a.btn-accent {
-  color: #ffffff;
-}
-
-a.btn-accent:hover {
-  color: #00c2cb;
-}
 /* -------------------------------------------------------------------------------------------------- */
 
 /* En que parte se utiliza esta clase? */
@@ -868,6 +946,15 @@ a.btn-accent:hover {
 .card-text {
   color: #ffffff
 }
+
+
+/* .d-flex{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+} */
+
 /* -------------------------------------------------------------------------------------------- */
 
 /* Estilos de los botones */

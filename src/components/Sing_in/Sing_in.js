@@ -232,7 +232,7 @@ const Sing_in = () => {
                             checked={aceptarTerminos}
                             onChange={handleCheckboxChange}
                         />
-                        <label htmlFor='terminos'>Acepto los <a href="#" onClick={handleShowModal}>Términos y Condiciones</a></label>
+                        <label htmlFor='terminos'> Acepto <a href="#" onClick={handleShowModal} className='termino'>Términos y Condiciones</a></label>
                     </div>   
                     <div className="cta-buttons">
                         <button type="submit" className="btn btn-accent">Registrarse</button>
