@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "nombre": "Ana Pérez",
+      "fecha": "2025-02-20",
+      "comentario": "¡El curso fue increíble! Aprendí muchísimo.",
+      "calificacion": 5
+    },
+    {
+      "id": 2,
+      "nombre": "María López",
+      "fecha": "2025-02-18",
+      "comentario": "Muy buen contenido, pero podría mejorar en algunos temas.",
+      "calificacion": 4
+    },
+    {
+      "id": 3,
+      "nombre": "Laura Gómez",
+      "fecha": "2025-02-15",
+      "comentario": "Me gustó, pero el instructor iba muy rápido.",
+      "calificacion": 3
+    },
+    {
+      "id": 4,
+      "nombre": "Sofía Jiménez",
+      "fecha": "2025-02-12",
+      "comentario": "¡Excelente curso! Súper claro y bien explicado.",
+      "calificacion": 5
+    },
+    {
+      "id": 5,
+      "nombre": "Valeria Torres",
+      "fecha": "2025-02-10",
+      "comentario": "Muy básico para mí, esperaba algo más avanzado.",
+      "calificacion": 3
+    },
+    {
+      "id": 6,
+      "nombre": "Gabriela Sánchez",
+      "fecha": "2025-02-08",
+      "comentario": "Aprendí mucho y el contenido fue relevante.",
+      "calificacion": 4
+    },
+    {
+      "id": 7,
+      "nombre": "Elena Castillo",
+      "fecha": "2025-02-05",
+      "comentario": "Me ayudó a entender temas complejos de forma sencilla.",
+      "calificacion": 5
+    },
+    {
+      "id": 8,
+      "nombre": "Daniela Morales",
+      "fecha": "2025-02-03",
+      "comentario": "El material de apoyo es excelente.",
+      "calificacion": 4
+    },
+    {
+      "id": 9,
+      "nombre": "Ximena Delgado",
+      "fecha": "2025-02-01",
+      "comentario": "Me hubiese gustado más ejercicios prácticos.",
+      "calificacion": 3
+    },
+    {
+      "id": 10,
+      "nombre": "Fernanda Rivera",
+      "fecha": "2025-01-30",
+      "comentario": "¡Totalmente recomendado! Superó mis expectativas.",
+      "calificacion": 5
+    }
+  ]
+  
