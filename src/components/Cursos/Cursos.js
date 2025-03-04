@@ -82,7 +82,7 @@ const Cursos = () => {
                       <li><strong>Plataforma:</strong> {curso.PLATAFORMA}</li>
                       <li><strong>Duración:</strong> {curso.TIEMPO}</li>
                       <li><strong>Nivel:</strong> {curso.NIVEL}</li>
-                      <li><strong>Precio:</strong> {curso.PRECIO === 0 ? 'Gratis' : `$${curso.PRECIO}`}</li>
+                      <li><strong>Precio:</strong> {curso.PRECIO === 0 ? 'Gratis' : `${curso.PRECIO || "Gratuito"}`}</li>
                       <li>
                         <strong>Opiniones:</strong>
                         <span 
