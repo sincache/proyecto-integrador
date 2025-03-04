@@ -23,6 +23,7 @@ import EliminarCurso from './components/Cursos/EliminarCurso';
 import EditarCurso from './components/EditarCurso/EditarCurso';
 import Iniciar from './components/Iniciar/Iniciar';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import Opiniones from './components/Opiniones/Opiniones.jsx';
 
 
 function QuienesSomosCompleta() {
@@ -64,6 +65,7 @@ function App() {
         <Route path="/Cursos/Eliminar" element={<ProtectedRoute user={user}><EliminarCurso /></ProtectedRoute>} />
         <Route path="/Contactanos" element={<Contactanos />} />
         <Route path="/Cursos/Editar/:id" element={<EditarCurso />} /> 
+        <Route path="/Opiniones/:idCurso" element={<Opiniones />} />
       </Routes>
       <Footer />
     </Router>
