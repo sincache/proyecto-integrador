@@ -116,131 +116,135 @@ const Sing_in = () => {
     }, [error, success]);  // Se ejecutará cada vez que error o success cambien
 
     return (
-        <section className="hero-section">
-            <div className="container">
-                <h1 className="display-4">Regístrate</h1>
+        <section className="hero-section" id='register_cotainer'>
+  <div className="container">
+    {/* Mostrar los alertas si hay error o éxito */}
+    <div ref={alertRef}>
+      {error && <div className="alert alert-danger">{error}</div>}
+      {success && <div className="alert alert-success">Registro exitoso! Ahora puedes iniciar sesión.</div>}
+    </div>
 
-                {/* Mostrar los alertas si hay error o éxito */}
-                <div ref={alertRef}>
-                    {error && <div className="alert alert-danger">{error}</div>}
-                    {success && <div className="alert alert-success">Registro exitoso! Ahora puedes iniciar sesión.</div>}
-                </div>
+    {/* Contenedor para el formulario */}
+    <div className="form-container">
+      {/* Título integrado dentro del contenedor */}
+      <h1 className="display-4 text-center mb-4">Regístrate</h1>
 
-                <form id="registerForm" onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                        <label htmlFor="nombre" className="form-label">Nombre(s):</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="nombre"
-                            placeholder="Pon aquí tu nombre"
-                            value={nombre}
-                            onChange={(e) => setNombre(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="apellido" className="form-label">Apellido(s):</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="apellido"
-                            placeholder="Pon aquí tu apellido"
-                            value={apellido}
-                            onChange={(e) => setApellido(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="curp" className="form-label">CURP:</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="curp"
-                            placeholder="Pon aquí tu CURP"
-                            value={curp}
-                            onChange={(e) => {
-                                setCurp(e.target.value);
-                                try {
-                                    validarGeneroCurp(e.target.value);  // Validar género
-                                    setCurpError(''); // Limpiar error si la CURP es válida
-                                } catch (error) {
-                                    setCurpError(error.message);  // Mostrar el error en tiempo real
-                                }
-                            }}
-                            required
-                        />
-                        {curpError && (
-                            <div className="alert alert-danger mt-2" role="alert">
-                                {curpError}
-                            </div>
-                        )}
-                    </div>
-
-                    <div className="mb-3">
-                        <label htmlFor="email" className="form-label">Correo Electrónico:</label>
-                        <input
-                            type="email"
-                            className="form-control"
-                            id="email"
-                            placeholder="tucorreo@ejemplo.com"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="telefono" className="form-label">Número teléfonico:</label>
-                        <input
-                            type="tel"
-                            className="form-control"
-                            id="telefono"
-                            placeholder="5511223344"
-                            value={telefono}
-                            onChange={(e) => setTelefono(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="password" className="form-label">Contraseña</label>
-                        <input
-                            type="password"
-                            className="form-control"
-                            id="password"
-                            placeholder="Crea una contraseña"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="password-confirm" className="form-label">Confirmar contraseña:</label>
-                        <input
-                            type="password"
-                            className="form-control"
-                            id="password-confirm"
-                            placeholder="Confirma la contraseña"
-                            value={confirmPassword}
-                            onChange={(e) => setConfirmPassword(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <input
-                            type='checkbox'
-                            id='terminos'   
-                            checked={aceptarTerminos}
-                            onChange={handleCheckboxChange}
-                        />
-                        <label htmlFor='terminos'> Acepto <a href="#" onClick={handleShowModal} className='termino'>Términos y Condiciones</a></label>
-                    </div>   
-                    <div className="cta-buttons">
-                        <button type="submit" className="btn btn-accent">Registrarse</button>
-                    </div>
-                </form>
-                <TerminosCondicionesModal show={showModal} handleClose={handleCloseModal} />
+      <form id="registerForm" onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <label htmlFor="nombre" className="form-label">Nombre(s):</label>
+          <input
+            type="text"
+            className="form-control"
+            id="nombre"
+            placeholder="Pon aquí tu nombre"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="apellido" className="form-label">Apellido(s):</label>
+          <input
+            type="text"
+            className="form-control"
+            id="apellido"
+            placeholder="Pon aquí tu apellido"
+            value={apellido}
+            onChange={(e) => setApellido(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="curp" className="form-label">CURP:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="curp"
+            placeholder="Pon aquí tu CURP"
+            value={curp}
+            onChange={(e) => {
+              setCurp(e.target.value);
+              try {
+                validarGeneroCurp(e.target.value);  // Validar género
+                setCurpError(''); // Limpiar error si la CURP es válida
+              } catch (error) {
+                setCurpError(error.message);  // Mostrar el error en tiempo real
+              }
+            }}
+            required
+          />
+          {curpError && (
+            <div className="alert alert-danger mt-2" role="alert">
+              {curpError}
             </div>
-        </section>
+          )}
+        </div>
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Correo Electrónico:</label>
+          <input
+            type="email"
+            className="form-control"
+            id="email"
+            placeholder="tucorreo@ejemplo.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="telefono" className="form-label">Número teléfonico:</label>
+          <input
+            type="tel"
+            className="form-control"
+            id="telefono"
+            placeholder="5511223344"
+            value={telefono}
+            onChange={(e) => setTelefono(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">Contraseña</label>
+          <input
+            type="password"
+            className="form-control"
+            id="password"
+            placeholder="Crea una contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="password-confirm" className="form-label">Confirmar contraseña:</label>
+          <input
+            type="password"
+            className="form-control"
+            id="password-confirm"
+            placeholder="Confirma la contraseña"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            type='checkbox'
+            id='terminos'   
+            checked={aceptarTerminos}
+            onChange={handleCheckboxChange}
+          />
+          <label htmlFor='terminos'> Acepto <a href="#" onClick={handleShowModal} className='termino'>Términos y Condiciones</a></label>
+        </div>   
+        <div className="cta-buttons">
+          <button type="submit" className="btn btn-accent">Registrarse</button>
+        </div>
+      </form>
+    </div>
+
+    <TerminosCondicionesModal show={showModal} handleClose={handleCloseModal} />
+  </div>
+</section>
     );
 };
 
