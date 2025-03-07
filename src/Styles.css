@@ -79,7 +79,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #100d28;
-  height: 60px;
+  height: 70px;
   padding: 0 20px;
 }
 
@@ -91,6 +91,7 @@ body {
   margin: 0;
   justify-content: center;
   flex-grow: 0.58;
+  
 }
 
 .nav a.nav-link {
@@ -99,10 +100,13 @@ body {
   font-size: medium;
   text-decoration: none;
   padding: 10px 15px;
+  margin: 5px;
 }
 
 .nav a.nav-link:hover {
   color: #ff0080;
+  border-bottom: 2px solid #ff0080;
+  transform: scale(1.2);
 }
 
 /* Logo Navbar */
@@ -114,7 +118,12 @@ body {
 .logo {
   width: auto;
   height: 60px;
+  margin-left: 10px;
 }
+
+.logo:hover{
+    transform: scale(1.2); /* Aumenta el tamaño del logo a 120% cuando el cursor pasa sobre él */
+  }
 
 /* Botones del Navbar */
 .nav-buttons {
