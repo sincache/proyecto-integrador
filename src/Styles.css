@@ -1235,3 +1235,34 @@ footer {
   }
 }
 
+/*Boton de favoritos*/
+.heart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-button:active {
+  transform: scale(1.4);
+}
+
+.heart-icon {
+  color: #1d1734; /* Color del ícono */
+  transition: color 0.2s ease-in-out, stroke 0.2s ease-in-out; /*Agregado para transición suave en el contorno */
+  font-size:48px; /* Tamaño del ícono */
+  stroke: #00c2cb; /* Contorno negro */
+  stroke-width: 1.5px; /* Grosor del contorno */
+}
+
+.heart-button.favorite .heart-icon {
+  color: #ff0080; /* Color cuando es favorito */
+  stroke: #100d28; /* Contorno del color de favorito */
+}
