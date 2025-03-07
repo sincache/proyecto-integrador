@@ -913,20 +913,37 @@ justify-content: space-around;
 
 /* Seccion de Contactanos */
 
-/* Alinear texto conctactanos al centro */
+.contactanos-container {
+  background-color: #271864; /* Color de fondo base más oscuro */
+  background-image:
+    radial-gradient(at 56% 95%, hsla(265, 86%, 41%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 29% 51%, hsla(223, 66%, 45%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 59% 20%, hsla(318, 72%, 33%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 73% 8%, hsla(269, 81%, 42%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 18% 61%, hsla(266, 89%, 35%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 61% 86%, hsla(204, 93%, 45%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 40% 30%, #271864 0px, transparent 50%), /* Color oscuro superior */
+    linear-gradient(180deg, rgba(39,24,100,1) 0%, rgba(41,32,76,1) 32%, rgba(35,28,60,1) 70%, #17151C 100%); /* Degradado principal */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Alinear texto contactanos al centro */
 .hero-section-contactanos {
   display: flex;               /* Activa Flexbox */
   justify-content: center;     /* Centra horizontalmente */
   align-items: center;         /* Centra verticalmente */
-  height: 100vh;               /* Hace que la sección ocupe toda la altura de la pantalla */
+  height: 80vh;               /* Reducimos la altura para recortar la imagen */
   text-align: center;          /* Centra el texto dentro del contenedor */
-  
-  position: relative;                  /* Necesario para el overlay */
+  position: relative;          /* Necesario para el overlay */
   background-image: url('../src/assets/images/Mujer\ 1.jpg'); /* Cambia 'tu-imagen.jpg' por el nombre de tu archivo */
-  background-size: cover;             /* Hace que la imagen cubra toda la sección */
-  background-position: center;        /* Centra la imagen */
-  background-repeat: no-repeat;       /* Evita que la imagen se repita */
-  height: 100vh;
+  background-size: cover;      /* Hace que la imagen cubra toda la sección */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;/* Evita que la imagen se repita */
+  width: 100%;                /* Asegura que ocupe todo el ancho de la página */
 }
 
 /* Aplicar opacidad */
@@ -941,24 +958,23 @@ justify-content: space-around;
   z-index: 1;    
 }
 
-@media (max-width: 1200px) {
-  .row.w-75 {
-      width: 95% !important;
-  }
-}
-
 /* Sobreponer letras para no aplicar opacidad*/
 .hero-section-contactanos .container {
   position: relative;
   z-index: 2;                         /* Coloca el texto por encima del overlay */
 }
 
-.container-fluid{
+.container-fluid {
   display: flex;
+  flex-direction: column; /* Cambiamos la dirección a columna */
+  align-items: center;
   max-width: 1200px;
+  width: 100%;
+  margin-top: 20px; /* Espacio entre la imagen y el formulario */
+  margin-bottom: 20px;
 }
 
-/* Fromulario */
+/* Estilos para la sección de contacto */
 .bg-purple-light{
   background-color: rgba(0, 0, 0, 0.5); /* Gris con 50% de opacidad */
   border-radius: 10px; /* Bordes redondeados para un mejor look */
@@ -971,9 +987,53 @@ justify-content: space-around;
   display: flex;
 }
 
+/* Estilos para el formulario */
+.col-md-7 {
+  background-color: #ffffff4f;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 
-/* --------------------------------------------------------------------------------- */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc3c3;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+}
 
+.form-control:focus {
+  border-color: #ab7cb8;
+}
+
+/* Estilos para las alertas */
+.alert {
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert ul {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  .row.w-75 {
+    width: 95% !important;
+  }
+}
 
 
 /* -------------------------------------------------------------------------------------------------- */
