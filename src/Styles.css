@@ -856,11 +856,81 @@ justify-content: space-around;
 /* --------------------------------------------------------------------------------- */
 
 /* Sección de Quienes Somos  */
-
-.hero-section {
-  padding: 6rem 0;
-  /*background-color: var(--purple-light);*/
+.hero-section-quienes-somos {
+  position: relative;
+  height: 100vh; 
+  background-image: url('/src/assets/images/Mujer2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  flex-wrap: wrap;
 }
+
+.hero-section-quienes-somos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Contenedor de Titulo y parrafo  */
+.hero-section-quienes-somos .container {
+  position: relative;
+  z-index: 2;
+  color: white; 
+  padding: 20px;  
+  display: flex; 
+  align-items: flex-start; 
+  justify-content: flex-start !important;
+
+  margin-left: 50px;
+  max-width: 600px;
+}
+
+
+
+/* Mision, Vision y Valores */
+
+.mission-image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+.accordion-container {
+  min-height: 1000px; 
+}
+
+
+
+
+
+
+h6.text-accent {
+  color: #ffcc00; /* Ajusta el color del acento */
+}
+
+h1.display-4 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p.lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+
+
+
+
+/* .hero-section {
+  padding: 6rem 0;
+  /*background-color: var(--purple-light);
+} */
 
 .mission-section {
   padding: 4rem 0;
@@ -881,6 +951,8 @@ justify-content: space-around;
 .feature-list i {
   color: var(--accent);
 }
+
+
 
 .team-card {
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -912,10 +984,7 @@ justify-content: space-around;
   opacity: 0.8;
 }
 
-.mission-image {
-  border-radius: 20px;
-  overflow: hidden;
-}
+
 /* --------------------------------------------------------------------------------- */
 
 /* ------------------------------------------------------------------------------- */
