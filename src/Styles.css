@@ -858,11 +858,14 @@ justify-content: space-around;
 /* Sección de Quienes Somos  */
 .hero-section-quienes-somos {
   position: relative;
-  height: 100vh; 
+  height: 100vh;
+  width: auto; 
   background-image: url('/src/assets/images/Mujer2.jpg'); 
   background-size: cover;
   background-position: center;
   flex-wrap: wrap;
+
+  
 }
 
 .hero-section-quienes-somos::before {
@@ -875,6 +878,8 @@ justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
+
+
 
 /* Contenedor de Titulo y parrafo  */
 .hero-section-quienes-somos .container {
@@ -900,9 +905,33 @@ justify-content: space-around;
 }
 
 
-.accordion-container {
-  min-height: 1000px; 
+
+
+
+/* Acordeon */
+
+#container-acordeon{
+  display: flex;
+  align-items: center;
 }
+
+.accordion-button {
+  background-color: #100d28; /* Fondo negro del botón */
+  color: white; /* Texto blanco */
+  width: 500px;
+
+}
+.accordion-body {
+  background-color: #100d28; /* Cuerpo del acordeón en negro */
+  color: white;
+  width: 500px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #100d28 ; /* Un tono más claro cuando está expandido */ 
+  color: #00c2cb ;
+} 
+
 
 
 

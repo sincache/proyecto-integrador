@@ -10,13 +10,12 @@ const MisionVisionValores = () => {
                     <p>Empoderando a mujeres en tecnología a través de educación de calidad</p>
                 </div>
                 <div className="row">
-                    {/* Columna para el acordeón (izquierda) */}
-                    <div className="col-md-6">
+                    <div className="col-md-6" id='container-acordeon'>
                         <div className="accordion accordion-flush" id="accordionFlushExample">
                            
                             <div className="accordion-item">
                                 <h2 className="accordion-header">
-                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"  aria-controls="flush-collapseOne">
+                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                         MISIÓN
                                     </button>
                                 </h2>
@@ -28,7 +27,7 @@ const MisionVisionValores = () => {
                             </div>
                             <div className="accordion-item">
                                 <h2 className="accordion-header">
-                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"  aria-controls="flush-collapseTwo">
+                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                         VISIÓN
                                     </button>
                                 </h2>
@@ -40,7 +39,7 @@ const MisionVisionValores = () => {
                             </div>
                             <div className="accordion-item">
                                 <h2 className="accordion-header">
-                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"  aria-controls="flush-collapseThree">
+                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                         VALORES
                                     </button>
                                 </h2>
@@ -56,7 +55,6 @@ const MisionVisionValores = () => {
                         </div>
                     </div>
 
-                    {/* Columna para la imagen (derecha) */}
                     <div className="col-md-6">
                         <div className="mission-image">
                             <img
