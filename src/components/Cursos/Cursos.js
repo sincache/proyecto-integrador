@@ -65,18 +65,11 @@ const Cursos = () => {
   return (
     <main>
       <section className="container my-5">
-      <div className="container">
-  <div className="row mb-4 text-center text-md-start" id="cursos_btn">
-    <div className="col-12 col-md-auto">
-      <h2>Nuestros Cursos</h2>
-    </div>
-    <div className="col-12 col-md-auto mt-2 mt-md-0">
-      <Link to="/Cursos/Agregar" className="btn btn-primary w-100 w-md-auto">
-        Agregar Nuevo Curso
-      </Link>
-    </div>
-  </div>
-</div>
+        <div className="d-flex justify-content-between align-items-center mb-4" id='cursos_btn'>
+          <h2>Nuestros Cursos</h2>
+          <Link to="/Cursos/Agregar" className="btn btn-primary">Agregar Nuevo Curso</Link> 
+        </div>
+
         <section className="container my-5">
           <div className="row">
             {cursos.map((curso) => (
@@ -109,7 +102,6 @@ const Cursos = () => {
                     <p className="card-text">{curso.DESCRIPCION}</p>
                     <ul className="list-unstyled mt-3">
                       <li><strong>Categoría:</strong> {curso.CATEGORIA}</li>
-                      <li><strong>Tema:</strong> {curso.TEMA}</li>
                       <li><strong>Plataforma:</strong> {curso.PLATAFORMA}</li>
                       <li><strong>Duración:</strong> {curso.TIEMPO}</li>
                       <li><strong>Nivel:</strong> {curso.NIVEL}</li>
@@ -124,7 +116,7 @@ const Cursos = () => {
                         </span>
                       </li>
                     </ul>
-                    <a href={curso.ENLACE} target="_blank" rel="noopener noreferrer" className="btn btn-accent mt-auto">
+                    <a href={curso.ENLACE} target="_blank" rel="noopener noreferrer"  className="btn btn-accent mt-auto">
                       Más Información
                     </a>
                     <Link to={`/Cursos/Editar/${curso.ID}`} className="btn mt-2"><FaEdit /> </Link>
