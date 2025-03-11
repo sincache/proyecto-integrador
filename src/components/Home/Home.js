@@ -6,8 +6,12 @@ import VideoTWA from '../../assets/Video/VideoTWA.mp4';
 const Home = () => {
     return (
         <>
-        <section class="hero">
-            <img id="imagen-presentacion" src={PortadaHome} alt="Imagen de presentación" />
+    
+        <section className="hero">
+                <video id="VideoTWA" src={VideoTWA} autoPlay loop muted playsInline className="video-background"></video>
+
+        </section>
+
             <div id="cita">
                 <p class="cita-home">"Las mujeres representan sólo el 26% de todos los puestos informáticos, y en el caso de las mujeres negras y latinas, las estadísticas son aún peores: combinadas, representan aproximadamente el 5% de todos los puestos informáticos."</p>
                 <p class="cita-dato">"Foro Económico Mundial (2023)"</p>
@@ -30,7 +34,7 @@ const Home = () => {
                     </div>
                 </section>
             </div>
-        </section>
+
         
         <main>
             <section class="features">
