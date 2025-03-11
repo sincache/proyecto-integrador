@@ -19,7 +19,7 @@ const Home = () => {
                         <a href="#" class="btn btn-primary">
                             Explorar
                         </a>
-                        <a href="#" class="btn btn-secondary">
+                        <a href="/Unirse" class="btn btn-secondary">
                             Únete
                         </a>
                     </div>
