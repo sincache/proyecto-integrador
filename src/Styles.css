@@ -509,6 +509,45 @@ body {
   align-items: start;
 }
 
+/* Estilos para la cita de éxito */
+.cita-home {
+  font-family: "Roboto", sans-serif; /* Fuente moderna */
+  font-size: 1.5rem; /* Tamaño de fuente grande */
+  font-weight: 500; /* Peso de la fuente */
+  font-style: italic; /* Texto en cursiva */
+  color: #ffffff; /* Color blanco */
+  background-color: #100D28; /* Fondo azul */
+  padding: 20px 30px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  text-align: center; /* Texto centrado */
+  align-items: center;
+  max-width: 80%; /* Ancho máximo para la cita */
+  margin: 70px auto; /* Centrar la cita en la página */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  position: relative; /* Para el ícono de comillas */
+}
+
+/* Opcional: Añadir ícono de comillas */
+.cita-home::before {
+  content: "“"; /* Comilla de apertura */
+  font-family: "Georgia", serif;
+  font-size: 4rem; /* Tamaño grande para la comilla */
+  color: rgba(255, 255, 255, 0.3); /* Color semi-transparente */
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+.cita-home::after {
+  content: "”"; /* Comilla de cierre */
+  font-family: "Georgia", serif;
+  font-size: 4rem; /* Tamaño grande para la comilla */
+  color: rgba(255, 255, 255, 0.3); /* Color semi-transparente */
+  position: absolute;
+  bottom: -40px;
+  right: 20px;
+}
+
 #logo-body{
   width: 75%;
   height: 75%;

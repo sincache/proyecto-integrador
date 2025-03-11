@@ -7,6 +7,10 @@ const Home = () => {
         <>
         <section class="hero">
             <img id="imagen-presentacion" src={PortadaHome} alt="Imagen de presentación" />
+            <div id="cita">
+                <p class="cita-home">"Las mujeres representan sólo el 26% de todos los puestos informáticos, y en el caso de las mujeres negras y latinas, las estadísticas son aún peores: combinadas, representan aproximadamente el 5% de todos los puestos informáticos."</p>
+                <p class="cita-dato">"Foro Económico Mundial (2023)"</p>
+            </div>
             <div class="container row-2 align-items-center">
                 <section class="hero-content col-md-6">
                     <h1>
