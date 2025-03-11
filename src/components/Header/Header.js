@@ -66,13 +66,13 @@ const Header = ({ user, onLogout }) => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/QuienesSomos" onClick={closeMenu}>
-            ¿Quiénes somos?
+          <Link className="nav-link" to="/Cursos" onClick={closeMenu}>
+            Cursos/Talleres
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/Cursos" onClick={closeMenu}>
-            Cursos/Talleres
+          <Link className="nav-link" to="/QuienesSomos" onClick={closeMenu}>
+            ¿Quiénes somos?
           </Link>
         </li>
         <li className="nav-item">
