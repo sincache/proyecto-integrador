@@ -65,9 +65,9 @@ const Cursos = () => {
   return (
     <main>
       <section className="container my-5">
-        <div  id='cursos_btn'>
+        <div className="d-flex justify-content-between align-items-center mb-4" id='cursos_btn'>
           <h2>Nuestros Cursos</h2>
-          <Link to="/Cursos/Agregar"  className="btn btn-primary">Agregar Nuevo Curso</Link> 
+          <Link to="/Cursos/Agregar" className="btn btn-primary">Agregar Nuevo Curso</Link> 
         </div>
 
         <section className="container my-5">

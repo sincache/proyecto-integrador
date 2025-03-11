@@ -1,12 +1,17 @@
 import React from 'react';
 import PortadaHome from '../../assets/images/Portada_Home (3).jpg';
 import LogoTWA from '../../assets/images/Logo_TWA_Sin_Fondo.png';
+import VideoTWA from '../../assets/Video/VideoTWA.mp4';
 
 const Home = () => {
     return (
         <>
         <section class="hero">
             <img id="imagen-presentacion" src={PortadaHome} alt="Imagen de presentación" />
+            <div id="cita">
+                <p class="cita-home">"Las mujeres representan sólo el 26% de todos los puestos informáticos, y en el caso de las mujeres negras y latinas, las estadísticas son aún peores: combinadas, representan aproximadamente el 5% de todos los puestos informáticos."</p>
+                <p class="cita-dato">"Foro Económico Mundial (2023)"</p>
+            </div>
             <div class="container row-2 align-items-center">
                 <section class="hero-content col-md-6">
                     <h1>
@@ -19,7 +24,7 @@ const Home = () => {
                         <a href="#" class="btn btn-primary">
                             Explorar
                         </a>
-                        <a href="#" class="btn btn-secondary">
+                        <a href="/Unirse" class="btn btn-secondary">
                             Únete
                         </a>
                     </div>
