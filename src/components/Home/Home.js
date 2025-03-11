@@ -8,25 +8,27 @@ const Home = () => {
         <>
             <section className="hero">
                 <video id="VideoTWA" src={VideoTWA} autoPlay loop muted playsInline className="video-background"></video>
-                <div className="container row-2 align-items-center">
-                    <section className="hero-content col-md-6">
-                        <h1>
-                            Mujeres en Tecnología: Empodera tu futuro
-                        </h1>
-                        <p>
-                            En TechWomen Academy, nuestra misión es empoderar a las mujeres a través de la educación en tecnología. Ofrecemos cursos y certificaciones que abren puertas a nuevas oportunidades en el mundo digital.
-                        </p>
-                        <div className="cta-buttons">
-                            <a href="#" className="btn btn-primary">
-                                Explorar
-                            </a>
-                            <a href="#" className="btn btn-secondary">
-                                Únete
-                            </a>
-                        </div>
-                    </section>
-                </div>
+                <div className="container row-2 align-items-center"> </div>
             </section>
+            <section className="hero-content col-md-6">
+                <h1>
+                    Mujeres en Tecnología: Empodera tu futuro
+                </h1>
+                <p>
+                    En TechWomen Academy, nuestra misión es empoderar a las mujeres a través de la educación en tecnología. Ofrecemos cursos y certificaciones que abren puertas a npush uevas oportunidades en el mundo digital.
+                </p>
+                <div className="cta-buttons">
+                    <a href="#" className="btn btn-primary">
+                        Explorar
+                    </a>
+                    <a href="#" className="btn btn-secondary">
+                        Únete
+                    </a>
+                </div>
+
+            </section>
+
+
 
             <main>
                 <section class="features">
