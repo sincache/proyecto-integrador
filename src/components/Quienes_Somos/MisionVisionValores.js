@@ -12,8 +12,8 @@ const MisionVisionValores = () => {
                 <div className="row">
                     <div className="col-md-6" id='container-acordeon'>
                         <div className="accordion accordion-flush" id="accordionFlushExample">
-                           
-                            <div className="accordion-item">
+                        
+                            <div className="accordion-item bg-color-accordion">
                                 <h2 className="accordion-header">
                                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                         MISIÓN
@@ -25,7 +25,7 @@ const MisionVisionValores = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="accordion-item">
+                            <div className="accordion-item bg-color-accordion">
                                 <h2 className="accordion-header">
                                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                         VISIÓN
@@ -37,7 +37,7 @@ const MisionVisionValores = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="accordion-item">
+                            <div className="accordion-item bg-color-accordion">
                                 <h2 className="accordion-header">
                                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                         VALORES
