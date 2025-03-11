@@ -624,7 +624,6 @@ justify-content: space-around;
   border: 2px solid #00c2cb;
   color: #00c2cb;
   border-radius: 25px;
-  padding: 8px 25px;
   transition: all 0.3s ease;
   white-space: nowrap;
 }
@@ -961,21 +960,70 @@ justify-content: space-around;
   width: 500px;
 
 }
+
 .accordion-body {
-  background-color: #100d28; /* Cuerpo del acordeón en negro */
+  background: linear-gradient(to right, #2f084b, #690f60);
   color: white;
   width: 500px;
+  border-radius: 20px;
+  border-color: #00c2cb;
 }
 
 .accordion-button:not(.collapsed) {
   background-color: #100d28 ; /* Un tono más claro cuando está expandido */ 
   color: #00c2cb ;
 } 
+.bg-color-accordion{
+  background: #f8f8f800;
+}
+
+
+/*ACCORDION RESPONSIVO*/
+
+@media (max-width: 768px) {
+  #container-acordeon{
+    display: flex;
+    align-items: center;
+  }
+  
+  .accordion-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #100d28; /* Fondo negro del botón */
+    color: white; /* Texto blanco */
+    width: 380px;
+    border-radius: 20px;
+    border: none;
+    margin-left: auto; 
+    margin-right: auto;
+    display: block; 
+  }
+  
+  .accordion-body {
+    font-size: 12px;
+    background: linear-gradient(to right, #2f084b, #690f60); /* Cuerpo del acordeón en negro */
+    color: white;
+    width: 380px;
+    border-radius: 20px;
+    border-color: #00c2cb;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #100d28 ; /* Un tono más claro cuando está expandido */ 
+    color: #00c2cb ;
+  } 
+  .bg-color-accordion{
+    background: #f8f8f800;
+  }
+}
 
 /* Imagen */
 .mission-image{
-  width: 470px;
-  padding-left: 100px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 100%; 
+  margin-top: 12px;           
 }
 
 .title-card{
@@ -1248,6 +1296,9 @@ justify-content: space-around;
   flex-shrink: 0;
 }
 
+.hamburger {
+  margin-left: auto; /* Alinea el botón a la derecha */
+}
 
 /* -------------------------------------------------------------------------------------------- */
 
