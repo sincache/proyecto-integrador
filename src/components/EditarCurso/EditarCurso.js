@@ -43,7 +43,7 @@ const EditarCurso = () => {
   };
 
   return (
-    <div className="container my-5">
+    <div>
       <h2>Editar Curso</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
