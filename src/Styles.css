@@ -1564,3 +1564,19 @@ footer {
   color: #ff0080; /* Color cuando es favorito */
   stroke: #100d28; /* Contorno del color de favorito */
 }
+
+.color-list-group{
+  color: white;
+  background: linear-gradient(to right, #2f084b, #690f60);
+  border-radius: 10px;
+  border: 5px;
+  margin-bottom: 8px;
+}
+
+.seccion-contacto{
+  background: linear-gradient(to right,#0f0f2e, #410479);
+}
+
+.formulario-contacto{
+  background: linear-gradient(to right, #690f60, #4d0f79);
+}

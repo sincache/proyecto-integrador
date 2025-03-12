@@ -65,10 +65,18 @@ const Cursos = () => {
   return (
     <main>
       <section className="container my-5">
-        <div className="d-flex justify-content-between align-items-center mb-4" id='cursos_btn'>
-          <h2>Nuestros Cursos</h2>
-          <Link to="/Cursos/Agregar" className="btn btn-primary">Agregar Nuevo Curso</Link> 
+      <div className="container">
+    <div className="row mb-4 text-center text-md-start" id="cursos_btn">
+      <div className="col-12 col-md-auto">
+        <h2>Nuestros Cursos</h2>
         </div>
+        <div className="col-12 col-md-auto mt-2 mt-md-0">
+        <Link to="/Cursos/Agregar" className="btn btn-primary w-100 w-md-auto">
+          Agregar Nuevo Curso
+        </Link>
+      </div>
+    </div>
+  </div>
 
         <section className="container my-5">
           <div className="row">

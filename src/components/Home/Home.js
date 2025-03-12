@@ -36,7 +36,7 @@ const Home = () => {
                         En TechWomen Academy, nuestra misión es empoderar a las mujeres a través de la educación en tecnología. Ofrecemos cursos y certificaciones que abren puertas a nuevas oportunidades en el mundo digital.
                     </p>
                     <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary">
+                        <a href="/Cursos" class="btn btn-primary">
                             Explorar
                         </a>
                         <a href="/Unirse" class="btn btn-secondary">
