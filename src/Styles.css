@@ -490,6 +490,7 @@ body {
   );
   background-attachment: fixed;
   color: white;
+  margin:auto;
 }
 
 /* Contenedor */
@@ -510,43 +511,90 @@ body {
 }
 
 /* Estilos para la cita de éxito */
-.cita-home {
-  font-family: "Roboto", sans-serif; /* Fuente moderna */
-  font-size: 1.5rem; /* Tamaño de fuente grande */
-  font-weight: 500; /* Peso de la fuente */
-  font-style: italic; /* Texto en cursiva */
-  color: #ffffff; /* Color blanco */
-  background-color: #100D28; /* Fondo azul */
-  padding: 20px 30px; /* Espaciado interno */
-  border-radius: 10px; /* Bordes redondeados */
-  text-align: center; /* Texto centrado */
-  align-items: center;
-  max-width: 80%; /* Ancho máximo para la cita */
-  margin: 70px auto; /* Centrar la cita en la página */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  position: relative; /* Para el ícono de comillas */
+/* CONTENEDOR PRINCIPAL DE LA CITA */
+.cita-container {
+  background-color: rgba(16, 13, 40, 0.9);
+  border: 2px solid #5C0AAC;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 150px auto;
+  max-width: 80%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  position: relative;
 }
 
-/* Opcional: Añadir ícono de comillas */
-.cita-home::before {
+/* CONTENIDO DE LA CITA */
+.cita-content {
+  text-align: center;
+}
+
+/* TEXTO PRINCIPAL DE LA CITA */
+.cita-text {
+  font-size: 2rem;
+  color: #FFFFFF;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+/* DATOS CLAVE (26% y 5%) */
+.dato-clave {
+  color: #D90070;
+  font-weight: bold;
+}
+
+/* FUENTE DE LA CITA */
+.cita-dato {
+  font-size: 1rem;
+  color: #00B5D9;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* COMILLAS DE APERTURA Y CIERRE */
+.cita-text::before {
   content: "“"; /* Comilla de apertura */
   font-family: "Georgia", serif;
-  font-size: 4rem; /* Tamaño grande para la comilla */
-  color: rgba(255, 255, 255, 0.3); /* Color semi-transparente */
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.2);
   position: absolute;
-  top: -20px;
-  left: 20px;
+  top: -30px;
+  left: -10px;
 }
 
-.cita-home::after {
+.cita-text::after {
   content: "”"; /* Comilla de cierre */
   font-family: "Georgia", serif;
-  font-size: 4rem; /* Tamaño grande para la comilla */
-  color: rgba(255, 255, 255, 0.3); /* Color semi-transparente */
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.2);
   position: absolute;
-  bottom: -40px;
-  right: 20px;
+  bottom: -30px;
+  right: -10px;
 }
+
+/* EFECTO AL PASAR EL CURSOR */
+.cita-container:hover {
+  transform: translateY(-4px);
+  transition: 0.3s ease;
+}
+
+/* ANIMACIÓN SUAVE */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.cita-container {
+  animation: fadeIn 0.6s ease;
+}
+
+
 
 #logo-body{
   width: 75%;
