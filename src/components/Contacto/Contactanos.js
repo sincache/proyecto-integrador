@@ -56,8 +56,8 @@ const Contactanos = () => {
       <div className="container-fluid">
         <div className="row w-75 shadow-lg rounded overflow-hidden">
           {/* Sección de Contacto */}
-          <div className="col-md-5 bg-purple-light p-5 d-flex flex-column justify-content-center">
-            <h1 className="mb-4 text-center">CONTÁCTANOS</h1>
+          <div className="col-md-5 bg-purple-light p-5 d-flex flex-column justify-content-center seccion-contacto">
+            <h2 className="mb-4 ml-4 text-center">CONTÁCTANOS</h2>
             <div className="data text-center">
               <p><i className="fas fa-phone-alt"></i> +52 555 555 555</p>
               <p><i className="fas fa-envelope"></i> sincache@mail.com</p>
@@ -66,7 +66,7 @@ const Contactanos = () => {
           </div>
 
           {/* Formulario de Contacto */}
-          <div className="col-md-7 p-5 d-flex flex-column justify-content-center">
+          <div className="col-md-7 p-5 d-flex flex-column justify-content-center formulario-contacto">
             {exito && (
               <div className="alert alert-success" role="alert">
                 ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.

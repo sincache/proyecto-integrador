@@ -99,9 +99,9 @@ const Opiniones = () => {
       {/* Listado de opiniones */}
       <ul className="list-group">
         {opiniones.map((opinion) => (
-          <li key={opinion.id} className="list-group-item">
+          <li key={opinion.id} className="list-group-item color-list-group">
             <h5>{opinion.nombre}</h5>
-            <small className="text-muted">{opinion.fecha}</small>
+            <small>{opinion.fecha}</small>
             <p>{opinion.comentario}</p>
             <p>Calificación: {'⭐'.repeat(opinion.calificacion)}</p>
           </li>
