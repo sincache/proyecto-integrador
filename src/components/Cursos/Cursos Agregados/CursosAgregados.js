@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaEdit, FaStar } from 'react-icons/fa';
 
-const Cursos = () => {
+const CursosAgregados = () => {
   const [cursos, setCursos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [favoritos, setFavoritos] = useState({});
@@ -30,8 +30,8 @@ const Cursos = () => {
           setLoading(false);
         });
     }
-  }, []);   
 
+  }, []);
 
 
   //codigo para el funcionamiento para "MIS CURSOS"
@@ -43,14 +43,18 @@ const Cursos = () => {
     } else { // si no existe, lo agregamos
       nuevosFavoritos = [...favoritos, cursoID] 
     }
-localStorage.setItem ('misFavoritos', JSON.stringify(nuevosFavoritos))  
+    localStorage.setItem ('misFavoritos', JSON.stringify(nuevosFavoritos))
+
     setFavoritos((prev) => ({
       ...prev,
       [cursoID]: !prev[cursoID],
     }));
-  }; 
+  };
+  const MisCursos=JSON.parse(localStorage.getItem('misFavoritos'));
+  console.log(MisCursos);
+  const cursosRender = cursos.filter(curso => MisCursos.includes(curso.ID));
 
-
+  
   // Función para generar estrellas
   const generarEstrellas = (calificacionPromedio) => {
     const estrellas = [];
@@ -81,19 +85,14 @@ localStorage.setItem ('misFavoritos', JSON.stringify(nuevosFavoritos))
       <div className="container">
     <div className="row mb-4 text-center text-md-start" id="cursos_btn">
       <div className="col-12 col-md-auto">
-        <h2>Nuestros Cursos</h2>
+        <h2>Mis Cursos</h2>
         </div>
-        <div className="col-12 col-md-auto mt-2 mt-md-0">
-        <Link to="/Cursos/Agregar" className="btn btn-primary w-100 w-md-auto">
-          Agregar Nuevo Curso
-        </Link>
-      </div>
     </div>
   </div>
 
         <section className="container my-5">
           <div className="row">
-            {cursos.map((curso) => (
+            {cursosRender.map((curso) => (
               <div className="col-md-4 mb-4" key={curso.ID}>
                 <div className="card team-card h-100">
                   <img 
@@ -102,25 +101,19 @@ localStorage.setItem ('misFavoritos', JSON.stringify(nuevosFavoritos))
                     alt={curso.TITULO} 
                   />
                   <div className="card-body d-flex flex-column text-white">
-                    
-                    <button onClick={() => toggleFavorite(curso.ID)} className={`plus-button ${favoritos[curso.ID] ? "favorite" : ""}`}>
-                    {favoritos[curso.ID] ? (
+
+
+                    {/* boton de favoritos*/}
+
+                    <button onClick={() => toggleFavorite(curso.ID)} className={`plus-button favorite`}>
                       // Ícono de "-"
                     <svg width="32" height="32" viewBox="0 0 32 32" className="plus-icon" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="16" cy="16" r="15" fill="currentColor" stroke="currentColor" strokeWidth="2"/>
                     <rect x="7" y="13" width="18" height="6" fill="currentColor"/>
                     </svg>
-                    ) : (
-                    // Ícono de "+"
-                    <svg width="32" height="32" viewBox="0 0 32 32" className="plus-icon" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="16" cy="16" r="15" fill="currentColor" stroke="currentColor" strokeWidth="2"/>
-                    <rect x="13" y="7" width="6" height="18" fill="currentColor"/>
-                    <rect x="7" y="13" width="18" height="6" fill="currentColor"/>
-                    </svg>
-                    )}
+                    
                     </button>
-
-
+                    
                     <h5 className="card-title">{curso.TITULO}</h5>
                     <p className="card-text">{curso.DESCRIPCION}</p>
                     <ul className="list-unstyled mt-3">
@@ -154,4 +147,4 @@ localStorage.setItem ('misFavoritos', JSON.stringify(nuevosFavoritos))
   );
 };
 
-export default Cursos;
+export default CursosAgregados;
