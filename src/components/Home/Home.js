@@ -92,19 +92,35 @@ const Home = () => {
 
                 <section class="enrollment">
                     <div class="container">
-                        <h2>¿Cómo inscribirte a los cursos y talleres?</h2>
+                    <h2>¿Cómo inscribirte a los cursos y comenzar tu camino al exito en las TI?</h2>
                         <div class="enrollment-grid">
                             <article class="enrollment-step">
-                                <h3>Participación en Talleres y Certificaciones</h3>
-                                <p>Una vez inscrita, recibirás toda la información necesaria para comenzar.</p>
+                            <h3>Registro, rapido, seguro y exclusivo</h3>
+                                <p>Para comenzar a disfrutar de todos los beneficios y herramientas que TechWomenpuede ofrecerte solo debes llenar un rapido registro diseñado para cuidar a nuestras usuarias y mantener una comunidad especial para todas...</p>
+                           </article>
+                            <article class="enrollment-step">
+                                <h3>Acceso a Materiales y Recursos, Pensados en ti</h3><br />
+                                <p>Tendrás acceso a materiales para mejorar tu desarollo tanto con tus compañeros de cursos, como poder solicitar assorias personalizadascon nuestro maravilloso equipo listo para apoyarte y resolver tus dudas. </p>
                             </article>
                             <article class="enrollment-step">
-                                <h3>Acceso a Materiales y Recursos</h3><br />
-                                <p>Tendrás acceso a materiales exclusivos para tu aprendizaje.</p>
+                                <h3>Certifica tu conocimiento</h3>
+                                <p>Al finalizar, recibirás una certificación que validara tus habilidades adqueridas, dichos certificados le daran mas formalidad y respaldo de tus HARD SKINS (Habilidades Tecnicas).
+                                    Algo fundamental y diferenciador en el competitivo mundo laboral actual.</p>
                             </article>
                             <article class="enrollment-step">
-                                <h3>Certificación al Completar el Curso</h3>
-                                <p>Al finalizar, recibirás una certificación que valida tus habilidades.</p>
+                                <h3>Un Espacio pensado para las Mujeres de Hoy</h3>
+                                <p>Por que no solo se trata de un curso mas!, Nuestras asesorias no solo son pensadas para las HARD SKINS, si no que tambien estan pensadas en apoyarte con Habilidades Blandas, como prsentar tu CV, Consejos para entrevistas y secretos que te haran dar un plus a tu presentacion laboral para captar la atencion de las empresas independintemente de tu desarollo y crecimiento a futuro</p>
+                            </article>
+                            <article class="enrollment-step">
+                                <h3>La Mejor parte?.... Todo esto es GRATUITO</h3>
+                                <p> Asi es, Nuestra Mision y principal objetivo es que las mujeres tengan las herramientas necesarias para su desarrollo profesional y para esto no se tiene precio, debido a esto nuestros cursos y materiales son GRATUITOS para todas nuestras miembros</p>
+                                </article>
+
+                                <article class="enrollment-step">
+                                <h3>TechWomen y el Exito las esperan</h3>
+                                <p>"Las mujeres son la mayor reserva de talento sin explotar del mundo". - Hillary Clinton     </p>                          
+                                <p>“El éxito de cada mujer debería ser una inspiración para otra. Somos más fuertes cuando nos alentamos mutuamente”. —Serena Williams</p>
+                                <p>“En el futuro no habrá mujeres líderes. Sólo habrá líderes”. —Sheryl Sandberg</p>                          
                             </article>
                         </div>
                         <div class="cta-buttons">
