@@ -86,31 +86,61 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section class="enrollment">
-                    <div class="container">
-                        <h2>¿Cómo inscribirte a los cursos y talleres?</h2>
-                        <div class="enrollment-grid">
-                            <article class="enrollment-step">
-                                <h3>Participación en Talleres y Certificaciones</h3>
-                                <p>Una vez inscrita, recibirás toda la información necesaria para comenzar.</p>
+                <section className="enrollment">
+                    <div className="container">
+                        <h2>¿Cómo inscribirte a los cursos y comenzar tu camino al éxito en las TI?</h2>
+                        <div className="enrollment-grid">
+                            <article className="enrollment-step">
+                                <h3>Registro, rápido, seguro y exclusivo</h3>
+                                <p>Para comenzar a disfrutar de todos los beneficios y herramientas que TechWomen puede ofrecerte solo debes llenar un rápido registro diseñado para cuidar a nuestras usuarias y mantener una comunidad especial para todas...</p>
+                                <div className="icon-container">
+                                <i class="bi bi-file-lock
+                                icon-large"></i>
+                                </div>
                             </article>
-                            <article class="enrollment-step">
-                                <h3>Acceso a Materiales y Recursos</h3><br />
-                                <p>Tendrás acceso a materiales exclusivos para tu aprendizaje.</p>
+                            <article className="enrollment-step">
+                                <h3>Acceso a Materiales y Recursos, Pensados en ti</h3>
+                                <p>Tendrás acceso a materiales para mejorar tu desarrollo tanto con tus compañeros de cursos, como poder solicitar asesorías personalizadas con nuestro maravilloso equipo listo para apoyarte y resolver tus dudas.</p>
+                                <div className="icon-container">
+                                    <i className="bi bi-pencil-square icon-large"></i>
+                                </div>
                             </article>
-                            <article class="enrollment-step">
-                                <h3>Certificación al Completar el Curso</h3>
-                                <p>Al finalizar, recibirás una certificación que valida tus habilidades.</p>
+                            <article className="enrollment-step">
+                                <h3>Certifica tu conocimiento</h3>
+                                <p> Al finalizar, recibirás una certificación que validará tus habilidades adquiridas, dichos certificados le darán más formalidad y respaldo a tus HARD SKILLS (Habilidades Técnicas). Algo fundamental y diferenciador en el competitivo mundo laboral actual.</p>
+                                <div className="icon-container">
+                                    <i class="bi bi-award
+                                     icon-large"></i>
+                                </div>
+                            </article>
+                            <article className="enrollment-step">
+                                <h3>Un Espacio pensado para las Mujeres de Hoy</h3>
+                                <p>Porque no solo se trata de un curso más!, Nuestras asesorías no solo son pensadas para las HARD SKILLS, sino que también están pensadas en apoyarte con Habilidades Blandas, como presentar tu CV, Consejos para entrevistas, entre otros que te harán dar un plus a tu presentación laboral para captar la atención de las empresas de hoy .</p>
+                                <i class="bi bi-person-workspace
+                                icon-large"></i>
+                            </article>
+                            <article className="enrollment-step">
+                                <h3>La Mejor parte?.... Todo esto es GRATUITO</h3>
+                                <p> Así es, Nuestra Misión y principal objetivo es que las mujeres tengan las herramientas necesarias para su desarrollo profesional y para esto no se tiene precio, debido a esto nuestros cursos y materiales son GRATUITOS para todas nuestras miembros.</p>
+                                <i class="bi bi-exclamation-circle-fill
+                                icon-large"></i>
+                            </article>
+                            <article className="enrollment-step">
+                                <h3>TechWomen y el Éxito las esperan</h3>
+                                <p> "Las mujeres son la mayor reserva de talento sin explotar del mundo". - Hillary Clinton</p>
+                                <p>“El éxito de cada mujer debería ser una inspiración para otra. Somos más fuertes cuando nos alentamos mutuamente”. —Serena Williams</p>
+                                <p> “En el futuro no habrá mujeres líderes. Sólo habrá líderes”. —Sheryl Sandberg</p>
+                                <i className="bi bi-trophy
+                                icon-large"></i>
                             </article>
                         </div>
-                        <div class="cta-buttons">
-                            <a href="#" class="btn btn-primary">Saber Más</a>
+                        <div className="cta-buttons">
+                            <a href="#" className="btn btn-primary">Saber Más</a>
                         </div>
                     </div>
                 </section>
             </main>
         </>
-
     );
 };
 

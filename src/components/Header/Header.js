@@ -80,6 +80,11 @@ const Header = ({ user, onLogout }) => {
             Contáctanos
           </Link>
         </li>
+        <li className="nav-item">
+    <Link className="nav-link" to="/MisCursos" onClick={closeMenu}>
+      Mis Cursos
+    </Link>
+  </li>
 
         {/* Botones */}
         <div className="nav-buttons">

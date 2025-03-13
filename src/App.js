@@ -24,6 +24,8 @@ import EditarCurso from './components/EditarCurso/EditarCurso';
 import Iniciar from './components/Iniciar/Iniciar';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import Opiniones from './components/Opiniones/Opiniones.jsx';
+import CursosAgregados from './components/Cursos/Cursos Agregados/CursosAgregados'; 
+
 
 
 function QuienesSomosCompleta() {
@@ -65,7 +67,8 @@ function App() {
         <Route path="/Cursos/Eliminar" element={<ProtectedRoute user={user}><EliminarCurso /></ProtectedRoute>} />
         <Route path="/Contactanos" element={<Contactanos />} />
         <Route path="/Cursos/Editar/:id" element={<EditarCurso />} /> 
-        <Route path="/Opiniones/:idCurso" element={<Opiniones />} />
+        <Route path="/Opiniones/:idCurso" element={<Opiniones />} /> 
+        <Route path='/MisCursos' element={<CursosAgregados />} /> 
       </Routes>
       <Footer />
     </Router>

@@ -477,6 +477,24 @@ button.btn-accent:hover {
   padding: 0;
   display: block;
 }
+/* Estilos de loc iconos*/
+.enrollment-step {
+  position: relative;
+  padding-bottom: 40px; /* Espacio para el icono */
+}
+
+.icon-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.icon-large {
+  font-size: 2rem; /* Tamaño del icono */
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -947,6 +965,8 @@ justify-content: space-around;
   font-size: 1.1rem;
 }
 
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .benefits .container {
@@ -1388,6 +1408,7 @@ justify-content: space-around;
 /* -------------------------------------------------------------------------------------------------- */
 
 /* En que parte se utiliza esta clase? */
+/* Ni idea jojojo*/
 .navbar-container {
   display: flex;
   align-items: center;
@@ -1617,7 +1638,7 @@ hr{
 
 
 /*Boton de favoritos*/
-.heart-button {
+.plus-button {
   background: none;
   border: none;
   cursor: pointer;
@@ -1631,21 +1652,46 @@ hr{
   justify-content: center;
 }
 
-.heart-button:active {
+.plus-button:active {
   transform: scale(1.4);
 }
 
-.heart-icon {
-  color: #1d1734; /* Color del ícono */
-  transition: color 0.2s ease-in-out, stroke 0.2s ease-in-out; /*Agregado para transición suave en el contorno */
-  font-size:48px; /* Tamaño del ícono */
-  stroke: #00c2cb; /* Contorno negro */
-  stroke-width: 1.5px; /* Grosor del contorno */
+/* Estilos generales para el SVG (tamaño, etc.) */
+.plus-icon {
+  fill: #ff0080; 
+
 }
 
-.heart-button.favorite .heart-icon {
-  color: #ff0080; /* Color cuando es favorito */
-  stroke: #100d28; /* Contorno del color de favorito */
+.plus-icon rect {
+  fill: #000000;
+}
+
+.plus-icon circle {
+  fill: #00c2cb;
+  stroke: #00c2cb;
+}
+
+.plus-button.favorite .plus-icon circle {
+  fill: #ff0080 !important;
+  stroke: #ff0080 !important;
+} 
+
+.plus-button.favorite .plus-icon rect {
+  fill: #000000 !important;
+}
+
+/*Boton de quitar en mis cursos*/
+.minium-icon rect {
+  fill: #000000;
+}
+
+.minium-icon circle {
+  fill: #00c2cb;
+  stroke: #00c2cb;
+}
+
+.minium-icon{
+  fill: #ff0080; 
 }
 
 .color-list-group{
