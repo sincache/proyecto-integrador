@@ -457,7 +457,8 @@ button.btn-accent:hover {
 
 
 #logo-footer{
-  width: 100px;
+  width: 250px;
+  margin-bottom: 10px;
 }
 
 /* Estilos de Home */
@@ -1196,7 +1197,7 @@ justify-content: space-around;
 }
 
 .social-links {
-  margin-top: 20px;
+  
   list-style: none;
   padding: 0;
   display: flex;
@@ -1419,22 +1420,26 @@ justify-content: space-around;
 
 /* Sección del footer */
 footer {
-    background: #17151C;
+  background: #17151C;
   color: #ffffff;
   padding: 1rem 0;
   display: flex;
+  flex-direction: column; 
+  align-items: center;
 }
 
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 5rem;
   justify-content: space-between;
+  padding-top: 30px;
 }
 
 .newsletter-section {
   flex: 1;
-  min-width: 300px;
+  min-width: 500px;
+
 }
 
 .newsletter-section h5 {
@@ -1463,10 +1468,13 @@ footer {
   cursor: pointer;
 }
 
+
+/* Seccion de links */
 .footer-links {
+  flex: 2; 
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  justify-content: space-between; 
+  gap: 40px; 
 }
 
 .footer-column {
@@ -1490,12 +1498,15 @@ footer {
 
 .footer-column a:hover {
   opacity: 1;
+  color: white;
+  transform: scale(1.2);
 }
 
 .social-links {
   display: flex;
   gap: 1rem;
   align-items: center;
+  
 }
 
 .social-links a {
@@ -1506,6 +1517,7 @@ footer {
 
 .social-links a:hover {
   transform: scale(1.2);
+  color: white;
 }
 
 .footer-bottom {
@@ -1513,8 +1525,14 @@ footer {
   text-align: center;
   color: #666;
   font-size: 0.875rem;
-  border-top-color: #5c0aac;
-  border-top-style: solid;
+  width: 100%;
+  
+  /* border-top-color: #5c0aac;
+  border-top-style: solid; */
+}
+
+hr{
+  border-top: 4px solid #5C0AAC;
 }
 
 .footer-bottom a {
@@ -1532,6 +1550,42 @@ footer {
       flex-direction: column;
   }
 }
+
+
+
+.icon-list {
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  gap: 12px; /* Espacio entre los iconos */
+}
+
+.icon-list a {
+  display: flex;
+  align-items: center; /* Centra los iconos verticalmente */
+}
+
+
+
+.icon-list a {
+  display: flex;
+  align-items: center; 
+  gap: 15px; 
+  font-size: small;
+  
+}
+
+.NameIcon {
+  color: white;
+  
+}
+
+.Button-footer{
+  border-radius: 20px;
+ 
+}
+
+
+
 
 /*Boton de favoritos*/
 .heart-button {
