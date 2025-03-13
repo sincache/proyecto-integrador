@@ -529,31 +529,67 @@ body {
   align-items: start;
 }
 
+
 /* Estilos para la cita de éxito */
 /* CONTENEDOR PRINCIPAL DE LA CITA */
 .cita-container {
-  background-color: rgba(16, 13, 40, 0.9);
-  border: 2px solid #5C0AAC;
-  border-radius: 12px;
-  padding: 25px;
-  margin: 150px auto;
-  max-width: 80%;
+  border: 3px solid #5C0AAC; 
+  border-radius: 20px;
+  padding: 40px;
+  margin: 100px auto;
+  max-width: 1300px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.6);
   position: relative;
+  overflow: hidden; /* Evita que el contenido sobresalga */
+  box-sizing: border-box; /*Padding y border dentro del tamaño total */
 }
 
 /* CONTENIDO DE LA CITA */
 .cita-content {
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: nowrap; /* Evita que se apilen en pantallas grandes */
+    flex-direction: row; /* ✅ Mantiene la imagen a la derecha */
 }
 
+/* IMAGEN */
+.cita-imagen {
+  flex-shrink: 0; /* Evita que la imagen se reduzca */
+  order: 2; /*Imagen a la derecha */
+}
+
+.cita-imagen img {
+ 
+  max-width: 450px; /* Ancho de la imagen */
+  height: auto; /* Mantener la proporción */
+  border-radius: 50px; /* Bordes redondeados */
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Sombra suave */ 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+/* EFECTO AL PASAR EL CURSOR (Escalar levemente para efecto dinámico) */
+.cita-imagen img:hover {
+  transform: scale(1.05); /* Aumenta un 5% al pasar el cursor */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+
 /* TEXTO PRINCIPAL DE LA CITA */
+.cita-texto{
+  flex: 1; /* Ocupa el espacio restante */
+  min-width: 280px; /* Para evitar que el texto se desborde */
+}
+
 .cita-text {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #FFFFFF;
   line-height: 1.6;
   margin-bottom: 12px;
   position: relative;
+  max-width: 100%; /*Evita desbordamiento de texto */
 }
 
 /* DATOS CLAVE (26% y 5%) */
@@ -591,7 +627,7 @@ body {
   right: -10px;
 }
 
-/* EFECTO AL PASAR EL CURSOR */
+/* EFECTO HOVER */
 .cita-container:hover {
   transform: translateY(-4px);
   transition: 0.3s ease;
@@ -611,6 +647,38 @@ body {
 
 .cita-container {
   animation: fadeIn 0.6s ease;
+}
+
+/* ----------------------- */
+/* RESPONSIVIDAD */
+/* ----------------------- */
+
+/* ✅ TABLET (768px) */
+@media (max-width: 768px) {
+  .cita-content {
+      flex-direction: column; /* Se apilan solo en pantallas pequeñas */
+      gap: 20px;
+  }
+
+  .cita-text {
+      font-size: 1.4rem; /* Texto más pequeño para móviles */
+  }
+
+  .cita-imagen img {
+      max-width: 300px;
+  }
+}
+
+/* ✅ MÓVIL (480px) */
+@media (max-width: 480px) {
+  .cita-text {
+      font-size: 1.2rem;
+      line-height: 1.4;
+  }
+
+  .cita-imagen img {
+      max-width: 250px;
+  }
 }
 
 

@@ -2,6 +2,7 @@ import React from 'react';
 import PortadaHome from '../../assets/images/Portada_Home (3).jpg';
 import LogoTWA from '../../assets/images/Logo_TWA_Sin_Fondo.png';
 import VideoTWA from '../../assets/Video/VideoTWA.mp4';
+import Img_cita from '../../assets/images/Img_cita.png';
 
 const Home = () => {
     return (
@@ -14,18 +15,22 @@ const Home = () => {
 
             <div id="cita" className="cita-container">
                 <div className="cita-content">
-                    <p className="cita-text">
-                        Las mujeres representan sólo el
-                        <span className="dato-clave"> 26%</span> de todos los puestos informáticos, y en el caso de las mujeres negras y latinas, las estadísticas son aún peores: combinadas, representan aproximadamente el
-                        <span className="dato-clave"> 5%</span> de todos los puestos informáticos.
-                    </p>
-                    <p className="cita-dato">
-                        Foro Económico Mundial (2023)
-                    </p>
+                    <div className='cita-imagen'>
+                        <img src={Img_cita} alt='Mujeres en tecnología' />
+                    </div>
+                    <div className='cita-texto'>
+                        <p className="cita-text">
+                            Las mujeres representan sólo el
+                            <span className="dato-clave"> 26%</span> de todos los puestos informáticos, y en el caso de las mujeres negras y latinas, las estadísticas son aún peores: combinadas, representan aproximadamente el
+                            <span className="dato-clave"> 5%</span> de todos los puestos informáticos.
+                        </p>
+                        <p className="cita-dato">
+                            Foro Económico Mundial (2023)
+                        </p>
+                    </div>
+
                 </div>
             </div>
-
-
 
             <div class="container Container-Inicio">
                 <section class="hero-content">
@@ -94,7 +99,7 @@ const Home = () => {
                                 <h3>Registro, rápido, seguro y exclusivo</h3>
                                 <p>Para comenzar a disfrutar de todos los beneficios y herramientas que TechWomen puede ofrecerte solo debes llenar un rápido registro diseñado para cuidar a nuestras usuarias y mantener una comunidad especial para todas...</p>
                                 <div className="icon-container">
-                                <i class="bi bi-file-lock
+                                    <i class="bi bi-file-lock
                                 icon-large"></i>
                                 </div>
                             </article>
