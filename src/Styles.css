@@ -477,6 +477,24 @@ button.btn-accent:hover {
   padding: 0;
   display: block;
 }
+/* Estilos de loc iconos*/
+.enrollment-step {
+  position: relative;
+  padding-bottom: 40px; /* Espacio para el icono */
+}
+
+.icon-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.icon-large {
+  font-size: 2rem; /* Tamaño del icono */
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -917,6 +935,8 @@ justify-content: space-around;
   padding: 1rem 3rem;
   font-size: 1.1rem;
 }
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
