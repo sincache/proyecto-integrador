@@ -728,6 +728,37 @@ justify-content: space-around;
 
 
 
+/* Contenedor de inicio */
+.Container-Inicio {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 2rem; 
+  padding: 2rem;
+  
+}
+
+.hero-content {
+  flex: 1; 
+}
+
+.hero-content h1 {
+  font-size: 2.5rem; 
+  color: #00c2cb; 
+}
+
+.hero-details {
+  flex: 1; 
+}
+
+.hero-details p {
+  font-size: 1rem; /* Tamaño del texto */
+  color: #ffffff; /* Color del texto */
+  margin-bottom: 1.5rem; /* Espacio inferior */
+}
+
+
+
 
 
 
@@ -823,13 +854,11 @@ justify-content: space-around;
 }
 
 .benefits-list {
-  list-style: none;
-  padding: 0;
+  list-style: circle;
 }
 
 .benefits-list li {
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
   position: relative;
   color: var(--text-light);
   opacity: 0.9;
