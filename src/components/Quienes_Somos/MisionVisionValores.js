@@ -5,7 +5,7 @@ const MisionVisionValores = () => {
     return (
         <section className="mission-section">
             <div className="container">
-                <div className="text-center mb-5">
+                <div className="text-center mb-5 mision-vision-valores">
                     <h2>Misión, Visión y Valores</h2>
                     <p>Empoderando a mujeres en tecnología a través de educación de calidad</p>
                 </div>

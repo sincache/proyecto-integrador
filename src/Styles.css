@@ -232,12 +232,13 @@ body {
 
   .nav.open {
     display: flex; /* Muestra el menú de navegación cuando está abierto */
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 
   /* Estilos para los enlaces del menú en móvil */
   .nav a.nav-link {
     font-size: 1.5rem; /* Tamaño de fuente más grande para móviles */
-    padding: 15px 20px; /* Más espacio para tocar fácilmente */
     text-align: center; /* Centra el texto */
     color: white; /* Color del texto */
     width: 100%; /* Ocupa todo el ancho disponible */
@@ -295,7 +296,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  padding: 20px;
   background-image: url('assets/images/Videojuegos.jpg');
   background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
   background-position: center; /* Centra la imagen */
@@ -306,13 +307,23 @@ body {
 /* Recuadro iniciar Sesión */ 
 .bg-black{
   position: relative;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   background: transparent !important;
   border-radius: 30px;
   backdrop-filter: blur(20px);
   box-shadow: 0 0 30px rgba(0, 0, 0, .5);
   border: 2px solid rgba(255, 255, 255, .5) !important;
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  #Login {
+    min-height: auto; /* Elimina el min-height en pantallas pequeñas */
+    padding-top: 60px; /* Ajusta el padding superior para evitar el navbar */
+    padding-bottom: 60px; /* Ajusta el padding inferior para evitar el footer */
+  }
 }
 
 /* --------------------------------------------------------------------------------- */
@@ -320,9 +331,9 @@ body {
 /* Estilos para el contenedor del formulario */
 .form-container {
   position: relative;
-  width: 100%;
+  width: 80%;
   max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin: 50px auto; /* Centra el contenedor horizontalmente */
   padding: 20px;
   background: transparent;
   border-radius: 20px;
@@ -331,14 +342,14 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-/* Asegúrate de que el contenedor padre use flexbox para centrar */
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center; /* Centra horizontalmente */
 }
 
-/* Estilos adicionales para los elementos del formulario (opcional) */
+
 .form-control {
   background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para los inputs */
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -1131,9 +1142,7 @@ justify-content: space-around;
   max-width: 600px;
 }
 
-.text-center{
-  margin-top: 60px;
-}
+
 
 .titulo-quienes-somos {
   font-size: 2.5rem; /* Tamaño del título */
@@ -1146,6 +1155,10 @@ justify-content: space-around;
 }
 
 /* Mision, Vision y Valores */
+
+.mision-vision-valores{
+  margin-top: 50px;
+}
 
 /* Acordeon */
 
@@ -1422,6 +1435,7 @@ justify-content: space-around;
   text-align: center;
   gap:15px;
   display: flex;
+  /* margin: 20px; */
 }
 
 /* Estilos para el formulario */
@@ -1469,6 +1483,7 @@ justify-content: space-around;
 @media (max-width: 1200px) {
   .row.w-75 {
     width: 95% !important;
+    margin: 30px;
   }
 }
 
@@ -1584,6 +1599,7 @@ footer {
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  
 }
 
 
@@ -1699,6 +1715,13 @@ hr{
 
 .Button-footer{
   border-radius: 20px;
+  color: white;
+}
+
+.Button-footer:hover{
+  background-color: #ff1f71;
+  color: white;
+  font-weight: bold;
  
 }
 
