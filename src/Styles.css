@@ -512,12 +512,12 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   background-image: linear-gradient(180deg, 
-      rgba(41,32,76,1) 0%, 
-      rgba(40,27,94,1) 25%, 
-      rgba(39,26,95,1) 50%, 
-      rgba(39,25,96,1) 75%, 
-      rgba(23,21,29,1) 100%
-  );
+  rgba(41,32,76,1) 0%, 
+  rgba(40,27,94,1) 25%, 
+  rgba(39,26,95,1) 50%, 
+  rgba(39,25,96,1) 75%, 
+  rgba(23,21,29,1) 100%
+);
   background-attachment: fixed;
   color: white;
   margin:auto;
@@ -1163,7 +1163,7 @@ justify-content: space-around;
   left: -15%;
   right: -15%;
   bottom: -15%;
-  border: 2px solid rgba(255, 20, 147, 0.1);
+  border: 5px solid rgba(255, 20, 147, 0.1);
   border-radius: 50%;
   animation: rotateCircle 30s linear infinite reverse;
 }
@@ -1682,6 +1682,7 @@ footer {
 .footer-column h6 {
   color: #00c2cb;
   margin-bottom: 1rem;
+  
 }
 
 .footer-column a {
@@ -1690,13 +1691,17 @@ footer {
   display: block;
   margin-bottom: 0.5rem;
   opacity: 0.7;
-  transition: opacity 0.3s;
+  transition: transform 0.3s;
+
+  
 }
 
 .footer-column a:hover {
   opacity: 1;
   color: white;
-  transform: scale(1.2);
+  transform: scale(1.1);
+  
+  
 }
 
 .social-links {
