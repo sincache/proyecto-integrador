@@ -862,12 +862,6 @@ justify-content: space-around;
 
 /* ---------------------------------------------------------------------------------------- */
 
-
-
-
-
-
-
 /* Sección de Cursos */
 .features {
   padding: var(--spacing-lg) 0;
@@ -979,6 +973,78 @@ justify-content: space-around;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+}
+
+/* Estilos específicos para la página de Editar Curso */
+#editar-curso-background{
+  background-image:
+    radial-gradient(at 56% 95%, hsla(265, 86%, 41%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 29% 51%, hsla(223, 66%, 45%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 59% 20%, hsla(318, 72%, 33%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 73% 8%, hsla(269, 81%, 42%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 18% 61%, hsla(266, 89%, 35%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 61% 86%, hsla(204, 93%, 45%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 40% 30%, #271864 0px, transparent 50%), /* Color oscuro superior */
+    linear-gradient(180deg, rgba(39,24,100,1) 0%, rgba(41,32,76,1) 32%, rgba(35,28,60,1) 70%, #17151C 100%); /* Degradado principal */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Contenedor del formulario */
+.editar-curso-form-container {
+  position: relative;
+  z-index: 2; /* Asegura que el formulario esté por encima del overlay */
+}
+
+/* Recuadro del formulario */
+.editar-curso-container {
+  width: 90%; /* Más ancho que el original */
+  max-width: 1000px; /* Ajusta el ancho máximo según sea necesario */
+  margin: 50px auto; /* Centra el contenedor horizontalmente */
+  padding: 20px;
+  background: transparent;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Estilos para el formulario */
+.editar-curso-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaciado entre los elementos del formulario */
+}
+
+.editar-curso-form .form-control {
+  background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para los inputs */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white; /* Texto blanco para los inputs */
+}
+
+.editar-curso-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Color del placeholder */
+}
+
+.editar-curso-form label {
+  text-align: center;
+  color: white; /* Color del texto de las etiquetas */
+}
+
+.editar-curso-form button {
+  background-color: #ff1f71; /* Color rosa para el botón */
+  border: none;
+  color: white;
+  border-radius: 25px;
+  padding: 8px 25px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  width: 200px;
+}
+
+.editar-curso-form button:hover {
+  background-color: #00c2cb; /* Cambio de color al pasar el mouse */
+  color: white;
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -1355,9 +1421,6 @@ justify-content: space-around;
 .social-links a:hover {
   opacity: 0.8;
 }
-
-
-
 
 /* ------------------------------------------------------------------------------- */
 
