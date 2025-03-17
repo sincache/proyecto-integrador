@@ -1398,6 +1398,7 @@ justify-content: space-around;
   padding: 0;
   display: flex;
   gap: 15px; /* Espacio entre los íconos */
+  margin-top: auto; 
 }
 
 .social-links a {
@@ -1867,4 +1868,122 @@ hr{
 
 .formulario-contacto{
   background: linear-gradient(to right, #690f60, #4d0f79);
+}
+
+
+
+
+
+
+/* Linea del tiempo */
+/* Contenedor de la línea de tiempo */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Línea central */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #ccc;
+  transform: translateX(-50%);
+}
+
+/* Contenedor de comentario de la línea de tiempo */
+.timeline-item {
+  position: relative;
+  width: 80%;
+  padding: 10px 40px; /* Más espacio horizontal */
+  box-sizing: border-box;
+}
+
+/* Posicionamiento alternado (izquierda y derecha) */
+.timeline-item.left {
+  left: -163px;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Contenido del comentario */
+.timeline-content {
+
+  padding: 20px; 
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  max-width: 100%; /* Asegura que no se desborde */
+  word-wrap: break-word; /* Evita que el texto se salga del cuadro */
+}
+
+/* Punto en la línea */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: #00c2cb;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+/* Posicionamiento del punto */
+.timeline-item.left::before {
+  right: -10px;
+}
+
+.timeline-item.right::before {
+  left: -10px;
+}
+
+
+
+/* Estrellas de calificación */
+.timeline-content p:last-child {
+  margin-top: 10px;
+  color: #ffc107; /* Color amarillo para las estrellas */
+}
+
+
+
+/* Ajustes para pantallas pequeñas (menos de 768px) */
+@media (max-width: 767.98px) {
+  .timeline::before {
+    left: 20px; /* Mueve la línea central a la izquierda */
+  }
+
+  .timeline-item {
+    width: 100%; /* Ocupa todo el ancho */
+    padding-left: 70px; /* Espacio para la línea y el punto */
+    padding-right: 20px; /* Espacio a la derecha */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0; /* Todos los comentarios a la izquierda */
+    text-align: left;
+  }
+
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    left: 10px; /* Posición del punto en móviles */
+    right: auto; /* Anula la posición en pantallas grandes */
+  }
+
+  .timeline-content {
+    padding: 15px; /* Espaciado interno reducido */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
 }

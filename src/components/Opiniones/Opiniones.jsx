@@ -46,10 +46,10 @@ const Opiniones = () => {
 
   return (
     <section className="container my-5">
-         <h2>{titulo}</h2>
+      <h2>{titulo}</h2>
 
       {/* Botón para mostrar/ocultar el formulario */}
-      <button 
+      <button
         className="btn btn-primary mb-3" // Estilo igual al botón de enviar
         onClick={() => setFormVisible(!formVisible)} // Cambia el estado de formVisible
       >
@@ -60,28 +60,28 @@ const Opiniones = () => {
       {formVisible && (
         <form onSubmit={handleSubmit} className="mb-5">
           <div className="mb-3">
-            <input 
-              type="text" 
-              className="form-control" 
-              placeholder="Tu nombre" 
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Tu nombre"
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
-              required 
+              required
             />
           </div>
           <div className="mb-3">
-            <textarea 
-              className="form-control" 
-              placeholder="Escribe tu opinión" 
+            <textarea
+              className="form-control"
+              placeholder="Escribe tu opinión"
               value={comentario}
               onChange={(e) => setComentario(e.target.value)}
-              required 
+              required
             />
           </div>
           <div className="mb-3">
             <label>Calificación: </label>
-            <select 
-              className="form-select w-auto d-inline ms-2" 
+            <select
+              className="form-select w-auto d-inline ms-2"
               value={calificacion}
               onChange={(e) => setCalificacion(e.target.value)}
             >
@@ -92,21 +92,30 @@ const Opiniones = () => {
               <option value="1">1 - Malo</option>
             </select>
           </div>
-          <button type="submit" className="btn btn-primary">Enviar Opinión</button>
+
+          <div className="text-center">
+            <button type="submit" className="btn btn-primary">Enviar Opinión</button>
+          </div>
         </form>
       )}
 
       {/* Listado de opiniones */}
-      <ul className="list-group">
-        {opiniones.map((opinion) => (
-          <li key={opinion.id} className="list-group-item color-list-group">
-            <h5>{opinion.nombre}</h5>
-            <small>{opinion.fecha}</small>
-            <p>{opinion.comentario}</p>
-            <p>Calificación: {'⭐'.repeat(opinion.calificacion)}</p>
-          </li>
+      {/* Contenedor de la línea de tiempo */}
+      <div className="timeline">
+        {opiniones.map((opinion, index) => (
+          <div
+            key={opinion.id}
+            className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
+          >
+            <div className="list-group-item color-list-group timeline-content">
+              <h5>{opinion.nombre}</h5>
+              <small>{opinion.fecha}</small>
+              <p>{opinion.comentario}</p>
+              <p>Calificación: {'⭐'.repeat(opinion.calificacion)}</p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };
