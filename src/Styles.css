@@ -488,24 +488,89 @@ button.btn-accent:hover {
   padding: 0;
   display: block;
 }
-/* Estilos de loc iconos*/
-.enrollment-step {
-  position: relative;
-  padding-bottom: 40px; /* Espacio para el icono */
+
+/* -------------------------------------------------------------------------------------- */
+/* Estilos de los iconos*/
+/* Contenedor principal */
+.enrollment {
+  padding: 20px;
 }
 
+/* Estilos para los pasos de inscripción */
+.enrollment-step {
+  position: relative;
+  padding-bottom: 40px; /* Espacio interno */
+  margin-bottom: 10px; /* Espacio entre recuadros */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Borde sutil */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+  text-align: center; /* Centrar el contenido */
+}
+
+/* Estilos para los íconos */
 .icon-container {
   position: absolute;
-  bottom: 0;
+  bottom: -20px; /* Mover el ícono hacia abajo */
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
-  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
 }
 
 .icon-large {
-  font-size: 2rem; /* Tamaño del icono */
+  font-size: 1.7rem; /* Tamaño del ícono */
+  color: #ff1f71; /* Color del ícono */
+  transition: color 0.3s ease; /* Transición suave para el hover */
 }
+
+.icon-large:hover {
+  color: #00c2cb; /* Cambio a azul al pasar el mouse */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .enrollment-step {
+    padding: 20px; /* Menos espacio en pantallas pequeñas */
+    margin-bottom: 30px; /* Menos espacio entre recuadros */
+  }
+
+  .icon-container {
+    bottom: -11px; /* Ajustar posición del ícono en pantallas pequeñas */
+    padding: 6px; /* Menos padding para el ícono */
+  }
+
+  .icon-large {
+    font-size: 1.4rem; /* Tamaño más pequeño para el ícono */
+  }
+}
+
+/* Estilos para el botón "Saber Más" */
+.btn-saber-mas {
+  background-color: #ff1f71; /* Color rosa */
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 30px; /* Bordes redondeados */
+  text-decoration: none; /* Quitar subrayado del enlace */
+  font-size: 1rem; /* Tamaño de la fuente */
+  transition: all 0.3s ease; /* Transición suave */
+  position: absolute; /* Posicionamiento absoluto */
+  top: -120px; /* Ajusta la posición vertical */
+  right: 20px; /* Ajusta la posición horizontal */
+  align-items: center;
+  margin-right: 670px;
+}
+
+.btn-saber-mas:hover {
+  background-color: #00c2cb; /* Cambio a azul al pasar el mouse */
+  color: white;
+}
+
+.cta-button {
+  position: relative; /* Contenedor relativo para posicionar el botón */
+  margin-top: 40px; /* Espacio arriba del botón */
+}
+
+/* --------------------------------------------------------------------------------- */
 
 body {
   font-family: 'Roboto', sans-serif;

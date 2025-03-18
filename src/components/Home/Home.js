@@ -99,8 +99,7 @@ const Home = () => {
                                 <h3>Registro, rápido, seguro y exclusivo</h3>
                                 <p>Para comenzar a disfrutar de todos los beneficios y herramientas que TechWomen puede ofrecerte solo debes llenar un rápido registro diseñado para cuidar a nuestras usuarias y mantener una comunidad especial para todas...</p>
                                 <div className="icon-container">
-                                    <i class="bi bi-file-lock
-                                icon-large"></i>
+                                    <i className="bi bi-file-lock icon-large"></i>
                                 </div>
                             </article>
                             <article className="enrollment-step">
@@ -112,39 +111,41 @@ const Home = () => {
                             </article>
                             <article className="enrollment-step">
                                 <h3>Certifica tu conocimiento</h3>
-                                <p> Al finalizar, recibirás una certificación que validará tus habilidades adquiridas, dichos certificados le darán más formalidad y respaldo a tus HARD SKILLS (Habilidades Técnicas). Algo fundamental y diferenciador en el competitivo mundo laboral actual.</p>
+                                <p>Al finalizar, recibirás una certificación que validará tus habilidades adquiridas, dichos certificados le darán más formalidad y respaldo a tus HARD SKILLS (Habilidades Técnicas). Algo fundamental y diferenciador en el competitivo mundo laboral actual.</p>
                                 <div className="icon-container">
-                                    <i class="bi bi-award
-                                     icon-large"></i>
+                                    <i className="bi bi-award icon-large"></i>
                                 </div>
                             </article>
                             <article className="enrollment-step">
                                 <h3>Un Espacio pensado para las Mujeres de Hoy</h3>
-                                <p>Porque no solo se trata de un curso más!, Nuestras asesorías no solo son pensadas para las HARD SKILLS, sino que también están pensadas en apoyarte con Habilidades Blandas, como presentar tu CV, Consejos para entrevistas, entre otros que te harán dar un plus a tu presentación laboral para captar la atención de las empresas de hoy .</p>
-                                <i class="bi bi-person-workspace
-                                icon-large"></i>
+                                <p>Porque no solo se trata de un curso más!, Nuestras asesorías no solo son pensadas para las HARD SKILLS, sino que también están pensadas en apoyarte con Habilidades Blandas, como presentar tu CV, Consejos para entrevistas, entre otros que te harán dar un plus a tu presentación laboral para captar la atención de las empresas de hoy.</p>
+                                <div className="icon-container">
+                                    <i className="bi bi-person-workspace icon-large"></i>
+                                </div>
                             </article>
                             <article className="enrollment-step">
                                 <h3>La Mejor parte?.... Todo esto es GRATUITO</h3>
-                                <p> Así es, Nuestra Misión y principal objetivo es que las mujeres tengan las herramientas necesarias para su desarrollo profesional y para esto no se tiene precio, debido a esto nuestros cursos y materiales son GRATUITOS para todas nuestras miembros.</p>
-                                <i class="bi bi-exclamation-circle-fill
-                                icon-large"></i>
+                                <p>Así es, Nuestra Misión y principal objetivo es que las mujeres tengan las herramientas necesarias para su desarrollo profesional y para esto no se tiene precio, debido a esto nuestros cursos y materiales son GRATUITOS para todas nuestras miembros.</p>
+                                <div className="icon-container">
+                                    <i className="bi bi-exclamation-circle-fill icon-large"></i>
+                                </div>
                             </article>
                             <article className="enrollment-step">
                                 <h3>TechWomen y el Éxito las esperan</h3>
-                                <p> "Las mujeres son la mayor reserva de talento sin explotar del mundo". - Hillary Clinton</p>
+                                <p>"Las mujeres son la mayor reserva de talento sin explotar del mundo". - Hillary Clinton</p>
                                 <p>“El éxito de cada mujer debería ser una inspiración para otra. Somos más fuertes cuando nos alentamos mutuamente”. —Serena Williams</p>
-                                <p> “En el futuro no habrá mujeres líderes. Sólo habrá líderes”. —Sheryl Sandberg</p>
-                                <i className="bi bi-trophy
-                                icon-large"></i>
+                                <p>“En el futuro no habrá mujeres líderes. Sólo habrá líderes”. —Sheryl Sandberg</p>
+                                <div className="icon-container">
+                                    <i className="bi bi-trophy icon-large"></i>
+                                </div>
                             </article>
-                        </div>
-                        <div className="cta-buttons">
-                            <a href="#" className="btn btn-primary">Saber Más</a>
                         </div>
                     </div>
                 </section>
-            </main>
+                <div className="cta-button">
+                    <a href="#" className="btn btn-saber-mas">Saber Más</a>
+                </div>
+            </main >
         </>
     );
 };
