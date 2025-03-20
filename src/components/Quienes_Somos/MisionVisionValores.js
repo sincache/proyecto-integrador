@@ -45,10 +45,12 @@ const MisionVisionValores = () => {
                                 </h2>
                                 <div id="flush-collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                                     <div className="accordion-body">
-                                        Inclusión: Promovemos la diversidad y el acceso igualitario a la educación en tecnología.<br />
-                                        Innovación: Fomentamos la creatividad y el aprendizaje continuo para la transformación digital.<br />
-                                        Colaboración: Construimos redes de apoyo para el crecimiento profesional de cada estudiante.<br />
-                                        Empoderamiento: Brindamos herramientas para fortalecer la confianza y el desarrollo profesional.
+                                        <ul> 
+                                         <li> <strong>Innovación: </strong> Fomentamos la creatividad y el aprendizaje continuo para la transformación digital. </li> 
+                                         <li> <strong> Inclusión: </strong> Promovemos la diversidad y el acceso igualitario a la educación en tecnología. </li> 
+                                         <li> <strong> Colaboración: </strong> Construimos redes de apoyo para el crecimiento profesional de cada estudiante. </li> 
+                                         <li> <strong> Empoderamiento: </strong> Brindamos herramientas para fortalecer la confianza y el desarrollo profesional. </li> 
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

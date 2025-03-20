@@ -107,6 +107,7 @@ body {
   color: #ff0080;
   border-bottom: 2px solid #ff0080;
   transform: scale(1.2);
+  
 }
 
 /* Logo Navbar */
@@ -499,22 +500,34 @@ button.btn-accent:hover {
 /* Estilos para los pasos de inscripción */
 .enrollment-step {
   position: relative;
+  padding: 20px;
   padding-bottom: 40px; /* Espacio interno */
   margin-bottom: 10px; /* Espacio entre recuadros */
   border: 1px solid rgba(255, 255, 255, 0.5); /* Borde sutil */
   border-radius: 10px; /* Bordes redondeados */
   background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
   text-align: center; /* Centrar el contenido */
+  min-height: 350px; 
+  
 }
 
-/* Estilos para los íconos */
+
+.enrollment-step p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Ajusta el ancho para evitar que se desborde */
+}
+
+/* Estilos para los heigíconos */
 .icon-container {
   position: absolute;
   bottom: -20px; /* Mover el ícono hacia abajo */
   left: 50%;
   transform: translateX(-50%);
   padding: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 .icon-large {
@@ -546,18 +559,18 @@ button.btn-accent:hover {
 
 /* Estilos para el botón "Saber Más" */
 .btn-saber-mas {
-  background-color: #ff1f71; /* Color rosa */
-  color: white; /* Texto blanco */
-  padding: 10px 20px; /* Espaciado interno */
-  border-radius: 30px; /* Bordes redondeados */
-  text-decoration: none; /* Quitar subrayado del enlace */
-  font-size: 1rem; /* Tamaño de la fuente */
-  transition: all 0.3s ease; /* Transición suave */
-  position: absolute; /* Posicionamiento absoluto */
-  top: -120px; /* Ajusta la posición vertical */
-  right: 20px; /* Ajusta la posición horizontal */
-  align-items: center;
-  margin-right: 670px;
+  background-color: #ff1f71; 
+  color: white; 
+  padding: 10px 20px;
+  border-radius: 30px; 
+  text-decoration: none; 
+  font-size: 1rem; 
+  transition: all 0.3s ease; 
+  position: absolute; 
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
 }
 
 .btn-saber-mas:hover {
@@ -819,7 +832,13 @@ justify-content: space-around;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
+  color: white;
 }
+
+/* .btn:hover {
+  color: #00c2cb;
+  transform: scale(1.1);
+}  */
 
 .btn-primary {
   background-color: #ff1f71;
@@ -1296,6 +1315,8 @@ justify-content: space-around;
 #container-acordeon{
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .accordion-button {
