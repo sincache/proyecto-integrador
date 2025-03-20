@@ -401,9 +401,9 @@ background-repeat: no-repeat; /* Evita que la imagen se repita */
 
 }
 
-.display-4 {
-  text-align: start;
-}
+/* .display-4 {
+  text-align: center;
+} */
 
 label.form-label {
   text-align: center;
@@ -508,7 +508,7 @@ button.btn-accent:hover {
   background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
   text-align: center; /* Centrar el contenido */
   min-height: 350px; 
-  
+background-color: #100d28;
 }
 
 
@@ -517,7 +517,7 @@ button.btn-accent:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%; /* Ajusta el ancho para evitar que se desborde */
+  width: 80%; 
 }
 
 /* Estilos para los heigíconos */
@@ -621,16 +621,27 @@ body {
 
 /* Estilos para la cita de éxito */
 /* CONTENEDOR PRINCIPAL DE LA CITA */
+
+
+
 .cita-container {
   border: 3px solid #5C0AAC; 
   border-radius: 20px;
   padding: 40px;
   margin: 100px auto;
-  max-width: 1300px;
+  max-width: 1100px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.6);
   position: relative;
   overflow: hidden; /* Evita que el contenido sobresalga */
   box-sizing: border-box; /*Padding y border dentro del tamaño total */
+}
+
+@media (max-width: 768px) {
+  .cita-container {
+    min-width: 100px;
+    margin: 50px 20px; 
+    padding: 30px; 
+  }
 }
 
 /* CONTENIDO DE LA CITA */
@@ -651,7 +662,7 @@ body {
 
 .cita-imagen img {
  
-  max-width: 450px; /* Ancho de la imagen */
+  max-width: 380px; /* Ancho de la imagen */
   height: auto; /* Mantener la proporción */
   border-radius: 50px; /* Bordes redondeados */
   /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Sombra suave */ 
@@ -673,7 +684,7 @@ body {
 }
 
 .cita-text {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   color: #FFFFFF;
   line-height: 1.6;
   margin-bottom: 12px;
@@ -781,6 +792,12 @@ body {
   transform: translateX(-50%);
   opacity: 0.8;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  #logo-body {
+    transform: translateX(-65%);
+  }
 }
 
 div.container{
@@ -916,7 +933,14 @@ justify-content: space-around;
   justify-content: space-between; 
   gap: 2rem; 
   padding: 2rem;
-  
+}
+
+@media (max-width: 768px) {
+  .Container-Inicio {
+    flex-direction:column !important; 
+    text-align: center ;
+    gap: 0.2rem;
+  }
 }
 
 .hero-content {
@@ -1345,7 +1369,7 @@ justify-content: space-around;
 
 /*ACCORDION RESPONSIVO*/
 
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
   #container-acordeon{
     display: flex;
     align-items: center;
@@ -1357,6 +1381,7 @@ justify-content: space-around;
     background-color: #100d28; /* Fondo negro del botón */
     color: white; /* Texto blanco */
     width: 380px;
+    height: 50px;
     border-radius: 20px;
     border: none;
     margin-left: auto; 
@@ -1546,6 +1571,9 @@ justify-content: space-around;
   width: 100%;                /* Asegura que ocupe todo el ancho de la página */
 }
 
+
+
+
 /* Aplicar opacidad */
 .hero-section-contactanos::before {
   content: '';                        /* Crea el pseudo-elemento */
@@ -1561,7 +1589,7 @@ justify-content: space-around;
 /* Sobreponer letras para no aplicar opacidad*/
 .hero-section-contactanos .container {
   position: relative;
-  z-index: 2;                         /* Coloca el texto por encima del overlay */
+  z-index: 2; 
 }
 
 .container-fluid {
@@ -1573,6 +1601,7 @@ justify-content: space-around;
   margin-top: 20px; /* Espacio entre la imagen y el formulario */
   margin-bottom: 20px;
 }
+
 
 /* Estilos para la sección de contacto */
 .bg-purple-light{
@@ -1722,7 +1751,14 @@ footer {
 .newsletter-section {
   flex: 1;
   min-width: 500px;
+  
+}
 
+@media screen and (max-width: 600px) {
+  .newsletter-section {
+    min-width: 360px; /* Reduce el mínimo en pantallas pequeñas */
+    width: 100%;
+  }
 }
 
 .newsletter-section h5 {
@@ -2073,3 +2109,13 @@ hr{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
   }
 }
+
+
+
+/* Forzar a que solo ocupe el 100% del ancho de la pantalla */
+html, body {
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+  width: 100%;
+}
+
+
