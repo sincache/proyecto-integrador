@@ -625,7 +625,7 @@ body {
   border: 3px solid #5C0AAC; 
   border-radius: 20px;
   padding: 40px;
-  margin: 100px auto;
+  margin: 80px auto;
   max-width: 1300px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.6);
   position: relative;
@@ -640,18 +640,19 @@ body {
     justify-content: space-between;
     gap: 40px;
     flex-wrap: nowrap; /* Evita que se apilen en pantallas grandes */
-    flex-direction: row; /* ✅ Mantiene la imagen a la derecha */
+    flex-direction: row; /*Mantiene la imagen a la derecha */
 }
 
 /* IMAGEN */
 .cita-imagen {
   flex-shrink: 0; /* Evita que la imagen se reduzca */
   order: 2; /*Imagen a la derecha */
+  height: 420px;
 }
 
 .cita-imagen img {
  
-  max-width: 450px; /* Ancho de la imagen */
+  max-width: 430px; /* Ancho de la imagen */
   height: auto; /* Mantener la proporción */
   border-radius: 50px; /* Bordes redondeados */
   /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Sombra suave */ 
@@ -673,7 +674,7 @@ body {
 }
 
 .cita-text {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   color: #FFFFFF;
   line-height: 1.6;
   margin-bottom: 12px;
@@ -685,6 +686,7 @@ body {
 .dato-clave {
   color: #D90070;
   font-weight: bold;
+  font-size: 2.2rem;
 }
 
 /* FUENTE DE LA CITA */
@@ -742,7 +744,7 @@ body {
 /* RESPONSIVIDAD */
 /* ----------------------- */
 
-/* ✅ TABLET (768px) */
+/* TABLET (768px) */
 @media (max-width: 768px) {
   .cita-content {
       flex-direction: column; /* Se apilan solo en pantallas pequeñas */
@@ -754,7 +756,7 @@ body {
   }
 
   .cita-imagen img {
-      max-width: 300px;
+      max-width: 350px;
   }
 }
 
@@ -1380,6 +1382,14 @@ justify-content: space-around;
   .bg-color-accordion{
     background: #f8f8f800;
   }
+
+  .mission-image{
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 50%; 
+    margin-top: 20px;           
+  }
 }
 
 /* Imagen */
@@ -1388,7 +1398,7 @@ justify-content: space-around;
   justify-content: center; 
   align-items: center;     
   height: 100%; 
-  margin-top: 12px;           
+  margin-top: 15px;           
 }
 
 .title-card{
@@ -1414,7 +1424,7 @@ justify-content: space-around;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto; /* Centra las tarjetas */
+  margin: 25px auto; /* Centra las tarjetas  y para separar tarjetas*/
   padding: 0rem;
   position: relative;
 
@@ -1447,7 +1457,7 @@ justify-content: space-around;
 }
 
 .card-body {
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1508,6 +1518,86 @@ justify-content: space-around;
 .social-links a:hover {
   opacity: 0.8;
 }
+
+/* Tarjetas de los cursos------------------------------------------------------------- */
+/* Estilos para las tarjetas de cursos */
+.curso-card {
+  background-color: #100d28;
+  border: 2px solid #5c0aac;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto; /* Altura automática para adaptarse al contenido */
+  width: 100%; /* Ancho completo para adaptarse al contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0; /* Margen para separar las tarjetas */
+  padding: 1rem;
+  position: relative;
+  box-shadow: 15px 3px 15px rgba(0, 0, 0, .3), -5px -10px 10px rgba(0, 0, 0, .05);
+}
+
+.curso-card:hover {
+  transform: translateY(-10px); /* Efecto de levantar la tarjeta */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+}
+
+.curso-card .card-img-top {
+  width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+  height: 200px; /* Altura fija para la imagen */
+  border-radius: 20px; /* Bordes redondeados */
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+  border-color: #5c0aac;
+}
+
+.curso-card .card-body {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.curso-card .card-title {
+  font-family: "Roboto", serif;
+  font-weight: 600;
+  color: #ffffff; /* Color blanco para el título */
+  font-size: 24px; /* Tamaño de fuente más grande */
+  margin-top: 10px;
+}
+
+.curso-card .card-text {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  color: #ffffff; /* Color blanco para el texto */
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+  margin-top: 10px;
+}
+
+.curso-card .btn-accent {
+  background-color: #00c2cb; /* Color de fondo para el botón */
+  color: #fff; /* Color del texto */
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.curso-card .btn-accent:hover {
+  background-color: #5c0aac; /* Color de fondo al pasar el mouse */
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .curso-card {
+    width: 100%; /* Ancho completo en pantallas pequeñas */
+    margin: 10px 0; /* Margen reducido */
+  }
+}
+
 
 /* ------------------------------------------------------------------------------- */
 
@@ -1686,7 +1776,7 @@ justify-content: space-around;
 
 .btn-iniciar {
   background-color: #ff1f71;
-  border: none;
+  border-color: #00c2cb;
   color: white;
   border-radius: 25px;
   padding: 8px 25px;

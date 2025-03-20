@@ -92,10 +92,10 @@ localStorage.setItem ('misFavoritos', JSON.stringify(nuevosFavoritos))
   </div>
 
         <section className="container my-5">
-          <div className="row">
+          <div className="row g-5">
             {cursos.map((curso) => (
-              <div className="col-md-4 mb-4" key={curso.ID}>
-                <div className="card team-card h-100">
+              <div className="col-lg-4 col-md-6 col-sm-6 mb-4" key={curso.ID}>
+                <div className="card curso-card h-100">
                   <img 
                     src={curso.IMAGEN || 'https://via.placeholder.com/300x200'} 
                     className="card-img-top" 
