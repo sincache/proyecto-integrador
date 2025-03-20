@@ -401,9 +401,9 @@ background-repeat: no-repeat; /* Evita que la imagen se repita */
 
 }
 
-.display-4 {
+/* .display-4 {
   text-align: start;
-}
+} */
 
 label.form-label {
   text-align: center;
@@ -1549,7 +1549,7 @@ justify-content: space-around;
   height: 200px; /* Altura fija para la imagen */
   border-radius: 20px; /* Bordes redondeados */
   object-fit: cover; /* Ajusta la imagen al contenedor */
-  border-color: #5c0aac;
+  border: 2px solid #5c0aac;
 }
 
 .curso-card .card-body {
@@ -2163,3 +2163,10 @@ hr{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
   }
 }
+
+/* Forzar a que solo ocupe el 100% del ancho de la pantalla */
+html, body {
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+  width: 100%;
+}
+
