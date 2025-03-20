@@ -134,7 +134,6 @@ const Home = () => {
                                 <h3>TechWomen y el Éxito las esperan</h3>
                                 <p>"Las mujeres son la mayor reserva de talento sin explotar del mundo". - Hillary Clinton</p>
                                 <p>“El éxito de cada mujer debería ser una inspiración para otra. Somos más fuertes cuando nos alentamos mutuamente”. —Serena Williams</p>
-                                <p>“En el futuro no habrá mujeres líderes. Sólo habrá líderes”. —Sheryl Sandberg</p>
                                 <div className="icon-container">
                                     <i className="bi bi-trophy icon-large"></i>
                                 </div>
