@@ -629,14 +629,14 @@ body {
   border-radius: 20px;
   padding: 40px;
   margin: 80px auto;
-  max-width: 1300px;
+  max-width: 1100px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.6);
   position: relative;
   overflow: hidden; /* Evita que el contenido sobresalga */
   box-sizing: border-box; /*Padding y border dentro del tamaño total */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1350px) {
   .cita-container {
     min-width: 100px;
     margin: 50px 20px; 
@@ -658,12 +658,12 @@ body {
 .cita-imagen {
   flex-shrink: 0; /* Evita que la imagen se reduzca */
   order: 2; /*Imagen a la derecha */
-  height: 420px;
+  height: 380px;
 }
 
 .cita-imagen img {
  
-  max-width: 430px; /* Ancho de la imagen */
+  max-width: 380px; /* Ancho de la imagen */
   height: auto; /* Mantener la proporción */
   border-radius: 50px; /* Bordes redondeados */
   /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Sombra suave */ 
@@ -685,7 +685,7 @@ body {
 }
 
 .cita-text {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #FFFFFF;
   line-height: 1.6;
   margin-bottom: 12px;
