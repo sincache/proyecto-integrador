@@ -350,6 +350,11 @@ body {
   align-items: center; /* Centra horizontalmente */
 }
 
+.text-md-start{
+  display: flex;
+  flex-direction: column;
+}
+
 
 .form-control {
   background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para los inputs */
