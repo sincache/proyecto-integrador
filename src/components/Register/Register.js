@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import TerminosCondicionesModal from '../TerminosCondiciones/TerminosCondicionesModal';
 
 const Register = () => {
-//funcion para que el usuario acepte los terminos y condiciones antes del registro
     const [showModal, setShowModal] = useState(false);
     const [acceptedTerms, setAcceptedTerms] = useState(false);
 

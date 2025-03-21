@@ -11,7 +11,7 @@ const Cursos = () => {
   // Obtener todos los cursos desde el backend
   const fetchCursos = async () => {
     try {
-      const response = await fetch('http://localhost:8080/courses'); // Ruta del backend
+      const response = await fetch('http://localhost:8080/api/v1/courses/obtenercursos'); // Ruta del backend
       if (!response.ok) throw new Error('Error al obtener los cursos');
       const data = await response.json();
       setCursos(data);
