@@ -31,11 +31,24 @@ const EliminarCurso = () => {
   };
 
   // Función para eliminar el curso encontrado
-  const eliminarCurso = () => {
+  const eliminarCurso = async () => {
+
+    try{
+      // Hacer la solicitud DELETE al backend
+      const response = await fetch(`http://localhost:8080/api/v1/courses/${cursoEncontrado.ID}`, {
+        method: 'DELETE',
+    });
+
+    if (!response.ok) {
+      throw new Error('Error al eliminar el curso en el backend');
+    }
+
+    // Eliminar el curso del localStorage
     const cursosGuardados = JSON.parse(localStorage.getItem('cursos')) || [];
     const cursosActualizados = cursosGuardados.filter(curso => curso.ID !== cursoEncontrado.ID);
-
     localStorage.setItem('cursos', JSON.stringify(cursosActualizados));
+    
+    // Mostrar mensaje de éxito
     setMensajeAlert('Curso eliminado correctamente.');
     setTipoAlert('success');
     setMostrarAlert(true);
@@ -43,7 +56,16 @@ const EliminarCurso = () => {
     setIdBusqueda('');
     setMostrarConfirmacion(false); // Oculta la alerta de confirmación después de eliminar
     setTimeout(() => navigate('/Cursos'), 1500); // Pequeño delay antes de redirigir
-  };
+  
+    // Redirigir después de 1.5 segundos
+    setTimeout(() => navigate('/Cursos'), 1500);
+  } catch (error) {
+    // Manejar errores
+    setMensajeAlert('Error al eliminar el curso: ' + error.message);
+    setTipoAlert('danger');
+    setMostrarAlert(true);
+  }
+};
 
   return (
     <main className="container my-5">
