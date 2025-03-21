@@ -92,10 +92,10 @@ const Cursos = () => {
                   >
                     {favoritos[curso.id] ? '-' : '+'}
                   </button>
-                  <h5 className="card-title">{curso.title}</h5>
-                  <p className="card-text">{curso.description}</p>
+                  <h5 className="card-title">{curso.name}</h5>
+                  <p className="card-text">{curso.duration}</p>
                   <p><strong>Nivel:</strong> {curso.level}</p>
-                  <p><strong>Precio:</strong> {curso.price === 0 ? 'Gratis' : `$${curso.price}`}</p>
+                  <p><strong>Precio:</strong> Gratis </p>
                   <p>
                     <strong>Opiniones:</strong>
                     <span 
