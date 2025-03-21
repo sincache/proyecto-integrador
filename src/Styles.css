@@ -350,9 +350,10 @@ body {
   align-items: center; /* Centra horizontalmente */
 }
 
-.text-md-start{
+
+#cursos_btn{
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
 
@@ -1162,8 +1163,8 @@ justify-content: space-around;
 }
 
 .editar-curso-form button:hover {
-  background-color: #00c2cb; /* Cambio de color al pasar el mouse */
-  color: white;
+  background-color: #00c2cb;
+  color: white;
 }
 
 /* --------------------------------------------------------------------------------------------- */
