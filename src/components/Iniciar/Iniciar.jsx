@@ -12,23 +12,31 @@ const Iniciar = ({ setUser }) => {
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+   
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const userData = usersData.find((u) => u.username === username);
-        if (!userData) {
-            setError('Usuario no encontrado');
-            return;
-        }
-
-
-        const passwordMatch = userData.password === password;
-        if (passwordMatch) {
-            setUser(userData.username);
-            localStorage.setItem('user', userData.username);
-            setError('');
-            navigate('/Cursos');
-        } else {
-            setError('Contraseña incorrecta');
+    
+        try {
+            const response = await fetch('http://localhost:8080/api/v1/credential/obtaincredential', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password }),
+            });
+    
+            if (response.ok) {
+                const data = await response.json();
+                setUser(data.username); // Usa los datos devueltos por el backend
+                localStorage.setItem('user', data.username);
+                setError('');
+                navigate('/courses'); // Asegúrate de que esta ruta exista en tu frontend
+            } else if (response.status === 404) {
+                setError('Usuario no encontrado');
+            } else {
+                setError('Contraseña incorrecta');
+            }
+        } catch (error) {
+            console.error('Error al conectar con el backend:', error);
+            setError('Error en la conexión con el servidor');
         }
     };
 
