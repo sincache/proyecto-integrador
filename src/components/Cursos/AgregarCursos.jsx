@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { linkImage } from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
 
 const AgregarCurso = () => {
   const [nuevoCurso, setNuevoCurso] = useState({
-    ID: '',
+    courseId: '',
+    name: '',
+    duration: '',
     CATEGORIA: '',
-    TITULO: '',
-    DESCRIPCION: '',
-    IMAGEN: '',
-    TIEMPO: '',
-    NIVEL: '',
-    ENLACE: '',
+    level: '',
+    linkImage: '',
+    dateAdded: '',
   });
 
   const [error, setError] = useState(null); // Estado para manejar errores
@@ -26,30 +25,30 @@ const AgregarCurso = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validar datos de entrada
-    if (!nuevoCurso.ID || !nuevoCurso.TITULO || !nuevoCurso.CATEGORIA) {
+    // ValcourseIdar datos de entrada
+    if (!nuevoCurso.courseId || !nuevoCurso.name || !nuevoCurso.CATEGORIA) {
       setError('Por favor, completa los campos obligatorios.');
       return;
     }
 
-    // Validar que el ID sea único
+    // ValcourseIdar que el courseId sea único
     const cursosGuardados = JSON.parse(localStorage.getItem('cursos')) || [];
-    const cursoExistente = cursosGuardados.find((curso) => curso.ID === nuevoCurso.ID);
+    const cursoExistente = cursosGuardados.find((curso) => curso.courseId === nuevoCurso.courseId);
     if (cursoExistente) {
-      setError('El ID del curso ya existe. Por favor, usa un ID único.');
+      setError('El courseId del curso ya existe. Por favor, usa un courseId único.');
       return;
     }
 
-    // Validar que el texto solo contenga letras (opcional)
+    // ValcourseIdar que el texto solo contenga letras (opcional)
     const soloLetras = (texto) => /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(texto);
     if (!soloLetras(nuevoCurso.CATEGORIA)) {
-      setError('La categoría contiene caracteres no permitidos.');
+      setError('La categoría contiene caracteres no permitcourseIdos.');
       return;
     }
 
     try {
       // Petición API para guardar el curso en la base de datos
-      const response = await fetch('http://localhost:8080/api/v1/courses', {
+      const response = await fetch('http://localhost:8080/api/v1/courses/crearcurso', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -85,10 +84,10 @@ const AgregarCurso = () => {
           <div className="col-md-2">
             <input
               type="text"
-              name="ID"
-              placeholder="ID"
+              name="courseId"
+              placeholder="courseId"
               className="form-control"
-              value={nuevoCurso.ID}
+              value={nuevoCurso.courseId}
               onChange={handleChange}
               required
             />
@@ -107,20 +106,20 @@ const AgregarCurso = () => {
           <div className="col-md-6">
             <input
               type="text"
-              name="TITULO"
+              name="name"
               placeholder="Título"
               className="form-control"
-              value={nuevoCurso.TITULO}
+              value={nuevoCurso.name}
               onChange={handleChange}
               required
             />
           </div>
           <div className="col-md-12">
             <textarea
-              name="DESCRIPCION"
+              name="duration"
               placeholder="Descripción"
               className="form-control"
-              value={nuevoCurso.DESCRIPCION}
+              value={nuevoCurso.duration}
               onChange={handleChange}
               required
             ></textarea>
@@ -150,10 +149,10 @@ const AgregarCurso = () => {
           <div className="col-md-3">
             <input
               type="text"
-              name="NIVEL"
-              placeholder="Nivel"
+              name="level"
+              placeholder="level"
               className="form-control"
-              value={nuevoCurso.NIVEL}
+              value={nuevoCurso.level}
               onChange={handleChange}
               required
             />
@@ -161,10 +160,10 @@ const AgregarCurso = () => {
           <div className="col-md-12">
             <input
               type="text"
-              name="ENLACE"
-              placeholder="Enlace (opcional)"
+              name="linkImage"
+              placeholder="linkImage (opcional)"
               className="form-control"
-              value={nuevoCurso.ENLACE}
+              value={nuevoCurso.linkImage}
               onChange={handleChange}
             />
           </div>
@@ -174,9 +173,9 @@ const AgregarCurso = () => {
             </button>
           </div>
           <div className="col-md-12 text-end">
-            <Link to="/Cursos/Eliminar" className="btn btn-danger m-0">
+            <linkImage to="/Cursos/Eliminar" className="btn btn-danger m-0">
               Eliminar Curso
-            </Link>
+            </linkImage>
           </div>
         </div>
       </form>

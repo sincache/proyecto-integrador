@@ -17,16 +17,16 @@ const Iniciar = ({ setUser }) => {
         e.preventDefault();
     
         try {
-            const response = await fetch('http://localhost:8080/api/v1/credential/obtaincredential', {
-                method: 'POST',
+            const response = await fetch(`http://localhost:8080/api/v1/credential/obtaincredential/${username}`, {
+                method: 'GET',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password }),
             });
     
             if (response.ok) {
                 const data = await response.json();
-                setUser(data.username); // Usa los datos devueltos por el backend
-                localStorage.setItem('user', data.username);
+                setUser(data.users); // Usa los datos devueltos por el backend
+                localStorage.setItem('user', data.users);
                 setError('');
                 navigate('/courses'); // Asegúrate de que esta ruta exista en tu frontend
             } else if (response.status === 404) {
