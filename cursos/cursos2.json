@@ -1,0 +1,95 @@
+
+   
+   
+  [
+    {
+      "ID": "11",
+      "CATEGORIA": "Database",
+      "TITULO": "Administración de bases de datos relacionales",
+      "DESCRIPCION": "Se explican los fundamentos de la administración de una base de datos a través de un sistema gestor. Desde el modelado de diferentes datos, la consulta a la información almacenada de una tienda internacional y su implementación en la nube para mantener en óptimas condiciones la información.",
+      "IMAGEN": "/cursos/imagenesCursos/Data.jpg",
+      "TIEMPO": "10 horas",
+      "NIVEL": "Básico",
+      "ENLACE": "sin informacion"
+    },
+    {
+      "ID": "12",
+      "CATEGORIA": "Otros cursos",
+      "TITULO": "Introducción práctica a los comandos Linux y Shell Scripting",
+      "DESCRIPCION": "Este curso proporciona una comprensión práctica de los comandos shell comunes de Linux / UNIX. En este curso amigable para principiantes, usted aprenderá acerca de los fundamentos de Linux, comandos Shell, y Bash shell scripting.",
+      "IMAGEN": "/cursos/imagenesCursos/cursolinux.jpg",
+      "TIEMPO": "10 horas",
+      "NIVEL": "Básico",
+      "ENLACE": "sin informacion"
+    },
+    {
+      "ID": "13",
+      "CATEGORIA": "Otros cursos",
+      "TITULO": "Curso de programación orientada a objetos",
+      "DESCRIPCION": "En este curso aprenderás los fundamentos de la programación orientada a objetos. Conocerás sobre las prácticas, los conocimientos correctos y profundizaremos en por qué es una metodología poderosa en el mundo de la programación y desarrollo del software.",
+      "IMAGEN": "/cursos/imagenesCursos/poo.png",
+      "TIEMPO": "8 horas aprox.",
+      "NIVEL": "Básico",
+      "ENLACE":"sin informacion"
+    },
+    
+    {
+      "ID": "14",
+      "CATEGORIA": "Front end",
+      "TITULO": "Frameworks Bootstrap",
+      "DESCRIPCION": "Crea páginas web elegantes y responsivas rápidamente con Bootstrap, el framework de CSS más popular. Aprende a utilizar sus componentes y utilidades para diseñar sitios web impresionantes y funcionales.",
+      "IMAGEN": "/cursos/imagenesCursos/Bootstrap.png",
+      "TIEMPO": "2 horas",
+      "NIVEL": "Basico",
+      "ENLACE":"sin informacion"
+      
+    },
+    {
+        "ID": "15",
+        "CATEGORIA": "DevOps",
+        "TITULO": "Azure",
+        "DESCRIPCION": "Explora Microsoft Azure, una de las principales plataformas de servicios en la nube. Aprende a implementar, administrar y asegurar soluciones en la nube utilizando las herramientas y servicios de Azure.",
+        "IMAGEN": "/cursos/imagenesCursos/Azure.png",
+        "TIEMPO": "2 horas",
+        "NIVEL": "Basico",
+        "ENLACE":"sin informacion"
+        
+      },
+      {
+        "ID": "16",
+        "CATEGORIA": "DevOps",
+        "TITULO": "Docker",
+        "DESCRIPCION": "Domina Docker, una plataforma líder para la creación, despliegue y gestión de aplicaciones en contenedores. Aprende a crear, probar y desplegar contenedores para aplicaciones escalables y portátiles.",
+        "IMAGEN": "/cursos/imagenesCursos/docker1.png",
+        "TIEMPO": "4 horas",
+        "NIVEL": "Basico",
+        "ENLACE":"sin informacion"
+        
+      },
+      {
+        "ID": "17",
+        "CATEGORIA": "Kubernets",
+        "TITULO": "introduccion kubernets",
+        "DESCRIPCION": "Gestiona y orquesta aplicaciones en contenedores con Kubernetes, el sistema de orquestación más popular. Aprende a desplegar, escalar y mantener aplicaciones distribuidas en este curso completo.",
+        "IMAGEN": "/cursos/imagenesCursos/kuberbets.png",
+        "TIEMPO": "4 horas",
+        "NIVEL": "Basico",
+        "ENLACE":"sin informacion"
+        
+      },
+      {
+        "ID": "18",
+        "CATEGORIA": "Otros cursos",
+        "TITULO": "Metodología Scrum" ,
+        "DESCRIPCION": "Mejora tus habilidades de gestión de proyectos aprendiendo SCRUM, un marco de trabajo ágil para equipos de desarrollo. Aprende los roles, eventos y artefactos de SCRUM para implementar proyectos de manera eficiente y efectiva",
+        "IMAGEN": "/cursos/imagenesCursos/scrum.jpg",
+        "TIEMPO": "2 horas",
+        "NIVEL": "Basico",
+        "ENLACE":"sin informacion"
+        
+      }
+  ]
+  
+   
+      
+
