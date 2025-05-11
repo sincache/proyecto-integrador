@@ -50,7 +50,7 @@ const CursosAgregados = () => {
       [cursoID]: !prev[cursoID],
     }));
   };
-  const MisCursos=JSON.parse(localStorage.getItem('misFavoritos'));
+  const MisCursos=JSON.parse(localStorage.getItem('misFavoritos'))||[]; //obtenemos los cursos que el usuario ha agregado a favoritos
   console.log(MisCursos);
   const cursosRender = cursos.filter(curso => MisCursos.includes(curso.ID));
 
